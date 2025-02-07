@@ -1,3 +1,4 @@
+
 import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useEffect, useState } from "react";
@@ -7,7 +8,6 @@ const Hero = () => {
   
   const images = [
     {
-      // Updated image showing mobile apps and rural accessibility
       url: "https://images.unsplash.com/photo-1523240795612-9a054b0db644",
       title: "Mobile First Digital",
       tagline: "Human-Centric Solutions, Seamless Experiences"
@@ -18,8 +18,8 @@ const Hero = () => {
       tagline: "Unlocking the Power of Unified Data"
     },
     {
-      // Using more relevant images for First Mile representation
-      url: "https://images.unsplash.com/photo-1585598367839-2ef7bf79a82d", // Modern dairy farm
+      // Using more relevant image for First Mile representation
+      url: "https://images.unsplash.com/photo-1465379944081-7f47de8d74ac", // Rural India with cattle farmer
       title: "First Mile Modernization",
       tagline: "Revolutionizing Rural Connect with Innovative Tech Solutions"
     },
@@ -49,7 +49,7 @@ const Hero = () => {
           style={{
             backgroundImage: index === 2 ? `
               linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
-              url('${images[2].url}'), /* Modern dairy farm */
+              url('${images[2].url}'), /* Rural India with cattle farmer */
               url('https://images.unsplash.com/photo-1595841696146-9c19408648f7'), /* Smart agriculture/AgriTech */
               url('https://images.unsplash.com/photo-1601597111158-2fceff292cdc'), /* Rural banking */
               url('https://images.unsplash.com/photo-1553877522-43269d4ea984')  /* Insurance services */
