@@ -47,7 +47,7 @@ const Navigation = () => {
     {
       title: "About",
       items: [
-        { title: "About Krushal - What we do", href: "#about" },
+        { title: "What we do", href: "#about" },
         { title: "Our Leadership", href: "#leadership" },
         { title: "Careers", href: "#careers" },
       ],
