@@ -1,4 +1,3 @@
-
 import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useEffect, useState } from "react";
@@ -8,24 +7,44 @@ const Hero = () => {
   
   const images = [
     {
-      url: "https://images.unsplash.com/photo-1517022812141-23620dba5c23", // Rural setting with sheep in fields
+      url: "https://images.unsplash.com/photo-1517022812141-23620dba5c23",
       title: "First Mile Modernization",
-      tagline: "Empowering Underserved Markets with Dairy, Agritech, Financial Services & Healthcare Solutions"
+      tagline: "Empowering Underserved Markets with Dairy, Agritech, Financial Services & Healthcare Solutions",
+      stats: ">60% early detection of mastitis, Farm-level antibiotics signalling, and Reduce procurement cost of milk by Rs. 0.36 / liter of milk",
+      testimonials: [
+        "You're building AWS for Rural, - Foundation CEO",
+        "Everyone in the industry needs this, - Dairy CEO"
+      ]
     },
     {
       url: "https://images.unsplash.com/photo-1523240795612-9a054b0db644",
       title: "Mobile First Digital",
-      tagline: "Human-Centric Solutions, Seamless Experiences"
+      tagline: "Human-Centric Solutions, Seamless Experiences",
+      stats: "Seamless digital experiences across 100+ rural touchpoints",
+      testimonials: [
+        "Transformed our digital presence, - Technology Head",
+        "Incredible user adoption rates, - Product Manager"
+      ]
     },
     {
       url: "https://images.unsplash.com/photo-1518770660439-4636190af475",
       title: "Insights and Data",
-      tagline: "Unlocking the Power of Unified Data"
+      tagline: "Unlocking the Power of Unified Data",
+      stats: "Unified data platform processing millions of rural transactions",
+      testimonials: [
+        "Data-driven decisions made simple, - Analytics Lead",
+        "Revolutionary insights platform, - CTO"
+      ]
     },
     {
       url: "https://images.unsplash.com/photo-1483058712412-4245e9b90334",
       title: "FutureReady CloudOps",
-      tagline: "Automate, Orchestrate, Innovate: Your DevOps Partner"
+      tagline: "Automate, Orchestrate, Innovate: Your DevOps Partner",
+      stats: "99.9% uptime with scalable cloud infrastructure",
+      testimonials: [
+        "Enterprise-grade reliability, - Operations Director",
+        "Future-ready architecture, - Cloud Architect"
+      ]
     }
   ];
 
@@ -38,7 +57,6 @@ const Hero = () => {
 
   return (
     <section className="relative min-h-[90vh] flex items-center justify-center py-20 mt-16">
-      {/* Background Image with Overlay */}
       {images.map((image, index) => (
         <div
           key={image.url}
@@ -65,11 +83,12 @@ const Hero = () => {
             </p>
             <div className="bg-white/95 backdrop-blur-sm rounded-lg p-6 mb-8 shadow-lg">
               <p className="text-[#7E69AB] font-medium mb-4">
-                &gt;60% early detection of mastitis, Farm-level antibiotics signalling, and Reduce procurement cost of milk by Rs. 0.36 / liter of milk
+                {images[currentImage].stats}
               </p>
               <div className="flex flex-col space-y-2 text-[#6E59A5] italic">
-                <p>"You're building AWS for Rural," - Foundation CEO</p>
-                <p>"Everyone in the industry needs this," - Dairy CEO</p>
+                {images[currentImage].testimonials.map((testimonial, index) => (
+                  <p key={index}>{testimonial}</p>
+                ))}
               </div>
             </div>
             <Button 
@@ -81,7 +100,6 @@ const Hero = () => {
         </div>
       </div>
 
-      {/* Image Indicators */}
       <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 flex gap-2 z-20">
         {images.map((_, index) => (
           <button
