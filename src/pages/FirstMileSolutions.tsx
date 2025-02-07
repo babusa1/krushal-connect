@@ -2,33 +2,104 @@
 import { Button } from "@/components/ui/button";
 import Navigation from "@/components/Navigation";
 import { ArrowRight, Leaf, LineChart, Target, Users } from "lucide-react";
+import { useEffect, useState } from "react";
 
 const FirstMileSolutions = () => {
+  const [currentImage, setCurrentImage] = useState(0);
+  
+  const images = [
+    {
+      url: "https://images.unsplash.com/photo-1465379944081-7f47de8d74ac",
+      title: "Dairy Solutions",
+      tagline: "Transforming dairy operations with modern first-mile solutions"
+    },
+    {
+      url: "https://images.unsplash.com/photo-1498936178812-4b2e558d2937",
+      title: "Agritech Innovation",
+      tagline: "Empowering farmers with cutting-edge agricultural technology"
+    },
+    {
+      url: "https://images.unsplash.com/photo-1450101499163-c8848c66ca85",
+      title: "Insurance Services",
+      tagline: "Secure futures with innovative insurance solutions"
+    },
+    {
+      url: "https://images.unsplash.com/photo-1601597111158-2fceff292cdc",
+      title: "Banking Solutions",
+      tagline: "Revolutionizing rural banking accessibility"
+    },
+    {
+      url: "https://images.unsplash.com/photo-1576091160550-2173dba999ef",
+      title: "Healthcare Access",
+      tagline: "Bridging healthcare gaps in rural communities"
+    }
+  ];
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setCurrentImage((prev) => (prev + 1) % images.length);
+    }, 5000);
+    return () => clearInterval(timer);
+  }, []);
+
   return (
     <div className="min-h-screen bg-white">
       <Navigation />
       
-      {/* Hero Section */}
-      <section className="pt-32 pb-16 px-4 bg-gradient-to-br from-[#E5DEFF] to-white">
-        <div className="container mx-auto">
-          <h1 className="text-4xl md:text-6xl font-bold text-[#673AB7] mb-4">
-            Krushal: Reimagining the First Mile for Underserved Markets
-          </h1>
-          <p className="text-xl text-[#6E59A5] mb-6 max-w-3xl">
-            Unlocking Untapped Potential: Empowering Dairy Farmers and Transforming Rural Economies
-          </p>
-          <div className="bg-white/80 backdrop-blur rounded-lg p-6 mb-8 inline-block">
-            <p className="text-[#7E69AB] font-medium">
-              50-100% Higher Margins, Improved Livelihoods, and Sustainable Practices
-              <br />
-              Revolutionizing India's First Mile, One Farmer at a Time
-            </p>
+      {/* Hero Section with Carousel */}
+      <section className="relative min-h-[90vh] flex items-center justify-center py-20 mt-16">
+        {/* Background Images with Overlay */}
+        {images.map((image, index) => (
+          <div
+            key={image.url}
+            className={`absolute inset-0 z-0 transition-opacity duration-1000 ${
+              currentImage === index ? "opacity-100" : "opacity-0"
+            }`}
+            style={{
+              backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('${image.url}')`,
+              backgroundSize: 'cover',
+              backgroundPosition: 'center',
+              backgroundRepeat: 'no-repeat',
+            }}
+          />
+        ))}
+
+        <div className="container px-4 mx-auto relative z-10">
+          <div className="max-w-4xl mx-auto">
+            <div className="text-left md:text-center">
+              <h1 className="animate-fadeIn text-3xl md:text-5xl font-bold text-white mb-6">
+                {images[currentImage].title}
+              </h1>
+              <p className="animate-fadeIn text-lg md:text-xl text-white/90 mb-8">
+                {images[currentImage].tagline}
+              </p>
+              <div className="bg-white/95 backdrop-blur-sm rounded-lg p-6 mb-8 shadow-lg">
+                <p className="text-[#7E69AB] font-medium">
+                  Krushal: Reimagining the First Mile for Underserved Markets
+                  <br />
+                  Unlocking Untapped Potential and Transforming Rural Economies
+                </p>
+              </div>
+              <Button 
+                className="animate-fadeIn bg-[#9b87f5] hover:bg-[#8B5CF6] text-white px-8 py-6 rounded-full text-lg font-medium flex items-center gap-2 mx-auto md:mx-0 md:inline-flex"
+              >
+                Modernize Your Operations <ArrowRight className="w-5 h-5" />
+              </Button>
+            </div>
           </div>
-          <Button 
-            className="bg-[#9b87f5] hover:bg-[#8B5CF6] text-white px-8 py-6 rounded-full text-lg font-medium flex items-center gap-2"
-          >
-            Modernize Your First Mile Operations <ArrowRight className="w-5 h-5" />
-          </Button>
+        </div>
+
+        {/* Image Indicators */}
+        <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 flex gap-2 z-20">
+          {images.map((_, index) => (
+            <button
+              key={index}
+              className={`w-2 h-2 rounded-full transition-all duration-300 ${
+                currentImage === index ? "bg-white w-4" : "bg-white/50"
+              }`}
+              onClick={() => setCurrentImage(index)}
+            />
+          ))}
         </div>
       </section>
 
@@ -179,3 +250,4 @@ const FirstMileSolutions = () => {
 };
 
 export default FirstMileSolutions;
+
