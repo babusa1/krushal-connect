@@ -1,3 +1,4 @@
+
 export const navigationMenu = [
   {
     title: "Services",
@@ -50,7 +51,7 @@ export const navigationMenu = [
   {
     title: "About Krushal",
     items: [
-      { title: "What we do", href: "#about" },
+      { title: "What We Do", href: "/about" },
       { title: "Our Leadership", href: "#leadership" },
       { title: "Careers", href: "#careers" },
     ],
