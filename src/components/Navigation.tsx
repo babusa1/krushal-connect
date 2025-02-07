@@ -38,6 +38,11 @@ const Navigation = () => {
           description: "Intelligent insights and analytics for enhanced decision making"
         },
         { 
+          title: "AI powered Agents", 
+          href: "#ai-agents",
+          description: "Intelligent agent solutions for enhanced operations"
+        },
+        { 
           title: "Cloud & Devops", 
           href: "#cloud-devops",
           description: "Modern cloud infrastructure and DevOps practices"
