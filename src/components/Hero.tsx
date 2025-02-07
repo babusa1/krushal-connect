@@ -8,7 +8,7 @@ const Hero = () => {
   
   const images = [
     {
-      url: "https://images.unsplash.com/photo-1465379944081-7f47de8d74ac", // Rural India with cattle farmer
+      url: "https://images.unsplash.com/photo-1595841696146-9c19408648f7", // Rural India farmer with cattle
       title: "First Mile Modernization",
       tagline: "Empowering Rural India with Dairy, Agritech, Financial Services & Healthcare Solutions"
     },
