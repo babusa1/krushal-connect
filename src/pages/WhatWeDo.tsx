@@ -15,9 +15,9 @@ const WhatWeDo = () => {
       <section className="relative min-h-[90vh] flex items-center justify-center py-20 mt-16">
         <div className="absolute inset-0 z-0">
           <div
-            className="absolute inset-0 bg-gradient-to-r from-[#673AB7]/80 to-[#8B5CF6]/80 z-10"
+            className="absolute inset-0 bg-gradient-to-r from-[#673AB7]/90 to-[#8B5CF6]/90 z-10"
             style={{
-              backgroundImage: `url('https://images.unsplash.com/photo-1542744173-8e7e53415bb0')`,
+              backgroundImage: `url('https://images.unsplash.com/photo-1504384308090-c894fdcc538d')`,
               backgroundSize: 'cover',
               backgroundPosition: 'center',
               backgroundBlendMode: 'overlay',
@@ -27,7 +27,7 @@ const WhatWeDo = () => {
         
         <div className="container relative z-20 px-4 mx-auto">
           <div className="max-w-4xl mx-auto text-center">
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+            <h1 className="text-4xl md:text-6xl font-bold text-[#9b87f5] mb-6 drop-shadow-lg">
               Transforming Industries Through Innovation
             </h1>
             <div className="bg-white/95 backdrop-blur-sm rounded-lg p-6 mt-8">
@@ -36,21 +36,21 @@ const WhatWeDo = () => {
               </p>
               <div className="grid md:grid-cols-3 gap-6 mt-8">
                 <div className="bg-[#F8F7FF] p-4 rounded-lg border border-[#E5DEFF]">
-                  <h3 className="font-semibold text-[#673AB7] mb-2">Rural Innovation</h3>
+                  <h3 className="font-semibold text-[#673AB7] mb-2">AI & Cloud Excellence</h3>
                   <p className="text-sm text-gray-600">
-                    Revolutionizing rural operations with AI-driven insights
+                    Advanced AI agents and cloud solutions
                   </p>
                 </div>
                 <div className="bg-[#F8F7FF] p-4 rounded-lg border border-[#E5DEFF]">
-                  <h3 className="font-semibold text-[#673AB7] mb-2">Tech Excellence</h3>
+                  <h3 className="font-semibold text-[#673AB7] mb-2">Digital Innovation</h3>
                   <p className="text-sm text-gray-600">
-                    Cloud, DevOps, and Mobile-First solutions
+                    Mobile-first and DevOps solutions
                   </p>
                 </div>
                 <div className="bg-[#F8F7FF] p-4 rounded-lg border border-[#E5DEFF]">
-                  <h3 className="font-semibold text-[#673AB7] mb-2">AI Innovation</h3>
+                  <h3 className="font-semibold text-[#673AB7] mb-2">Rural Tech</h3>
                   <p className="text-sm text-gray-600">
-                    Advanced AI Agents and Intelligent Insights
+                    Transforming rural operations
                   </p>
                 </div>
               </div>
