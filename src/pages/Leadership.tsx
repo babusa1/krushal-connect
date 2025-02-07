@@ -8,7 +8,7 @@ const Leadership = () => {
     {
       name: "Gauravharan",
       role: "CEO & MD",
-      linkedin: "https://linkedin.com/in/gauravharan",
+      linkedin: "https://linkedin.com/in/gaurav-haran-a746537",
       image: "/lovable-uploads/79a196b4-e97d-4308-a4e5-41fcec739a22.png"
     },
     {
