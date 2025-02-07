@@ -8,16 +8,16 @@ const Hero = () => {
   
   const images = [
     {
+      url: "https://images.unsplash.com/photo-1531297484001-80022131f5a1?auto=format&fit=crop&q=80",
+      title: "Tech Solutions at Speed"
+    },
+    {
       url: "https://images.unsplash.com/photo-1605810230434-7631ac76ec81?auto=format&fit=crop&q=80",
       title: "Rural Innovation"
     },
     {
       url: "https://images.unsplash.com/photo-1495107334309-fcf20504a5ab?auto=format&fit=crop&q=80",
       title: "Agricultural Technology"
-    },
-    {
-      url: "https://images.unsplash.com/photo-1542222780-b08589f1bf8c?auto=format&fit=crop&q=80",
-      title: "Digital Transformation"
     }
   ];
 
@@ -51,7 +51,7 @@ const Hero = () => {
         <div className="max-w-4xl mx-auto">
           <div className="text-left md:text-center">
             <h1 className="animate-fadeIn text-4xl md:text-6xl font-bold text-white mb-6">
-              Krushal: Empowering Rural India
+              Krushal - Delivering Solutions at Speed
             </h1>
             <p className="animate-fadeIn text-lg md:text-xl text-white/90 mb-8 delay-100">
               Transforming Rural Operations with AI-Powered Tech Solutions
