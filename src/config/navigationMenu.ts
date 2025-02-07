@@ -19,8 +19,8 @@ export const navigationMenu = [
         description: "Intelligent insights and analytics for enhanced decision making"
       },
       { 
-        title: "AI powered Agents", 
-        href: "#ai-agents",
+        title: "AI Powered Agents", 
+        href: "/ai-agents",
         description: "Intelligent agent solutions for enhanced operations"
       },
       { 

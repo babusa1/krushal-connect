@@ -13,6 +13,7 @@ import Expl_MobileService from "./pages/Expl_MobileService";
 import ExploreFirstMileServices from "./pages/ExploreFirstMileServices";
 import AIPoweredInsights from "./pages/AIPoweredInsights";
 import ExploreAIServices from "./pages/ExploreAIServices";
+import AIPoweredAgents from "./pages/AIPoweredAgents";
 
 const queryClient = new QueryClient();
 
@@ -31,6 +32,7 @@ const App = () => (
           <Route path="/explore-firstmile-services" element={<ExploreFirstMileServices />} />
           <Route path="/ai-insights" element={<AIPoweredInsights />} />
           <Route path="/explore-ai-services" element={<ExploreAIServices />} />
+          <Route path="/ai-agents" element={<AIPoweredAgents />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
