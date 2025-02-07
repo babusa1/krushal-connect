@@ -13,11 +13,11 @@ const ExploreServices = () => {
       
       {/* Hero Section with Background Image */}
       <section className="relative pt-20">
-        <div className="absolute inset-0 bg-gradient-to-br from-[#E5DEFF]/90 to-white/80 -z-10">
+        <div className="absolute inset-0 bg-gradient-to-br from-[#E5DEFF]/30 to-white/50 -z-10">
           <img 
             src="https://images.unsplash.com/photo-1488590528505-98d2b5aba04b" 
             alt="Digital Services"
-            className="w-full h-full object-cover opacity-40"
+            className="w-full h-full object-cover opacity-80"
           />
         </div>
         <div className="container mx-auto px-4 py-16">
