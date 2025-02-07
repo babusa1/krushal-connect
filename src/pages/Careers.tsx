@@ -17,6 +17,8 @@ const Careers = () => {
             src="https://images.unsplash.com/photo-1519389950473-47ba0277781c"
             alt="Team Collaboration"
             className="w-full h-[500px] object-cover"
+            loading="eager"
+            fetchPriority="high"
           />
         </div>
         <div className="container mx-auto px-4 py-24 relative z-20">
@@ -92,3 +94,4 @@ const Careers = () => {
 };
 
 export default Careers;
+
