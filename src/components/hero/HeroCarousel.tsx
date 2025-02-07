@@ -1,4 +1,3 @@
-
 import { useEffect, useState } from "react";
 import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -24,12 +23,17 @@ const HeroCarousel = ({ images, buttonConfig }: HeroCarouselProps) => {
   const [currentImage, setCurrentImage] = useState(0);
   const navigate = useNavigate();
 
+  // Add safety check for empty images array
+  if (!images || images.length === 0) {
+    return null;
+  }
+
   useEffect(() => {
     const timer = setInterval(() => {
       setCurrentImage((prev) => (prev + 1) % images.length);
     }, 5000);
     return () => clearInterval(timer);
-  }, []);
+  }, [images.length]); // Add images.length as dependency
 
   const defaultButtonConfig = {
     text: "Explore Services",
@@ -59,17 +63,14 @@ const HeroCarousel = ({ images, buttonConfig }: HeroCarouselProps) => {
         <div className="max-w-4xl mx-auto">
           <div className="text-left md:text-center">
             <h1 className="animate-fadeIn text-3xl md:text-5xl font-bold text-white mb-6">
-              {images[currentImage].title}
+              {images[currentImage]?.title}
             </h1>
             <p className="animate-fadeIn text-lg md:text-xl text-white/90 mb-8">
-              {images[currentImage].tagline}
+              {images[currentImage]?.tagline}
             </p>
             <div className="bg-gradient-to-r from-purple-600/90 to-indigo-600/90 backdrop-blur-sm rounded-lg p-8 mb-8 shadow-xl border border-white/10">
               <p className="text-white font-medium text-lg md:text-xl leading-relaxed">
-                Democratizing Digital Access with Mobile-First Solutions
-                <span className="block mt-2 text-white/90">
-                  Where Digital Transformation Meets Real-World Impact
-                </span>
+                Where Intelligent AI Agents Drive Industry Transformation and Excellence
               </p>
             </div>
             <Button 
