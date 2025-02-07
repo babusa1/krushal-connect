@@ -51,8 +51,8 @@ const ExploreAIServices = () => {
         <div className="absolute inset-0">
           <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/50 to-transparent z-10" />
           <img 
-            src="https://images.unsplash.com/photo-1485827404703-89b55fcc595e?auto=format&fit=crop&q=80"
-            alt="AI Data Analytics"
+            src="https://images.unsplash.com/photo-1498050108023-c5249f4df085"
+            alt="AI Technology"
             className="w-full h-[500px] object-cover"
           />
         </div>
