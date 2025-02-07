@@ -4,6 +4,7 @@ import Navigation from "@/components/Navigation";
 import HeroSection from "@/components/first-mile/HeroSection";
 import ServicesSection from "@/components/first-mile/ServicesSection";
 import CaseStudiesSection from "@/components/first-mile/CaseStudiesSection";
+import InsightsSection from "@/components/first-mile/InsightsSection";
 import CTASection from "@/components/first-mile/CTASection";
 
 const ExploreFirstMileServices = () => {
@@ -13,6 +14,7 @@ const ExploreFirstMileServices = () => {
       <HeroSection />
       <ServicesSection />
       <CaseStudiesSection />
+      <InsightsSection />
       <CTASection />
     </div>
   );
