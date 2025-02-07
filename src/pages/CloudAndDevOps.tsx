@@ -1,6 +1,5 @@
 import Navigation from "@/components/Navigation";
 import { Button } from "@/components/ui/button";
-import { ArrowRight } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 import { ArrowRight, Rocket, Percent, Scale, ShieldCheck, Gauge } from "lucide-react";
 
