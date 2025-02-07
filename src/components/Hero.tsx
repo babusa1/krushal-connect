@@ -8,17 +8,17 @@ const Hero = () => {
   
   const images = [
     {
-      url: "https://images.unsplash.com/photo-1531297484001-80022131f5a1?auto=format&fit=crop&q=80",
+      url: "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&q=80",
       title: "Tech Solutions at Speed",
       tagline: "Speed Powered by AI, Data, Low Code Frameworks"
     },
     {
-      url: "https://images.unsplash.com/photo-1605810230434-7631ac76ec81?auto=format&fit=crop&q=80",
+      url: "https://images.unsplash.com/photo-1642952469120-eed4b65104be?auto=format&fit=crop&q=80",
       title: "Rural Innovation",
       tagline: "Krushal: Modernizing the First Mile"
     },
     {
-      url: "https://images.unsplash.com/photo-1495107334309-fcf20504a5ab?auto=format&fit=crop&q=80",
+      url: "https://images.unsplash.com/photo-1580584126903-c17d41830450?auto=format&fit=crop&q=80",
       title: "Agricultural Technology",
       tagline: "Empowering Agriculture with Smart Technology Solutions"
     }
@@ -46,7 +46,7 @@ const Hero = () => {
             backgroundPosition: "center",
           }}
         >
-          <div className="absolute inset-0 bg-gradient-to-r from-[#0EA5E9]/95 to-transparent" />
+          <div className="absolute inset-0 bg-gradient-to-r from-[#6E59A5]/95 to-transparent" />
         </div>
       ))}
 
@@ -60,16 +60,16 @@ const Hero = () => {
               {images[currentImage].tagline}
             </p>
             <div className="bg-white/95 backdrop-blur-sm rounded-lg p-6 mb-8 shadow-lg">
-              <p className="text-[#0EA5E9] font-medium mb-4">
+              <p className="text-[#7E69AB] font-medium mb-4">
                 &gt;60% early detection of mastitis, Farm-level antibiotics signalling, and Reduce procurement cost of milk by Rs. 0.36 / liter of milk
               </p>
-              <div className="flex flex-col space-y-2 text-[#403E43] italic">
+              <div className="flex flex-col space-y-2 text-[#6E59A5] italic">
                 <p>"You're building AWS for Rural," - Foundation CEO</p>
                 <p>"Everyone in the industry needs this," - Dairy CEO</p>
               </div>
             </div>
             <Button 
-              className="animate-fadeIn bg-[#1EAEDB] hover:bg-[#0FA0CE] text-white px-8 py-6 rounded-full text-lg font-medium flex items-center gap-2 mx-auto md:mx-0 md:inline-flex transition-colors duration-300"
+              className="animate-fadeIn bg-[#9b87f5] hover:bg-[#8B5CF6] text-white px-8 py-6 rounded-full text-lg font-medium flex items-center gap-2 mx-auto md:mx-0 md:inline-flex transition-colors duration-300"
             >
               Modernize Your Operations <ArrowRight className="w-5 h-5" />
             </Button>
