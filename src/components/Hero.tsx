@@ -10,7 +10,7 @@ const Hero = () => {
     {
       url: "https://images.unsplash.com/photo-1531297484001-80022131f5a1?auto=format&fit=crop&q=80",
       title: "Tech Solutions at Speed",
-      tagline: "Transforming Rural Operations with AI-Powered Tech Solutions"
+      tagline: "SPEED Powered by AI, Data, Low Code Frameworks"
     },
     {
       url: "https://images.unsplash.com/photo-1605810230434-7631ac76ec81?auto=format&fit=crop&q=80",
