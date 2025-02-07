@@ -18,15 +18,6 @@ const Navigation = () => {
 
   const menu = [
     {
-      title: "Industries",
-      items: [
-        { title: "Dairy Operations", href: "#dairy" },
-        { title: "Insurance Services", href: "#insurance" },
-        { title: "Financial Solutions", href: "#finance" },
-        { title: "Agritech", href: "#agritech" },
-      ],
-    },
-    {
       title: "Services",
       items: [
         { title: "Digital Transformation", href: "#digital" },
@@ -42,6 +33,15 @@ const Navigation = () => {
         { title: "Tech Solutions at SPEED", href: "#tech-solutions" },
         { title: "Rural Insurance Platform", href: "#insurance-platform" },
         { title: "Digital Financial Services", href: "#financial-services" },
+      ],
+    },
+    {
+      title: "Industries",
+      items: [
+        { title: "Dairy Operations", href: "#dairy" },
+        { title: "Insurance Services", href: "#insurance" },
+        { title: "Financial Solutions", href: "#finance" },
+        { title: "Agritech", href: "#agritech" },
       ],
     },
     {
