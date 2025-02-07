@@ -125,19 +125,35 @@ const AboutKrushal = () => {
             <div className="bg-white p-8 rounded-xl shadow-sm border">
               <div className="grid md:grid-cols-2 gap-8">
                 <div className="text-left">
-                  <h3 className="text-xl font-semibold mb-4 text-[#673AB7]">Dairy First Mile Revolution</h3>
+                  <h3 className="text-xl font-semibold mb-4 text-[#673AB7]">First Mile Excellence</h3>
                   <ul className="space-y-3 text-gray-600">
-                    <li>• 60%+ early mastitis detection</li>
+                    <li>• 60%+ early mastitis detection in dairy</li>
                     <li>• Farm-level antibiotic signalling</li>
                     <li>• Rs. 0.36/liter cost reduction</li>
                   </ul>
                 </div>
                 <div className="text-left">
-                  <h3 className="text-xl font-semibold mb-4 text-[#673AB7]">Industry Recognition</h3>
+                  <h3 className="text-xl font-semibold mb-4 text-[#673AB7]">AI & Automation Impact</h3>
                   <ul className="space-y-3 text-gray-600">
-                    <li>• Recognized as "AWS for Rural"</li>
-                    <li>• Essential industry solution provider</li>
-                    <li>• Proven First Mile expertise</li>
+                    <li>• 40% reduction in processing time</li>
+                    <li>• 85% automation in routine tasks</li>
+                    <li>• 50% decrease in error rates</li>
+                  </ul>
+                </div>
+                <div className="text-left">
+                  <h3 className="text-xl font-semibold mb-4 text-[#673AB7]">Mobile Solutions</h3>
+                  <ul className="space-y-3 text-gray-600">
+                    <li>• 75% field operation efficiency gain</li>
+                    <li>• 90% user adoption rate</li>
+                    <li>• 65% faster data collection</li>
+                  </ul>
+                </div>
+                <div className="text-left">
+                  <h3 className="text-xl font-semibold mb-4 text-[#673AB7]">Cloud Transformation</h3>
+                  <ul className="space-y-3 text-gray-600">
+                    <li>• 99.9% system availability</li>
+                    <li>• 45% infrastructure cost reduction</li>
+                    <li>• 70% faster deployment cycles</li>
                   </ul>
                 </div>
               </div>
