@@ -21,7 +21,7 @@ const Hero = () => {
         <div className="max-w-4xl mx-auto">
           <div className="text-left md:text-center">
             <h1 className="animate-fadeIn text-4xl md:text-6xl font-bold text-white mb-6">
-              Krushal: Modernizing the First Mile
+              Krushal: Modernizing First Mile & Mass Customization
             </h1>
             <p className="animate-fadeIn text-lg md:text-xl text-white/90 mb-8 delay-100">
               Empowering Farmers, Transforming Rural Economies with AI-Powered Tech Solutions
