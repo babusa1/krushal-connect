@@ -90,11 +90,11 @@ const Navigation = () => {
 
   const MobileMenu = () => (
     <div 
-      className={`fixed inset-0 bg-white/95 backdrop-blur-md z-[100] transition-transform duration-300 ${
+      className={`fixed inset-0 bg-white z-[9999] transition-transform duration-300 ${
         isMenuOpen ? 'translate-x-0' : '-translate-x-full'
       }`}
     >
-      <div className="fixed top-0 left-0 right-0 flex justify-between items-center p-4 border-b bg-white/95 backdrop-blur-sm">
+      <div className="fixed top-0 left-0 right-0 flex justify-between items-center p-4 border-b bg-white">
         <div className="w-24">
           <img
             src="/lovable-uploads/9114eb0c-c8f9-4859-ac25-dfea74a21dbc.png"
@@ -105,29 +105,30 @@ const Navigation = () => {
         <button 
           onClick={toggleMenu} 
           className="p-2 rounded-full hover:bg-[#E5DEFF] transition-colors"
+          aria-label="Close menu"
         >
           <X className="h-6 w-6 text-[#6E59A5]" />
         </button>
       </div>
-      <div className="mt-16 h-[calc(100vh-4rem)] overflow-y-auto">
-        <div className="p-4 space-y-6">
+      <div className="mt-20 h-[calc(100vh-5rem)] overflow-y-auto pb-20">
+        <div className="p-4 space-y-8">
           {menu.map((section) => (
-            <div key={section.title} className="space-y-3">
+            <div key={section.title} className="space-y-4">
               <h3 className="text-lg font-semibold text-[#6E59A5] px-2">
                 {section.title}
               </h3>
-              <div className="space-y-1">
+              <div className="space-y-2">
                 {section.items.map((item) => (
                   <button
                     key={item.title}
                     onClick={() => handleNavigation(item.href)}
-                    className="w-full text-left p-2 rounded-lg hover:bg-[#E5DEFF] transition-colors group"
+                    className="w-full text-left p-3 rounded-lg hover:bg-[#E5DEFF] transition-colors group"
                   >
                     <span className="text-[#6E59A5] group-hover:text-[#9b87f5] font-medium">
                       {item.title}
                     </span>
                     {item.description && (
-                      <p className="text-sm text-gray-500 mt-1 group-hover:text-[#7E69AB]">
+                      <p className="text-sm text-gray-500 mt-2 group-hover:text-[#7E69AB] line-clamp-2">
                         {item.description}
                       </p>
                     )}
@@ -142,8 +143,8 @@ const Navigation = () => {
   );
 
   return (
-    <NavigationMenu className="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-sm border-b">
-      <div className="container mx-auto py-2 flex justify-between items-center">
+    <NavigationMenu className="fixed top-0 left-0 right-0 z-[100] bg-white border-b shadow-sm">
+      <div className="container mx-auto py-3 flex justify-between items-center">
         <div className="w-32">
           <img
             src="/lovable-uploads/9114eb0c-c8f9-4859-ac25-dfea74a21dbc.png"
@@ -155,6 +156,7 @@ const Navigation = () => {
           <button 
             onClick={toggleMenu} 
             className="p-2 rounded-full hover:bg-[#E5DEFF] transition-colors"
+            aria-label="Open menu"
           >
             <Menu className="h-6 w-6 text-[#6E59A5]" />
           </button>
@@ -166,8 +168,8 @@ const Navigation = () => {
                   {section.title}
                 </NavigationMenuTrigger>
                 <NavigationMenuContent>
-                  <div className="w-[500px] p-4 md:grid-cols-2 bg-white rounded-lg shadow-lg border border-[#E5DEFF]">
-                    <div className="mb-2 text-sm font-medium text-[#7E69AB]">
+                  <div className="w-[500px] p-4 md:grid-cols-2 bg-white rounded-lg shadow-lg">
+                    <div className="mb-3 text-sm font-medium text-[#7E69AB]">
                       {section.title}
                     </div>
                     <ul className="grid gap-3 md:grid-cols-2">
@@ -187,7 +189,7 @@ const Navigation = () => {
                                 {item.title}
                               </div>
                               {item.description && (
-                                <p className="mt-1 text-xs leading-relaxed text-gray-500 line-clamp-2 group-hover:text-[#7E69AB]">
+                                <p className="mt-2 text-xs leading-relaxed text-gray-500 line-clamp-2 group-hover:text-[#7E69AB]">
                                   {item.description}
                                 </p>
                               )}
@@ -209,3 +211,4 @@ const Navigation = () => {
 };
 
 export default Navigation;
+
