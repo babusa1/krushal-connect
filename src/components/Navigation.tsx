@@ -20,10 +20,31 @@ const Navigation = () => {
     {
       title: "Services",
       items: [
-        { title: "Digital Transformation", href: "#digital" },
-        { title: "Data Analytics", href: "#analytics" },
-        { title: "Process Automation", href: "#automation" },
-        { title: "Rural Tech Solutions", href: "#rural-tech" },
+        { 
+          title: "First Mile Solutions",
+          href: "#first-mile",
+          description: "Extension Services, Procurement Operations, Field Operations, Risk Management, First Mile Data & Insights"
+        },
+        { 
+          title: "AI Powered Insights", 
+          href: "#ai-insights",
+          description: "Leverage artificial intelligence for actionable business insights"
+        },
+        { 
+          title: "Mobile First Digital", 
+          href: "#mobile-digital",
+          description: "Digital solutions optimized for mobile experiences"
+        },
+        { 
+          title: "AI powered Agents", 
+          href: "#ai-agents",
+          description: "Intelligent agent solutions for enhanced operations"
+        },
+        { 
+          title: "Cloud & Devops", 
+          href: "#cloud-devops",
+          description: "Modern cloud infrastructure and DevOps practices"
+        },
       ],
     },
     {
@@ -83,6 +104,11 @@ const Navigation = () => {
                     onClick={toggleMenu}
                   >
                     {item.title}
+                    {item.description && (
+                      <span className="block text-xs text-gray-500 mt-1">
+                        {item.description}
+                      </span>
+                    )}
                   </a>
                 </li>
               ))}
@@ -133,9 +159,11 @@ const Navigation = () => {
                               <div className="text-sm font-medium leading-none group-hover:text-primary">
                                 {item.title}
                               </div>
-                              <p className="mt-1 text-xs leading-relaxed text-gray-500 line-clamp-2 group-hover:text-primary/70">
-                                Explore {item.title.toLowerCase()} solutions and services
-                              </p>
+                              {item.description && (
+                                <p className="mt-1 text-xs leading-relaxed text-gray-500 line-clamp-2 group-hover:text-primary/70">
+                                  {item.description}
+                                </p>
+                              )}
                             </a>
                           </NavigationMenuLink>
                         </li>
