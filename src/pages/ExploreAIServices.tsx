@@ -48,10 +48,10 @@ const ExploreAIServices = () => {
       <Navigation />
       
       {/* Hero Section */}
-      <section className="relative py-20 mt-16 bg-gradient-to-br from-[#E5DEFF] to-white">
+      <section className="relative py-20 mt-16 bg-gradient-to-br from-blue-50 to-white">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
-            <h1 className="text-4xl md:text-5xl font-bold text-[#6E59A5] mb-6 animate-fade-in">
+            <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6 animate-fade-in">
               Transform Data into Your Strategic Advantage with Krushal's AI-Powered Insights
             </h1>
             <p className="text-lg text-gray-700 mb-8 animate-fade-in">
@@ -59,7 +59,7 @@ const ExploreAIServices = () => {
             </p>
             <Button 
               onClick={() => navigate("/contact")}
-              className="bg-[#9b87f5] hover:bg-[#8B5CF6] text-white px-8 py-6 text-lg rounded-full animate-fade-in"
+              className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-6 text-lg rounded-full animate-fade-in"
             >
               Request a Consultation
             </Button>
@@ -70,7 +70,7 @@ const ExploreAIServices = () => {
       {/* Services Overview */}
       <section className="py-16">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold text-center text-[#6E59A5] mb-12">
+          <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">
             Krushal: AI-Powered Insight Services
           </h2>
           <p className="text-lg text-gray-700 text-center max-w-3xl mx-auto mb-16">
@@ -79,17 +79,17 @@ const ExploreAIServices = () => {
           
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {services.map((service, index) => (
-              <Card key={index} className="hover:shadow-lg transition-shadow duration-300">
+              <Card key={index} className="hover:shadow-lg transition-shadow duration-300 group">
                 <CardContent className="p-6">
-                  <div className="mb-4 w-12 h-12 bg-[#E5DEFF] rounded-full flex items-center justify-center">
-                    <service.icon className="w-6 h-6 text-[#9b87f5]" />
+                  <div className="mb-4 w-12 h-12 bg-blue-50 rounded-full flex items-center justify-center group-hover:bg-blue-100 transition-colors">
+                    <service.icon className="w-6 h-6 text-blue-600" />
                   </div>
-                  <h3 className="text-xl font-semibold text-[#6E59A5] mb-4">{service.title}</h3>
+                  <h3 className="text-xl font-semibold text-gray-900 mb-4">{service.title}</h3>
                   <p className="text-gray-600 mb-6">{service.description}</p>
                   <ul className="space-y-2">
                     {service.bullets.map((bullet, idx) => (
                       <li key={idx} className="text-sm text-gray-600 flex items-start gap-2">
-                        <ChartLine className="w-4 h-4 text-[#9b87f5] mt-1 flex-shrink-0" />
+                        <ChartLine className="w-4 h-4 text-blue-600 mt-1 flex-shrink-0" />
                         <span>{bullet}</span>
                       </li>
                     ))}
@@ -102,9 +102,9 @@ const ExploreAIServices = () => {
       </section>
 
       {/* Impact Section */}
-      <section className="py-16 bg-[#F8F7FF]">
+      <section className="py-16 bg-gray-50">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold text-center text-[#6E59A5] mb-8">
+          <h2 className="text-3xl font-bold text-center text-gray-900 mb-8">
             Impact: Strategic Advantage, Data-Driven Success
           </h2>
           <div className="max-w-3xl mx-auto text-center">
@@ -116,9 +116,9 @@ const ExploreAIServices = () => {
       </section>
 
       {/* Call to Action */}
-      <section className="py-16 bg-gradient-to-br from-[#E5DEFF] to-white">
+      <section className="py-16 bg-gradient-to-br from-blue-50 to-white">
         <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl font-bold text-[#6E59A5] mb-6">
+          <h2 className="text-3xl font-bold text-gray-900 mb-6">
             Ready to Unlock Your Data's Potential?
           </h2>
           <p className="text-lg text-gray-700 mb-8 max-w-2xl mx-auto">
@@ -126,7 +126,7 @@ const ExploreAIServices = () => {
           </p>
           <Button 
             onClick={() => navigate("/contact")}
-            className="bg-[#9b87f5] hover:bg-[#8B5CF6] text-white px-8 py-6 text-lg rounded-full"
+            className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-6 text-lg rounded-full"
           >
             Get a Free Consultation
           </Button>
