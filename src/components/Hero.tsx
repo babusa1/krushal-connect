@@ -1,3 +1,4 @@
+
 import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useEffect, useState } from "react";
@@ -9,7 +10,7 @@ const Hero = () => {
     {
       url: "https://images.unsplash.com/photo-1595841696146-9c19408648f7?auto=format&fit=crop&w=2000&q=80", // Rural India farmer with cattle
       title: "First Mile Modernization",
-      tagline: "Empowering Rural India with Dairy, Agritech, Financial Services & Healthcare Solutions"
+      tagline: "Empowering Underserved Markets with Dairy, Agritech, Financial Services & Healthcare Solutions"
     },
     {
       url: "https://images.unsplash.com/photo-1523240795612-9a054b0db644",
