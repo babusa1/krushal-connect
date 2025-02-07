@@ -88,19 +88,19 @@ const Navigation = () => {
           />
         </div>
         <button onClick={toggleMenu} className="p-2">
-          <X className="h-6 w-6" />
+          <X className="h-6 w-6 text-[#9b87f5] hover:text-[#7E69AB] transition-colors" />
         </button>
       </div>
       <div className="p-4">
         {menu.map((section) => (
           <div key={section.title} className="mb-6">
-            <h3 className="text-lg font-semibold mb-2">{section.title}</h3>
+            <h3 className="text-lg font-semibold mb-2 text-[#6E59A5]">{section.title}</h3>
             <ul className="space-y-2">
               {section.items.map((item) => (
                 <li key={item.title}>
                   <a 
                     href={item.href}
-                    className="block p-2 text-gray-600 hover:text-primary hover:bg-gray-50 rounded-md"
+                    className="block p-2 text-gray-600 hover:text-[#9b87f5] hover:bg-[#E5DEFF] rounded-md transition-colors"
                     onClick={toggleMenu}
                   >
                     {item.title}
@@ -131,18 +131,18 @@ const Navigation = () => {
         </div>
         {isMobile ? (
           <button onClick={toggleMenu} className="p-2">
-            <Menu className="h-6 w-6" />
+            <Menu className="h-6 w-6 text-[#9b87f5] hover:text-[#7E69AB] transition-colors" />
           </button>
         ) : (
           <NavigationMenuList className="flex-1 justify-end">
             {menu.map((section) => (
               <NavigationMenuItem key={section.title}>
-                <NavigationMenuTrigger className="bg-transparent hover:bg-gray-50 data-[state=open]:bg-gray-50 text-gray-700">
+                <NavigationMenuTrigger className="bg-transparent hover:bg-[#E5DEFF] data-[state=open]:bg-[#E5DEFF] text-[#6E59A5] hover:text-[#9b87f5]">
                   {section.title}
                 </NavigationMenuTrigger>
                 <NavigationMenuContent>
-                  <div className="w-[500px] p-4 bg-white rounded-lg shadow-lg border border-gray-100">
-                    <div className="mb-2 text-sm font-medium text-primary/80">{section.title}</div>
+                  <div className="w-[500px] p-4 bg-white rounded-lg shadow-lg border border-[#E5DEFF]">
+                    <div className="mb-2 text-sm font-medium text-[#7E69AB]">{section.title}</div>
                     <ul className="grid gap-3 md:grid-cols-2">
                       {section.items.map((item) => (
                         <li key={item.title}>
@@ -151,16 +151,16 @@ const Navigation = () => {
                               href={item.href}
                               className={cn(
                                 "block select-none rounded-md p-3 leading-none no-underline outline-none transition-all duration-200",
-                                "hover:bg-gray-50 hover:text-primary",
-                                "focus:bg-gray-50 focus:text-primary",
+                                "hover:bg-[#E5DEFF] hover:text-[#9b87f5]",
+                                "focus:bg-[#E5DEFF] focus:text-[#9b87f5]",
                                 "group"
                               )}
                             >
-                              <div className="text-sm font-medium leading-none group-hover:text-primary">
+                              <div className="text-sm font-medium leading-none group-hover:text-[#9b87f5]">
                                 {item.title}
                               </div>
                               {item.description && (
-                                <p className="mt-1 text-xs leading-relaxed text-gray-500 line-clamp-2 group-hover:text-primary/70">
+                                <p className="mt-1 text-xs leading-relaxed text-gray-500 line-clamp-2 group-hover:text-[#7E69AB]">
                                   {item.description}
                                 </p>
                               )}
@@ -182,3 +182,4 @@ const Navigation = () => {
 };
 
 export default Navigation;
+
