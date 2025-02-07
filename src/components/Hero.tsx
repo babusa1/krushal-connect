@@ -1,3 +1,4 @@
+
 import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useEffect, useState } from "react";
@@ -7,6 +8,11 @@ const Hero = () => {
   
   const images = [
     {
+      url: "https://images.unsplash.com/photo-1465379944081-7f47de8d74ac", // Rural India with cattle farmer
+      title: "First Mile Modernization",
+      tagline: "Empowering Rural India with Dairy, Agritech, Financial Services & Healthcare Solutions"
+    },
+    {
       url: "https://images.unsplash.com/photo-1523240795612-9a054b0db644",
       title: "Mobile First Digital",
       tagline: "Human-Centric Solutions, Seamless Experiences"
@@ -15,11 +21,6 @@ const Hero = () => {
       url: "https://images.unsplash.com/photo-1518770660439-4636190af475",
       title: "Insights and Data",
       tagline: "Unlocking the Power of Unified Data"
-    },
-    {
-      url: "https://images.unsplash.com/photo-1465379944081-7f47de8d74ac", // Rural India with cattle farmer
-      title: "First Mile Modernization",
-      tagline: "Empowering Rural India with Dairy, Agritech, Financial Services & Healthcare Solutions"
     },
     {
       url: "https://images.unsplash.com/photo-1483058712412-4245e9b90334",
