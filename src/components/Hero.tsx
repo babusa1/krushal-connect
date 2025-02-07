@@ -1,4 +1,3 @@
-
 import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useEffect, useState } from "react";
@@ -19,7 +18,7 @@ const Hero = () => {
       tagline: "Unlocking the Power of Unified Data"
     },
     {
-      // Using a grid of 4 images for First Mile representation
+      // Using more relevant images for First Mile representation
       url: "https://images.unsplash.com/photo-1585598367839-2ef7bf79a82d", // Modern dairy farm
       title: "First Mile Modernization",
       tagline: "Revolutionizing Rural Connect with Innovative Tech Solutions"
@@ -51,11 +50,11 @@ const Hero = () => {
             backgroundImage: index === 2 ? `
               linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
               url('${images[2].url}'), /* Modern dairy farm */
-              url('https://images.unsplash.com/photo-1628352081506-83c43123ed6d'), /* Smart agriculture/AgriTech */
-              url('https://images.unsplash.com/photo-1554224155-6726b3ff858f'), /* Insurance/Financial services */
-              url('https://images.unsplash.com/photo-1601597111158-2fceff292cdc')  /* Rural banking */
+              url('https://images.unsplash.com/photo-1595841696146-9c19408648f7'), /* Smart agriculture/AgriTech */
+              url('https://images.unsplash.com/photo-1601597111158-2fceff292cdc'), /* Rural banking */
+              url('https://images.unsplash.com/photo-1553877522-43269d4ea984')  /* Insurance services */
             ` : `url('${image.url}')`,
-            backgroundSize: index === 2 ? 'cover, 50% 50%, 50% 50%, 50% 50%, 50% 50%' : 'cover',
+            backgroundSize: index === 2 ? 'cover, 50% 50%, 50% 50%, 50% 50%' : 'cover',
             backgroundPosition: index === 2 ? 'center, top left, top right, bottom left, bottom right' : 'center',
             backgroundRepeat: 'no-repeat',
             ...(index === 2 && {
