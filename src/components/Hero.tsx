@@ -8,19 +8,24 @@ const Hero = () => {
   
   const images = [
     {
-      url: "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b",
+      url: "https://images.unsplash.com/photo-1590668156425-3f2138b96b04",
       title: "Mobile First Digital",
       tagline: "Digital Transformation for Rural India"
     },
     {
-      url: "https://images.unsplash.com/photo-1518770660439-4636190af475",
-      title: "AI & Data Analytics",
-      tagline: "Intelligent Solutions Powered by AI and Data"
+      url: "https://images.unsplash.com/photo-1559441552-f4a23c4f609b",
+      title: "First Mile Dairy Innovation",
+      tagline: "Revolutionizing Rural Dairy Operations with Smart Solutions"
     },
     {
-      url: "https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7",
-      title: "First Mile Innovation",
-      tagline: "Integrated Solutions for Agritech, Insurance, Banking & Dairy"
+      url: "https://images.unsplash.com/photo-1495107334309-fcf20504a5ab",
+      title: "AgriTech & Banking",
+      tagline: "Integrated Financial Solutions for Agriculture"
+    },
+    {
+      url: "https://images.unsplash.com/photo-1450101499163-c8848c66ca85",
+      title: "Insurance Tech",
+      tagline: "Secure Coverage for Rural Prosperity"
     }
   ];
 
