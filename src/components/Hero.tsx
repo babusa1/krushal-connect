@@ -1,30 +1,60 @@
 
 import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { useEffect, useState } from "react";
 
 const Hero = () => {
+  const [currentImage, setCurrentImage] = useState(0);
+  
+  const images = [
+    {
+      url: "https://images.unsplash.com/photo-1605810230434-7631ac76ec81?auto=format&fit=crop&q=80",
+      title: "Rural Innovation"
+    },
+    {
+      url: "https://images.unsplash.com/photo-1495107334309-fcf20504a5ab?auto=format&fit=crop&q=80",
+      title: "Agricultural Technology"
+    },
+    {
+      url: "https://images.unsplash.com/photo-1542222780-b08589f1bf8c?auto=format&fit=crop&q=80",
+      title: "Digital Transformation"
+    }
+  ];
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setCurrentImage((prev) => (prev + 1) % images.length);
+    }, 5000);
+    return () => clearInterval(timer);
+  }, []);
+
   return (
-    <section className="relative min-h-[90vh] flex items-center justify-center py-20">
+    <section className="relative min-h-[90vh] flex items-center justify-center py-20 mt-16">
       {/* Background Image with Overlay */}
-      <div 
-        className="absolute inset-0 z-0"
-        style={{
-          backgroundImage: "url('https://images.unsplash.com/photo-1605810230434-7631ac76ec81?auto=format&fit=crop&q=80')",
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-        }}
-      >
-        <div className="absolute inset-0 bg-gradient-to-r from-[#0EA5E9]/95 to-transparent" />
-      </div>
+      {images.map((image, index) => (
+        <div
+          key={image.url}
+          className={`absolute inset-0 z-0 transition-opacity duration-1000 ${
+            currentImage === index ? "opacity-100" : "opacity-0"
+          }`}
+          style={{
+            backgroundImage: `url('${image.url}')`,
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+          }}
+        >
+          <div className="absolute inset-0 bg-gradient-to-r from-[#0EA5E9]/95 to-transparent" />
+        </div>
+      ))}
 
       <div className="container px-4 mx-auto relative z-10">
         <div className="max-w-4xl mx-auto">
           <div className="text-left md:text-center">
             <h1 className="animate-fadeIn text-4xl md:text-6xl font-bold text-white mb-6">
-              Krushal: Modernizing First Mile & Mass Customization
+              Krushal: Empowering Rural India
             </h1>
             <p className="animate-fadeIn text-lg md:text-xl text-white/90 mb-8 delay-100">
-              Empowering Farmers, Transforming Rural Economies with AI-Powered Tech Solutions
+              Transforming Rural Operations with AI-Powered Tech Solutions
             </p>
             <div className="bg-white/95 backdrop-blur-sm rounded-lg p-6 mb-8 shadow-lg">
               <p className="text-[#0EA5E9] font-medium mb-4">
@@ -42,6 +72,19 @@ const Hero = () => {
             </Button>
           </div>
         </div>
+      </div>
+
+      {/* Image Indicators */}
+      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 flex gap-2 z-20">
+        {images.map((_, index) => (
+          <button
+            key={index}
+            className={`w-2 h-2 rounded-full transition-all duration-300 ${
+              currentImage === index ? "bg-white w-4" : "bg-white/50"
+            }`}
+            onClick={() => setCurrentImage(index)}
+          />
+        ))}
       </div>
     </section>
   );
