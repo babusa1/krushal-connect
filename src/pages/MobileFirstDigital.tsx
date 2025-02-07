@@ -1,48 +1,40 @@
-
 import { Button } from "@/components/ui/button";
 import Navigation from "@/components/Navigation";
+import HeroCarousel from "@/components/hero/HeroCarousel";
 import { ArrowRight, Smartphone, Globe, Users, ShieldCheck, Code, Container, MessageSquare, Database } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 
 const MobileFirstDigital = () => {
   const navigate = useNavigate();
 
+  const carouselImages = [
+    {
+      url: "/lovable-uploads/9114eb0c-c8f9-4859-ac25-dfea74a21dbc.png",
+      title: "Modern Digital Solutions for Tomorrow's Challenges",
+      tagline: "Building seamless experiences across web, mobile, and voice platforms"
+    },
+    {
+      url: "/lovable-uploads/9114eb0c-c8f9-4859-ac25-dfea74a21dbc.png",
+      title: "Web Application Development",
+      tagline: "Create powerful, responsive web applications that drive business growth"
+    },
+    {
+      url: "/lovable-uploads/9114eb0c-c8f9-4859-ac25-dfea74a21dbc.png",
+      title: "Mobile Application Development",
+      tagline: "Native and cross-platform solutions for iOS and Android"
+    },
+    {
+      url: "/lovable-uploads/9114eb0c-c8f9-4859-ac25-dfea74a21dbc.png",
+      title: "Voice Application Development",
+      tagline: "Next-generation voice interfaces for Alexa and Google Assistant"
+    }
+  ];
+
   return (
     <div className="min-h-screen bg-white">
       <Navigation />
       
-      {/* Hero Section */}
-      <section className="relative pt-20 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-[#E5DEFF] to-white/50 -z-10" />
-        <div className="container mx-auto px-4 py-16 md:py-24">
-          <div className="max-w-4xl mx-auto text-center">
-            <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
-              Transforming Ideas into Engaging Digital Experiences
-            </h1>
-            <p className="text-xl text-gray-600 mb-8">
-              We build web, mobile, and voice applications that drive business growth through enriching, human-centered design.
-            </p>
-            <p className="text-lg text-gray-600 mb-12">
-              Krushal helps clients create seamless, intuitive digital solutions that prioritize user experience and deliver measurable business results, whether B2B or B2C.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button 
-                onClick={() => navigate("/contact")}
-                className="bg-[#9b87f5] hover:bg-[#8B5CF6] text-white px-8 py-6 text-lg"
-              >
-                Get a Free Consultation <ArrowRight className="ml-2" />
-              </Button>
-              <Button 
-                onClick={() => navigate("/explore-services")}
-                variant="outline"
-                className="border-[#9b87f5] text-[#9b87f5] hover:bg-[#E5DEFF] px-8 py-6 text-lg"
-              >
-                Explore Our Services <ArrowRight className="ml-2" />
-              </Button>
-            </div>
-          </div>
-        </div>
-      </section>
+      <HeroCarousel images={carouselImages} />
 
       {/* Performance Statistics Section */}
       <section className="py-16 bg-[#F6F6F7]">
