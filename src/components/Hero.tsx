@@ -18,7 +18,8 @@ const Hero = () => {
       tagline: "Unlocking the Power of Unified Data"
     },
     {
-      url: "https://images.unsplash.com/photo-1465379944081-7f47de8d74ac",
+      // Using a grid of 4 images for First Mile representation
+      url: "https://images.unsplash.com/photo-1516253593875-bd7ba052fbc5",
       title: "First Mile Modernization",
       tagline: "Revolutionizing Rural Connect with Innovative Tech Solutions"
     },
@@ -46,9 +47,16 @@ const Hero = () => {
             currentImage === index ? "opacity-100" : "opacity-0"
           }`}
           style={{
-            backgroundImage: `url('${image.url}')`,
-            backgroundSize: "cover",
-            backgroundPosition: "center",
+            backgroundImage: index === 2 ? `
+              linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+              url('https://images.unsplash.com/photo-1516253593875-bd7ba052fbc5'), /* Dairy */
+              url('https://images.unsplash.com/photo-1595344416261-3b2b891f3b66'), /* Agritech */
+              url('https://images.unsplash.com/photo-1563986768494-4dee2763ff3f'), /* Insurance */
+              url('https://images.unsplash.com/photo-1501167786227-4cba60f6d58f')  /* Banking */
+            ` : `url('${image.url}')`,
+            backgroundSize: index === 2 ? '50% 50%' : 'cover',
+            backgroundPosition: index === 2 ? 'top left, top right, bottom left, bottom right' : 'center',
+            backgroundRepeat: 'no-repeat'
           }}
         >
           <div className="absolute inset-0 bg-gradient-to-r from-[#6E59A5]/95 to-transparent" />
