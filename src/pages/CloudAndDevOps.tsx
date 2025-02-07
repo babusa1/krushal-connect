@@ -9,19 +9,19 @@ const CloudAndDevOps = () => {
 
   const carouselImages = [
     {
-      url: "https://images.unsplash.com/photo-1451187580459-43490279c0fa",
+      url: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31",
       title: "Enterprise Cloud Solutions",
-      tagline: "Transform your business with secure, scalable cloud infrastructure"
+      tagline: "Empowering Digital Excellence Through Cloud Innovation & DevOps Mastery"
     },
     {
-      url: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31",
+      url: "https://images.unsplash.com/photo-1451187580459-43490279c0fa",
       title: "DevOps Excellence",
-      tagline: "Automate, deploy, and scale with confidence"
+      tagline: "Accelerate Your Digital Transformation with Modern Cloud & DevOps Practices"
     },
     {
       url: "https://images.unsplash.com/photo-1563986768494-4dee2763ff3f",
       title: "Cloud Migration & Optimization",
-      tagline: "Seamless transitions to modern cloud architecture"
+      tagline: "Seamless Cloud Migration and Infrastructure Optimization for Business Growth"
     }
   ];
 
