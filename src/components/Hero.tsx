@@ -19,7 +19,7 @@ const Hero = () => {
     },
     {
       // Using a grid of 4 images for First Mile representation
-      url: "https://images.unsplash.com/photo-1516253593875-bd7ba052fbc5",
+      url: "https://images.unsplash.com/photo-1585598367839-2ef7bf79a82d", // Modern dairy farm
       title: "First Mile Modernization",
       tagline: "Revolutionizing Rural Connect with Innovative Tech Solutions"
     },
@@ -49,16 +49,15 @@ const Hero = () => {
           style={{
             backgroundImage: index === 2 ? `
               linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
-              url('${images[2].url}'),
-              url('https://images.unsplash.com/photo-1595344416261-3b2b891f3b66'),
-              url('https://images.unsplash.com/photo-1563986768494-4dee2763ff3f'),
-              url('https://images.unsplash.com/photo-1501167786227-4cba60f6d58f')
+              url('${images[2].url}'), /* Modern dairy farm */
+              url('https://images.unsplash.com/photo-1628352081506-83c43123ed6d'), /* Smart agriculture/AgriTech */
+              url('https://images.unsplash.com/photo-1554224155-6726b3ff858f'), /* Insurance/Financial services */
+              url('https://images.unsplash.com/photo-1601597111158-2fceff292cdc')  /* Rural banking */
             ` : `url('${image.url}')`,
             backgroundSize: index === 2 ? 'cover, 50% 50%, 50% 50%, 50% 50%, 50% 50%' : 'cover',
             backgroundPosition: index === 2 ? 'center, top left, top right, bottom left, bottom right' : 'center',
             backgroundRepeat: 'no-repeat',
             ...(index === 2 && {
-              // Create a grid effect for the third slide
               backgroundBlendMode: 'overlay, normal, normal, normal, normal',
               backgroundAttachment: 'fixed'
             })
