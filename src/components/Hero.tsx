@@ -1,9 +1,11 @@
 import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 const Hero = () => {
   const [currentImage, setCurrentImage] = useState(0);
+  const navigate = useNavigate();
   
   const images = [
     {
@@ -93,6 +95,7 @@ const Hero = () => {
             </div>
             <Button 
               className="animate-fadeIn bg-[#9b87f5] hover:bg-[#8B5CF6] text-white px-8 py-6 rounded-full text-lg font-medium flex items-center gap-2 mx-auto md:mx-0 md:inline-flex transition-colors duration-300"
+              onClick={() => navigate('/first-mile-solutions')}
             >
               Modernize Your Operations <ArrowRight className="w-5 h-5" />
             </Button>
