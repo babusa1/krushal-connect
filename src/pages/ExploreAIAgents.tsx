@@ -25,8 +25,16 @@ const ExploreAIAgents = () => {
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 animate-fadeIn">
               Krushal: Pioneering Intelligent AI Agents Across Industries
             </h1>
-            <p className="text-xl md:text-2xl text-gray-200 max-w-2xl mx-auto mb-12 animate-fadeIn">
-              Unleash the transformative power of Artificial Intelligence with Krushal's cutting-edge AI Agent development services. We create bespoke AI Agents tailored to your unique needs across various sectors, delivering intelligent automation and game-changing results.
+          </div>
+        </div>
+      </section>
+
+      {/* Introduction Section */}
+      <section className="py-16 bg-white">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto text-center">
+            <p className="text-xl md:text-2xl text-gray-700 leading-relaxed animate-fadeIn">
+              Experience the next evolution in business transformation with Krushal's state-of-the-art AI Agent development services. Our team crafts sophisticated, custom-built AI Agents that seamlessly integrate with your operations, delivering unprecedented levels of automation and efficiency across diverse industries. From predictive analytics to intelligent decision-making, we're here to revolutionize how your business operates.
             </p>
           </div>
         </div>
