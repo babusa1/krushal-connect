@@ -10,11 +10,17 @@ interface CarouselImage {
   tagline: string;
 }
 
-interface HeroCarouselProps {
-  images: CarouselImage[];
+interface ButtonConfig {
+  text: string;
+  onClick: () => void;
 }
 
-const HeroCarousel = ({ images }: HeroCarouselProps) => {
+interface HeroCarouselProps {
+  images: CarouselImage[];
+  buttonConfig?: ButtonConfig;
+}
+
+const HeroCarousel = ({ images, buttonConfig }: HeroCarouselProps) => {
   const [currentImage, setCurrentImage] = useState(0);
   const navigate = useNavigate();
 
@@ -24,6 +30,13 @@ const HeroCarousel = ({ images }: HeroCarouselProps) => {
     }, 5000);
     return () => clearInterval(timer);
   }, []);
+
+  const defaultButtonConfig = {
+    text: "Explore Services",
+    onClick: () => navigate("/explore-mobile-services")
+  };
+
+  const activeButtonConfig = buttonConfig || defaultButtonConfig;
 
   return (
     <section className="relative min-h-[90vh] flex items-center justify-center py-20 mt-16">
@@ -60,10 +73,10 @@ const HeroCarousel = ({ images }: HeroCarouselProps) => {
               </p>
             </div>
             <Button 
-              onClick={() => navigate("/explore-services")}
+              onClick={activeButtonConfig.onClick}
               className="animate-fadeIn bg-[#9b87f5] hover:bg-[#8B5CF6] text-white px-8 py-6 rounded-full text-lg font-medium flex items-center gap-2 mx-auto md:mx-0 md:inline-flex"
             >
-              Explore Services <ArrowRight className="w-5 h-5" />
+              {activeButtonConfig.text} <ArrowRight className="w-5 h-5" />
             </Button>
           </div>
         </div>
@@ -85,4 +98,3 @@ const HeroCarousel = ({ images }: HeroCarouselProps) => {
 };
 
 export default HeroCarousel;
-

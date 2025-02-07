@@ -46,7 +46,13 @@ const FirstMileSolutions = () => {
   return (
     <div className="min-h-screen bg-white overflow-x-hidden">
       <Navigation />
-      <HeroCarousel images={images} />
+      <HeroCarousel 
+        images={images}
+        buttonConfig={{
+          text: "Explore Services",
+          onClick: () => navigate("/explore-firstmile-services")
+        }}
+      />
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <MarketOpportunity />
         <SolutionSection />

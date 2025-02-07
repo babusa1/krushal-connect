@@ -1,4 +1,3 @@
-
 import { Button } from "@/components/ui/button";
 import Navigation from "@/components/Navigation";
 import HeroCarousel from "@/components/hero/HeroCarousel";
@@ -35,7 +34,13 @@ const MobileFirstDigital = () => {
     <div className="min-h-screen bg-white">
       <Navigation />
       
-      <HeroCarousel images={carouselImages} />
+      <HeroCarousel 
+        images={carouselImages}
+        buttonConfig={{
+          text: "Explore Services",
+          onClick: () => navigate("/explore-mobile-services")
+        }}
+      />
 
       {/* Performance Statistics Section */}
       <section className="py-16 bg-[#F6F6F7]">
