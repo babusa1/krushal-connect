@@ -70,7 +70,7 @@ const HeroCarousel = ({ images, buttonConfig }: HeroCarouselProps) => {
             </p>
             <div className="bg-gradient-to-r from-purple-600/90 to-indigo-600/90 backdrop-blur-sm rounded-lg p-8 mb-8 shadow-xl border border-white/10">
               <p className="text-white font-medium text-lg md:text-xl leading-relaxed">
-                Where Intelligent AI Agents Drive Industry Transformation and Excellence
+                Accelerate Your Digital Transformation with Modern Cloud & DevOps Solutions
               </p>
             </div>
             <Button 
