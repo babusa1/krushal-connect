@@ -1,7 +1,6 @@
-
 import { Button } from "@/components/ui/button";
 import Navigation from "@/components/Navigation";
-import { ArrowRight, Smartphone, Globe, Users, ShieldCheck, ChartBarIcon, Code, Container, MessageSquare, Database } from "lucide-react";
+import { ArrowRight, Smartphone, Globe, Users, ShieldCheck, Code, Container, MessageSquare, Database } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 
 const MobileFirstDigital = () => {
@@ -38,6 +37,65 @@ const MobileFirstDigital = () => {
               >
                 Explore Our Services <ArrowRight className="ml-2" />
               </Button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Performance Statistics Section */}
+      <section className="py-16 bg-[#F6F6F7]">
+        <div className="container mx-auto px-4">
+          <div className="grid md:grid-cols-2 gap-8">
+            {/* Conversion Rate */}
+            <div className="bg-white p-8 rounded-lg shadow-lg">
+              <h3 className="text-2xl font-bold text-gray-900 mb-4">
+                Supercharge Your Conversions with Mobile-First
+              </h3>
+              <p className="text-2xl text-[#673AB7] font-bold mb-4">
+                46% increase in conversions
+              </p>
+              <p className="text-gray-600">
+                46% of consumers complete their entire purchase process on mobile devices. By optimizing for mobile, you ensure that potential customers can easily complete their transactions, leading to a significant boost in sales.
+              </p>
+            </div>
+
+            {/* Customer Retention */}
+            <div className="bg-white p-8 rounded-lg shadow-lg">
+              <h3 className="text-2xl font-bold text-gray-900 mb-4">
+                Retain More Customers with a Flawless Mobile Experience
+              </h3>
+              <p className="text-2xl text-[#673AB7] font-bold mb-4">
+                40% customer retention boost
+              </p>
+              <p className="text-gray-600">
+                40% of users will go to a competitor after a bad mobile experience. With our mobile-first approach, we ensure a positive and engaging experience that keeps customers coming back.
+              </p>
+            </div>
+
+            {/* Audience Reach */}
+            <div className="bg-white p-8 rounded-lg shadow-lg">
+              <h3 className="text-2xl font-bold text-gray-900 mb-4">
+                Capture a Larger Audience with Mobile Optimization
+              </h3>
+              <p className="text-2xl text-[#673AB7] font-bold mb-4">
+                54% of total web traffic
+              </p>
+              <p className="text-gray-600">
+                54% of all website traffic is generated from mobile phones. With the majority of online traffic coming from mobile devices, a mobile-first approach ensures that you're reaching the largest possible audience.
+              </p>
+            </div>
+
+            {/* Future-Proofing */}
+            <div className="bg-white p-8 rounded-lg shadow-lg">
+              <h3 className="text-2xl font-bold text-gray-900 mb-4">
+                Prepare for the Mobile-Dominant Future
+              </h3>
+              <p className="text-2xl text-[#673AB7] font-bold mb-4">
+                72% projected mobile traffic
+              </p>
+              <p className="text-gray-600">
+                Gartner's research indicates that mobile devices are expected to drive 72% of all internet traffic. With mobile usage continuing to grow, investing in a mobile-first strategy ensures your business is ready for the future.
+              </p>
             </div>
           </div>
         </div>
@@ -121,11 +179,6 @@ const MobileFirstDigital = () => {
                 icon: <Database className="w-12 h-12 text-[#9b87f5]" />,
                 title: "API Development",
                 description: "Ensuring seamless data flow with robust API development and management."
-              },
-              {
-                icon: <ChartBarIcon className="w-12 h-12 text-[#9b87f5]" />,
-                title: "Analytics & Insights",
-                description: "Transform data into actionable insights with advanced analytics capabilities."
               }
             ].map((service, index) => (
               <div key={index} className="bg-white p-8 rounded-lg shadow-lg hover:shadow-xl transition-shadow">
