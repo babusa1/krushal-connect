@@ -8,7 +8,8 @@ const Hero = () => {
   
   const images = [
     {
-      url: "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b",
+      // Updated image showing mobile apps and rural accessibility
+      url: "https://images.unsplash.com/photo-1523240795612-9a054b0db644",
       title: "Mobile First Digital",
       tagline: "Human-Centric Solutions, Seamless Experiences"
     },
