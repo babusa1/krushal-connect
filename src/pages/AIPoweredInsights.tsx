@@ -1,35 +1,47 @@
-
 import { Brain, ChartBar, ChartLine, Database, Network, Signal, Target, Users } from "lucide-react";
 import Navigation from "@/components/Navigation";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
+import HeroCarousel from "@/components/hero/HeroCarousel";
+import { useNavigate } from "react-router-dom";
 
 const AIPoweredInsights = () => {
+  const navigate = useNavigate();
+
+  const carouselImages = [
+    {
+      url: "https://images.unsplash.com/photo-1485827404703-89b55fcc595e",
+      title: "AI-Powered Insights Services",
+      tagline: "Transforming Data into Actionable Intelligence"
+    },
+    {
+      url: "https://images.unsplash.com/photo-1509228468518-180dd4864904",
+      title: "Advanced Analytics Solutions",
+      tagline: "Leverage AI and ML for data-driven decision making"
+    },
+    {
+      url: "https://images.unsplash.com/photo-1639762681485-074b7f938ba0",
+      title: "Predictive Analytics",
+      tagline: "Forecast trends and make informed business decisions"
+    },
+    {
+      url: "https://images.unsplash.com/photo-1488229297570-58520851e868",
+      title: "Business Intelligence",
+      tagline: "Transform raw data into meaningful business insights"
+    }
+  ];
+
   return (
     <div className="min-h-screen bg-white">
       <Navigation />
       
-      {/* Hero Section */}
-      <section className="relative pt-20">
-        <div className="absolute inset-0">
-          <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/50 to-transparent z-10" />
-          <img 
-            src="https://images.unsplash.com/photo-1485827404703-89b55fcc595e"
-            alt="AI Technology"
-            className="w-full h-[500px] object-cover"
-          />
-        </div>
-        <div className="container mx-auto px-4 py-24 relative z-20">
-          <div className="max-w-3xl mx-auto text-center">
-            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 animate-fade-in">
-              AI-Powered Insights Services
-            </h1>
-            <p className="text-xl md:text-2xl text-gray-200 max-w-2xl mx-auto mb-12 animate-fade-in">
-              Transforming Data into Actionable Intelligence
-            </p>
-          </div>
-        </div>
-      </section>
+      <HeroCarousel 
+        images={carouselImages}
+        buttonConfig={{
+          text: "Explore AI Services",
+          onClick: () => navigate("/explore-ai-services")
+        }}
+      />
 
       {/* Overview Section */}
       <section className="py-16 bg-gradient-to-b from-[#E5DEFF] to-white">
