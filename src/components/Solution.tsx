@@ -1,7 +1,30 @@
 
-import { Truck, Rocket, Brain, Blocks, Users, DollarSign, Award, Handshake } from "lucide-react";
+import { Truck, Rocket, Brain, Blocks, Users, DollarSign, Award, Handshake, AlertTriangle, TrendingDown, Clock, Activity } from "lucide-react";
 
 const Solution = () => {
+  const problems = [
+    {
+      icon: <Activity className="w-8 h-8 text-secondary" />,
+      title: "Productivity Gap",
+      description: "Labor productivity lags behind global benchmarks",
+    },
+    {
+      icon: <AlertTriangle className="w-8 h-8 text-secondary" />,
+      title: "Quality & Safety",
+      description: "Milk adulteration and safety concerns persist",
+    },
+    {
+      icon: <Clock className="w-8 h-8 text-secondary" />,
+      title: "First Mile Inefficiencies",
+      description: "Add 5-15% to rural operation costs",
+    },
+    {
+      icon: <TrendingDown className="w-8 h-8 text-secondary" />,
+      title: "Low Milk Productivity",
+      description: "India trails global peers by 4-5x",
+    },
+  ];
+
   return (
     <section className="py-20 bg-gradient-to-b from-primary-light to-white">
       <div className="container px-4 mx-auto">
@@ -17,6 +40,23 @@ const Solution = () => {
                 Comprehensive solutions for Dairy, Insurance, Finance, and Agritech sectors
               </p>
             </div>
+
+            {/* Critical Gaps Section */}
+            <div className="bg-white/80 backdrop-blur-sm p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100">
+              <h3 className="text-xl font-semibold text-primary mb-4">Addressing Critical Gaps in Rural India</h3>
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                {problems.map((problem, index) => (
+                  <div key={index} className="flex items-start gap-3 p-3 rounded-lg hover:bg-gray-50 transition-colors">
+                    <div className="flex-shrink-0">{problem.icon}</div>
+                    <div>
+                      <h4 className="font-semibold text-primary">{problem.title}</h4>
+                      <p className="text-sm text-gray-600">{problem.description}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+
             <div className="bg-white/80 backdrop-blur-sm p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100">
               <h3 className="text-xl font-semibold text-primary mb-4">Industry Coverage</h3>
               <ul className="space-y-2 text-gray-600">
