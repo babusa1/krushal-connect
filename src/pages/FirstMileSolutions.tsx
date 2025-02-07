@@ -1,4 +1,3 @@
-
 import { Button } from "@/components/ui/button";
 import Navigation from "@/components/Navigation";
 import { ArrowRight, Leaf, LineChart, Target, Users } from "lucide-react";
@@ -166,11 +165,11 @@ const FirstMileSolutions = () => {
         </div>
       </section>
 
-      {/* Use Cases Section */}
+      {/* Use Cases Section - Updated Heading */}
       <section className="py-16 px-4">
         <div className="container mx-auto">
           <h2 className="text-3xl md:text-4xl font-bold text-[#673AB7] mb-8">
-            Use Cases for First Mile Transformation
+            Empowering Rural Innovation Across Industries
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {[
@@ -250,4 +249,3 @@ const FirstMileSolutions = () => {
 };
 
 export default FirstMileSolutions;
-
