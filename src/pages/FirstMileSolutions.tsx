@@ -7,8 +7,10 @@ import MarketOpportunity from "@/components/sections/MarketOpportunity";
 import SolutionSection from "@/components/sections/SolutionSection";
 import IndustryUseCases from "@/components/sections/IndustryUseCases";
 import OutcomesSection from "@/components/sections/OutcomesSection";
+import { useNavigate } from "react-router-dom";
 
 const FirstMileSolutions = () => {
+  const navigate = useNavigate();
   const images = [
     {
       url: "https://images.unsplash.com/photo-1465379944081-7f47de8d74ac",
@@ -37,6 +39,10 @@ const FirstMileSolutions = () => {
     }
   ];
 
+  const handleContactClick = () => {
+    navigate('/contact');
+  };
+
   return (
     <div className="min-h-screen bg-white overflow-x-hidden">
       <Navigation />
@@ -58,6 +64,7 @@ const FirstMileSolutions = () => {
             Join the revolution in rural transformation
           </p>
           <Button 
+            onClick={handleContactClick}
             className="bg-white text-[#673AB7] hover:bg-[#E5DEFF] px-6 sm:px-8 py-4 sm:py-6 rounded-full text-base sm:text-lg font-medium flex items-center gap-2 mx-auto"
           >
             Contact Us <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5" />
