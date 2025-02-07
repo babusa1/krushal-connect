@@ -34,7 +34,7 @@ const Navigation = () => {
         },
         { 
           title: "AI-powered Insights", 
-          href: "#ai-insights",
+          href: "/ai-insights",
           description: "Intelligent insights and analytics for enhanced decision making"
         },
         { 
