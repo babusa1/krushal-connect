@@ -13,21 +13,23 @@ const ExploreServices = () => {
       
       {/* Hero Section with Background Image */}
       <section className="relative pt-20">
-        <div className="absolute inset-0 z-0">
-          <div className="absolute inset-0 bg-gradient-to-br from-[#E5DEFF]/50 to-white/70 z-10" />
+        <div className="absolute inset-0">
+          <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/50 to-transparent z-10" />
           <img 
-            src="https://images.unsplash.com/photo-1488590528505-98d2b5aba04b" 
+            src="https://images.unsplash.com/photo-1581090464777-f3220bbe1b8b?auto=format&fit=crop&q=80"
             alt="Digital Services"
-            className="w-full h-[400px] object-cover"
+            className="w-full h-[500px] object-cover"
           />
         </div>
-        <div className="container mx-auto px-4 py-16 relative z-20">
-          <h1 className="text-4xl md:text-5xl font-bold text-center text-gray-900 mb-8 animate-fade-in">
-            Our Comprehensive Digital Services
-          </h1>
-          <p className="text-xl text-center text-gray-600 max-w-3xl mx-auto mb-12 animate-fade-in">
-            Transform your business with our end-to-end digital solutions, powered by cutting-edge technology and expertise
-          </p>
+        <div className="container mx-auto px-4 py-24 relative z-20">
+          <div className="max-w-3xl mx-auto text-center">
+            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 animate-fade-in">
+              Comprehensive Digital Solutions
+            </h1>
+            <p className="text-xl md:text-2xl text-gray-200 max-w-2xl mx-auto mb-12 animate-fade-in">
+              Transform your business with our end-to-end digital solutions, powered by cutting-edge technology and expertise
+            </p>
+          </div>
         </div>
       </section>
 
