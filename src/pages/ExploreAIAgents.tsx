@@ -34,7 +34,7 @@ const ExploreAIAgents = () => {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
             <p className="text-xl md:text-2xl text-gray-700 leading-relaxed animate-fadeIn">
-              Experience the next evolution in business transformation with Krushal's state-of-the-art AI Agent development services. Our team crafts sophisticated, custom-built AI Agents that seamlessly integrate with your operations, delivering unprecedented levels of automation and efficiency across diverse industries. From predictive analytics to intelligent decision-making, we're here to revolutionize how your business operates.
+              Unlock seamless automation and efficiency with our custom AI Agents, delivering predictive analytics and intelligent decision-making across diverse industries. Revolutionize your operations with Krushal.
             </p>
           </div>
         </div>
