@@ -49,14 +49,19 @@ const Hero = () => {
           style={{
             backgroundImage: index === 2 ? `
               linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
-              url('https://images.unsplash.com/photo-1516253593875-bd7ba052fbc5'), /* Dairy */
-              url('https://images.unsplash.com/photo-1595344416261-3b2b891f3b66'), /* Agritech */
-              url('https://images.unsplash.com/photo-1563986768494-4dee2763ff3f'), /* Insurance */
-              url('https://images.unsplash.com/photo-1501167786227-4cba60f6d58f')  /* Banking */
+              url('${images[2].url}'),
+              url('https://images.unsplash.com/photo-1595344416261-3b2b891f3b66'),
+              url('https://images.unsplash.com/photo-1563986768494-4dee2763ff3f'),
+              url('https://images.unsplash.com/photo-1501167786227-4cba60f6d58f')
             ` : `url('${image.url}')`,
-            backgroundSize: index === 2 ? '50% 50%' : 'cover',
-            backgroundPosition: index === 2 ? 'top left, top right, bottom left, bottom right' : 'center',
-            backgroundRepeat: 'no-repeat'
+            backgroundSize: index === 2 ? 'cover, 50% 50%, 50% 50%, 50% 50%, 50% 50%' : 'cover',
+            backgroundPosition: index === 2 ? 'center, top left, top right, bottom left, bottom right' : 'center',
+            backgroundRepeat: 'no-repeat',
+            ...(index === 2 && {
+              // Create a grid effect for the third slide
+              backgroundBlendMode: 'overlay, normal, normal, normal, normal',
+              backgroundAttachment: 'fixed'
+            })
           }}
         >
           <div className="absolute inset-0 bg-gradient-to-r from-[#6E59A5]/95 to-transparent" />
