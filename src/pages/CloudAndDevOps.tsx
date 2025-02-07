@@ -77,7 +77,6 @@ const CloudAndDevOps = () => {
         </div>
       </section>
 
-      {/* Services Section */}
       <section className="py-16 bg-[#E5DEFF]/30">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold text-center mb-12 text-[#6E59A5]">
