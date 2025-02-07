@@ -49,11 +49,12 @@ const HeroCarousel = ({ images }: HeroCarouselProps) => {
             <p className="animate-fadeIn text-lg md:text-xl text-white/90 mb-8">
               {images[currentImage].tagline}
             </p>
-            <div className="bg-white/95 backdrop-blur-sm rounded-lg p-6 mb-8 shadow-lg">
-              <p className="text-[#7E69AB] font-medium">
+            <div className="bg-gradient-to-r from-purple-600/90 to-indigo-600/90 backdrop-blur-sm rounded-lg p-8 mb-8 shadow-xl border border-white/10">
+              <p className="text-white font-medium text-lg md:text-xl leading-relaxed">
                 Democratizing Digital Access with Mobile-First Solutions
-                <br />
-                Where Digital Transformation Meets Real-World Impact
+                <span className="block mt-2 text-white/90">
+                  Where Digital Transformation Meets Real-World Impact
+                </span>
               </p>
             </div>
             <Button 
