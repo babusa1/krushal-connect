@@ -49,11 +49,25 @@ export const navigationMenu = [
     ],
   },
   {
-    title: "About Krushal",
+    title: "Who We Are",
     items: [
-      { title: "What We Do", href: "/about" },
-      { title: "Our Leadership", href: "#leadership" },
-      { title: "Careers", href: "#careers" },
+      { 
+        title: "About Krushal", 
+        href: "/about-krushal"
+      },
+      { 
+        title: "What We Do", 
+        href: "/about",
+        description: "Learn about our mission, expertise, and impact in modernizing essential industries"
+      },
+      { 
+        title: "Our Leadership", 
+        href: "/leadership"
+      },
+      { 
+        title: "Careers", 
+        href: "/careers"
+      },
     ],
   },
 ];
