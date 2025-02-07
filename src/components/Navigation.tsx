@@ -51,7 +51,7 @@ const Navigation = () => {
 
   return (
     <NavigationMenu className="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-sm border-b">
-      <div className="container mx-auto py-2">
+      <div className="container mx-auto py-2 flex justify-between items-center">
         <NavigationMenuList>
           {menu.map((section) => (
             <NavigationMenuItem key={section.title}>
@@ -77,6 +77,13 @@ const Navigation = () => {
             </NavigationMenuItem>
           ))}
         </NavigationMenuList>
+        <div className="w-32">
+          <img
+            src="/lovable-uploads/9114eb0c-c8f9-4859-ac25-dfea74a21dbc.png"
+            alt="Krushal Logo"
+            className="h-8 w-auto"
+          />
+        </div>
       </div>
     </NavigationMenu>
   );
