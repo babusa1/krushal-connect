@@ -15,6 +15,7 @@ import ExploreAIServices from "./pages/ExploreAIServices";
 import AIPoweredAgents from "./pages/AIPoweredAgents";
 import ExploreAIAgents from "./pages/ExploreAIAgents";
 import CloudAndDevOps from "./pages/CloudAndDevOps";
+import ExploreCloudServices from "./pages/ExploreCloudServices";
 
 const queryClient = new QueryClient();
 
@@ -36,6 +37,7 @@ const App = () => (
           <Route path="/ai-agents" element={<AIPoweredAgents />} />
           <Route path="/explore-ai-agents" element={<ExploreAIAgents />} />
           <Route path="/cloud-and-devops" element={<CloudAndDevOps />} />
+          <Route path="/explore-cloud-services" element={<ExploreCloudServices />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
