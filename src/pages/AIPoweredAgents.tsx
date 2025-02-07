@@ -1,5 +1,6 @@
 import Navigation from "@/components/Navigation";
 import { Button } from "@/components/ui/button";
+import { useNavigate } from "react-router-dom";
 import { Bot, Cpu, Database, LineChart, Brain, Network, ArrowRight } from "lucide-react";
 import HeroCarousel from "@/components/hero/HeroCarousel";
 
