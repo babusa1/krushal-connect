@@ -9,15 +9,18 @@ const Hero = () => {
   const images = [
     {
       url: "https://images.unsplash.com/photo-1531297484001-80022131f5a1?auto=format&fit=crop&q=80",
-      title: "Tech Solutions at Speed"
+      title: "Tech Solutions at Speed",
+      tagline: "Transforming Rural Operations with AI-Powered Tech Solutions"
     },
     {
       url: "https://images.unsplash.com/photo-1605810230434-7631ac76ec81?auto=format&fit=crop&q=80",
-      title: "Rural Innovation"
+      title: "Rural Innovation",
+      tagline: "Revolutionizing Rural India through Digital Innovation"
     },
     {
       url: "https://images.unsplash.com/photo-1495107334309-fcf20504a5ab?auto=format&fit=crop&q=80",
-      title: "Agricultural Technology"
+      title: "Agricultural Technology",
+      tagline: "Empowering Agriculture with Smart Technology Solutions"
     }
   ];
 
@@ -54,7 +57,7 @@ const Hero = () => {
               Krushal - Delivering Solutions at Speed
             </h1>
             <p className="animate-fadeIn text-lg md:text-xl text-white/90 mb-8 delay-100">
-              Transforming Rural Operations with AI-Powered Tech Solutions
+              {images[currentImage].tagline}
             </p>
             <div className="bg-white/95 backdrop-blur-sm rounded-lg p-6 mb-8 shadow-lg">
               <p className="text-[#0EA5E9] font-medium mb-4">
