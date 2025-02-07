@@ -54,9 +54,6 @@ const MobileFirstDigital = () => {
               <p className="text-2xl text-[#673AB7] font-bold mb-4">
                 46% increase in conversions
               </p>
-              <p className="text-gray-600">
-                46% of consumers complete their entire purchase process on mobile devices. By optimizing for mobile, you ensure that potential customers can easily complete their transactions, leading to a significant boost in sales.
-              </p>
             </div>
 
             {/* Customer Retention */}
@@ -66,9 +63,6 @@ const MobileFirstDigital = () => {
               </h3>
               <p className="text-2xl text-[#673AB7] font-bold mb-4">
                 40% customer retention boost
-              </p>
-              <p className="text-gray-600">
-                40% of users will go to a competitor after a bad mobile experience. With our mobile-first approach, we ensure a positive and engaging experience that keeps customers coming back.
               </p>
             </div>
 
@@ -80,9 +74,6 @@ const MobileFirstDigital = () => {
               <p className="text-2xl text-[#673AB7] font-bold mb-4">
                 54% of total web traffic
               </p>
-              <p className="text-gray-600">
-                54% of all website traffic is generated from mobile phones. With the majority of online traffic coming from mobile devices, a mobile-first approach ensures that you're reaching the largest possible audience.
-              </p>
             </div>
 
             {/* Future-Proofing */}
@@ -92,9 +83,6 @@ const MobileFirstDigital = () => {
               </h3>
               <p className="text-2xl text-[#673AB7] font-bold mb-4">
                 72% projected mobile traffic
-              </p>
-              <p className="text-gray-600">
-                Gartner's research indicates that mobile devices are expected to drive 72% of all internet traffic. With mobile usage continuing to grow, investing in a mobile-first strategy ensures your business is ready for the future.
               </p>
             </div>
           </div>
