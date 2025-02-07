@@ -1,7 +1,7 @@
 
 import Navigation from "@/components/Navigation";
 import { Button } from "@/components/ui/button";
-import { Brain, Cloud, Users, DollarSign, BarChart, Globe, Lightbulb } from "lucide-react";
+import { Brain, Cloud, Users, DollarSign, BarChart, Globe, Lightbulb, Code, Smartphone, Bot } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 
 const WhatWeDo = () => {
@@ -28,29 +28,29 @@ const WhatWeDo = () => {
         <div className="container relative z-20 px-4 mx-auto">
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              Transforming Industries with Intelligent Technology
+              Transforming Industries Through Innovation
             </h1>
             <div className="bg-white/95 backdrop-blur-sm rounded-lg p-6 mt-8">
               <p className="text-lg md:text-xl text-gray-800 mb-4">
-                Building the next generation of <span className="font-semibold text-[#8B5CF6]">intelligent solutions</span> for rural India
+                Empowering businesses with <span className="font-semibold text-[#8B5CF6]">intelligent solutions</span>, from rural operations to cutting-edge technology services
               </p>
               <div className="grid md:grid-cols-3 gap-6 mt-8">
                 <div className="bg-[#F8F7FF] p-4 rounded-lg border border-[#E5DEFF]">
-                  <h3 className="font-semibold text-[#673AB7] mb-2">Smart(Field)Ops</h3>
+                  <h3 className="font-semibold text-[#673AB7] mb-2">Rural Innovation</h3>
                   <p className="text-sm text-gray-600">
-                    60% improvement in early detection of quality issues
+                    Revolutionizing rural operations with AI-driven insights
                   </p>
                 </div>
                 <div className="bg-[#F8F7FF] p-4 rounded-lg border border-[#E5DEFF]">
-                  <h3 className="font-semibold text-[#673AB7] mb-2">SmartRation</h3>
+                  <h3 className="font-semibold text-[#673AB7] mb-2">Tech Excellence</h3>
                   <p className="text-sm text-gray-600">
-                    Optimize feed costs by 15-20% through AI-driven insights
+                    Cloud, DevOps, and Mobile-First solutions
                   </p>
                 </div>
                 <div className="bg-[#F8F7FF] p-4 rounded-lg border border-[#E5DEFF]">
-                  <h3 className="font-semibold text-[#673AB7] mb-2">SmartProjection</h3>
+                  <h3 className="font-semibold text-[#673AB7] mb-2">AI Innovation</h3>
                   <p className="text-sm text-gray-600">
-                    Reduce procurement costs by ₹0.36 per liter
+                    Advanced AI Agents and Intelligent Insights
                   </p>
                 </div>
               </div>
@@ -59,106 +59,103 @@ const WhatWeDo = () => {
         </div>
       </section>
 
-      {/* About Krushal Section */}
+      {/* Core Solutions Section */}
       <section className="py-20 bg-[#F8F7FF]">
         <div className="container px-4 mx-auto">
           <div className="max-w-4xl mx-auto">
             <div className="flex items-center gap-3 mb-6">
               <Globe className="w-8 h-8 text-[#8B5CF6]" />
               <h2 className="text-3xl md:text-4xl font-bold text-[#673AB7]">
-                Driving Impact Through Innovation
+                Comprehensive Technology Solutions
               </h2>
             </div>
             <p className="text-lg text-gray-700 leading-relaxed">
-              At Krushal, we're revolutionizing essential industries through
-              <span className="font-semibold text-[#8B5CF6]"> AI-powered solutions</span>, 
-              <span className="font-semibold text-[#8B5CF6]"> Cloud infrastructure</span>, and
-              <span className="font-semibold text-[#8B5CF6]"> DevOps excellence</span>. 
-              Our technologies are purposefully designed to enhance productivity, quality, and 
-              market access across rural India's vital sectors.
+              At Krushal, we deliver end-to-end technology solutions that drive transformation across industries. From 
+              <span className="font-semibold text-[#8B5CF6]"> rural innovation</span> to
+              <span className="font-semibold text-[#8B5CF6]"> advanced AI services</span>, our solutions are designed to 
+              empower businesses for the future.
             </p>
           </div>
         </div>
       </section>
 
-      {/* Our Expertise Section */}
+      {/* Our Services Section */}
       <section className="py-20">
         <div className="container px-4 mx-auto">
           <div className="max-w-4xl mx-auto">
             <div className="flex items-center gap-3 mb-12">
               <Brain className="w-8 h-8 text-[#F97316]" />
               <h2 className="text-3xl md:text-4xl font-bold text-[#673AB7]">
-                Our Core Capabilities
+                Our Service Portfolio
               </h2>
             </div>
             
             <div className="grid md:grid-cols-2 gap-8">
               <div className="bg-white p-6 rounded-lg shadow-sm border border-[#E5DEFF] hover:border-[#8B5CF6] transition-colors">
-                <Globe className="w-10 h-10 text-[#F97316] mb-4" />
-                <h3 className="text-xl font-semibold mb-2 text-[#673AB7]">Industry Expertise</h3>
-                <p className="text-gray-600">Delivering targeted solutions for dairy, FMCG, and agritech sectors.</p>
-              </div>
-              
-              <div className="bg-white p-6 rounded-lg shadow-sm border border-[#E5DEFF] hover:border-[#8B5CF6] transition-colors">
-                <Brain className="w-10 h-10 text-[#F97316] mb-4" />
-                <h3 className="text-xl font-semibold mb-2 text-[#673AB7]">AI & Analytics</h3>
-                <p className="text-gray-600">Advanced algorithms providing actionable business intelligence.</p>
+                <Bot className="w-10 h-10 text-[#F97316] mb-4" />
+                <h3 className="text-xl font-semibold mb-2 text-[#673AB7]">AI Agents & Insights</h3>
+                <p className="text-gray-600">Advanced AI solutions providing actionable intelligence and automated processes.</p>
               </div>
               
               <div className="bg-white p-6 rounded-lg shadow-sm border border-[#E5DEFF] hover:border-[#8B5CF6] transition-colors">
                 <Cloud className="w-10 h-10 text-[#F97316] mb-4" />
-                <h3 className="text-xl font-semibold mb-2 text-[#673AB7]">Cloud Solutions</h3>
-                <p className="text-gray-600">Scalable infrastructure enabling digital transformation.</p>
+                <h3 className="text-xl font-semibold mb-2 text-[#673AB7]">Cloud & DevOps</h3>
+                <p className="text-gray-600">Scalable infrastructure and streamlined development operations.</p>
               </div>
               
               <div className="bg-white p-6 rounded-lg shadow-sm border border-[#E5DEFF] hover:border-[#8B5CF6] transition-colors">
-                <Users className="w-10 h-10 text-[#F97316] mb-4" />
-                <h3 className="text-xl font-semibold mb-2 text-[#673AB7]">Human-Centered Design</h3>
-                <p className="text-gray-600">Intuitive interfaces built for real-world usability.</p>
+                <Smartphone className="w-10 h-10 text-[#F97316] mb-4" />
+                <h3 className="text-xl font-semibold mb-2 text-[#673AB7]">Mobile-First Digital</h3>
+                <p className="text-gray-600">Intuitive mobile solutions for seamless user experiences.</p>
+              </div>
+              
+              <div className="bg-white p-6 rounded-lg shadow-sm border border-[#E5DEFF] hover:border-[#8B5CF6] transition-colors">
+                <Globe className="w-10 h-10 text-[#F97316] mb-4" />
+                <h3 className="text-xl font-semibold mb-2 text-[#673AB7]">Rural Innovation</h3>
+                <p className="text-gray-600">Transforming rural operations with smart technology solutions.</p>
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Our Impact Section */}
+      {/* Business Impact Section */}
       <section className="py-20 bg-[#F8F7FF]">
         <div className="container px-4 mx-auto">
           <div className="max-w-4xl mx-auto">
             <div className="flex items-center gap-3 mb-12">
               <BarChart className="w-8 h-8 text-[#F97316]" />
               <h2 className="text-3xl md:text-4xl font-bold text-[#673AB7]">
-                Measurable Impact
+                Delivering Real Results
               </h2>
             </div>
             
             <div className="grid md:grid-cols-3 gap-8 mb-12">
               <div className="bg-white p-6 rounded-lg shadow-sm border border-[#E5DEFF] hover:border-[#8B5CF6] transition-colors text-center">
+                <Code className="w-12 h-12 text-[#F97316] mx-auto mb-4" />
+                <h3 className="text-xl font-semibold mb-2 text-[#673AB7]">Tech Innovation</h3>
+                <p className="text-gray-600">Cutting-edge solutions driving digital transformation.</p>
+              </div>
+              
+              <div className="bg-white p-6 rounded-lg shadow-sm border border-[#E5DEFF] hover:border-[#8B5CF6] transition-colors text-center">
+                <Users className="w-12 h-12 text-[#F97316] mx-auto mb-4" />
+                <h3 className="text-xl font-semibold mb-2 text-[#673AB7]">User-Centric</h3>
+                <p className="text-gray-600">Solutions designed for maximum adoption and impact.</p>
+              </div>
+              
+              <div className="bg-white p-6 rounded-lg shadow-sm border border-[#E5DEFF] hover:border-[#8B5CF6] transition-colors text-center">
                 <DollarSign className="w-12 h-12 text-[#F97316] mx-auto mb-4" />
-                <h3 className="text-xl font-semibold mb-2 text-[#673AB7]">Cost Optimization</h3>
-                <p className="text-gray-600">Reducing operational costs through smart automation.</p>
-              </div>
-              
-              <div className="bg-white p-6 rounded-lg shadow-sm border border-[#E5DEFF] hover:border-[#8B5CF6] transition-colors text-center">
-                <BarChart className="w-12 h-12 text-[#F97316] mx-auto mb-4" />
-                <h3 className="text-xl font-semibold mb-2 text-[#673AB7]">Enhanced Efficiency</h3>
-                <p className="text-gray-600">Streamlining processes for maximum productivity.</p>
-              </div>
-              
-              <div className="bg-white p-6 rounded-lg shadow-sm border border-[#E5DEFF] hover:border-[#8B5CF6] transition-colors text-center">
-                <Globe className="w-12 h-12 text-[#F97316] mx-auto mb-4" />
-                <h3 className="text-xl font-semibold mb-2 text-[#673AB7]">Market Growth</h3>
-                <p className="text-gray-600">Expanding reach through digital transformation.</p>
+                <h3 className="text-xl font-semibold mb-2 text-[#673AB7]">Cost Efficiency</h3>
+                <p className="text-gray-600">Optimized solutions for better ROI.</p>
               </div>
             </div>
             
             <div className="bg-white p-8 rounded-lg shadow-sm border border-[#E5DEFF]">
               <p className="text-lg text-gray-700 text-center leading-relaxed">
-                Our flagship solutions like <span className="font-semibold text-[#8B5CF6]">Smart(Field)Ops</span>, 
-                <span className="font-semibold text-[#8B5CF6]"> SmartRation</span>, and 
-                <span className="font-semibold text-[#8B5CF6]"> SmartProjection</span> have 
-                revolutionized operations for thousands of users, delivering unprecedented efficiency 
-                and cost savings across the value chain.
+                From our flagship rural solutions to advanced AI services, we've helped businesses achieve 
+                <span className="font-semibold text-[#8B5CF6]"> significant efficiency gains</span>, 
+                <span className="font-semibold text-[#8B5CF6]"> cost reductions</span>, and 
+                <span className="font-semibold text-[#8B5CF6]"> enhanced market reach</span> across sectors.
               </p>
             </div>
           </div>
@@ -174,7 +171,7 @@ const WhatWeDo = () => {
               Ready to Transform Your Business?
             </h2>
             <p className="text-xl text-white/90 mb-8">
-              Join the growing network of businesses leveraging Krushal's intelligent technology solutions.
+              Join the growing network of businesses leveraging Krushal's comprehensive technology solutions.
             </p>
             <Button 
               className="bg-white text-[#673AB7] hover:bg-gray-100 text-lg px-8 py-6 rounded-full"
@@ -190,3 +187,4 @@ const WhatWeDo = () => {
 };
 
 export default WhatWeDo;
+
