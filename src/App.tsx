@@ -1,3 +1,4 @@
+
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
@@ -16,6 +17,8 @@ import AIPoweredAgents from "./pages/AIPoweredAgents";
 import ExploreAIAgents from "./pages/ExploreAIAgents";
 import CloudAndDevOps from "./pages/CloudAndDevOps";
 import ExploreCloudServices from "./pages/ExploreCloudServices";
+import WhatWeDo from "./pages/WhatWeDo";
+import AboutKrushal from "./pages/AboutKrushal";
 
 const queryClient = new QueryClient();
 
@@ -38,6 +41,8 @@ const App = () => (
           <Route path="/explore-ai-agents" element={<ExploreAIAgents />} />
           <Route path="/cloud-and-devops" element={<CloudAndDevOps />} />
           <Route path="/explore-cloud-services" element={<ExploreCloudServices />} />
+          <Route path="/about" element={<WhatWeDo />} />
+          <Route path="/about-krushal" element={<AboutKrushal />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
