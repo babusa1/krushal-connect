@@ -1,4 +1,3 @@
-
 import { Truck, Rocket, Brain, Blocks, Users, DollarSign, Building2, Globe, BriefcaseBusiness, AlertTriangle, TrendingDown, Clock, Activity } from "lucide-react";
 
 const Solution = () => {
@@ -7,7 +6,7 @@ const Solution = () => {
       title: "Dairy Operations",
       icon: <Building2 className="w-12 h-12 text-[#673AB7] mb-4" />,
       description: "End-to-end dairy supply chain solutions",
-      image: "https://images.unsplash.com/photo-1542879546-c82e37a243ad"
+      image: "https://images.unsplash.com/photo-1465379944081-7f47de8d74ac"
     },
     {
       title: "Insurance Services",
@@ -19,13 +18,13 @@ const Solution = () => {
       title: "Financial Solutions",
       icon: <BriefcaseBusiness className="w-12 h-12 text-[#673AB7] mb-4" />,
       description: "Digital financial services for rural India",
-      image: "https://images.unsplash.com/photo-1633158829585-23ba8f7c8caf"
+      image: "https://images.unsplash.com/photo-1518458028785-8fbcd101ebb9"
     },
     {
       title: "Agritech Integration",
       icon: <Globe className="w-12 h-12 text-[#673AB7] mb-4" />,
       description: "Smart farming and agriculture solutions",
-      image: "https://images.unsplash.com/photo-1628444285746-7172537a2a0f"
+      image: "https://images.unsplash.com/photo-1472396961693-142e6e269027"
     }
   ];
 
@@ -189,4 +188,3 @@ const Solution = () => {
 };
 
 export default Solution;
-
