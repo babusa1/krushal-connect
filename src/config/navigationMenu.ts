@@ -49,6 +49,13 @@ export const navigationMenu = [
     ],
   },
   {
+    title: "Insights",
+    items: [
+      { title: "Case Studies", href: "/case-studies", description: "Success stories and implementation examples from our clients" },
+      { title: "Blog", href: "/blog", description: "Latest trends, insights and thought leadership in digital transformation" },
+    ],
+  },
+  {
     title: "Who We Are",
     items: [
       { 
