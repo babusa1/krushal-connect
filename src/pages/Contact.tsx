@@ -61,8 +61,9 @@ const Contact = () => {
                 <div>
                   <h3 className="font-semibold text-gray-900">Visit Us</h3>
                   <p className="text-gray-600">
-                    123 Tech Park, Sector 15<br />
-                    Gurugram, Haryana 122001<br />
+                    L-148, 5TH Main Road<br />
+                    Sector 6, HSR Layout<br />
+                    Bengaluru, Karnataka 560102<br />
                     India
                   </p>
                 </div>
