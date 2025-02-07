@@ -1,3 +1,4 @@
+
 import { Brain, ChartBar, ChartLine, Database, Network, Signal, Target, Users } from "lucide-react";
 import Navigation from "@/components/Navigation";
 import { Button } from "@/components/ui/button";
@@ -84,9 +85,9 @@ const AIPoweredInsights = () => {
             </div>
             
             <div className="mt-8 p-6 bg-[#F8F7FF] rounded-lg border border-[#E5DEFF]">
-              <h3 className="text-2xl font-semibold text-[#6E59A5] mb-4">Impact</h3>
+              <h3 className="text-2xl font-semibold text-[#6E59A5] mb-4">Impact: Strategic Advantage, Data-Driven Success</h3>
               <p className="text-gray-700">
-                With Krushal's AI-Powered Insights, you're not just collecting data, you're gaining a strategic advantage. Make data-driven decisions with confidence, optimize your operations, understand your customers on a deeper level, and uncover new opportunities for growth.
+                Krushal's AI Insights transform data into your strategic weapon. Decide with confidence, optimize operations, deeply understand customers, and unlock new growth opportunities.
               </p>
             </div>
           </div>
