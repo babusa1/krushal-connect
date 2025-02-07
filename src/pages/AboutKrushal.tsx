@@ -1,4 +1,3 @@
-
 import Navigation from "@/components/Navigation";
 import { Target, Rocket, Brain, BarChart, Users, Sparkles } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -12,16 +11,31 @@ const AboutKrushal = () => {
       <Navigation />
       
       {/* Hero Section */}
-      <section className="pt-32 pb-20 bg-gradient-to-r from-[#F8F7FF] to-white">
-        <div className="container px-4 mx-auto">
+      <section className="relative min-h-[90vh] flex items-center justify-center py-20 mt-16">
+        <div 
+          className="absolute inset-0 z-0"
+          style={{
+            backgroundImage: `linear-gradient(rgba(103, 58, 183, 0.9), rgba(139, 92, 246, 0.9)), url('https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7')`,
+            backgroundSize: 'cover',
+            backgroundPosition: 'center',
+            backgroundRepeat: 'no-repeat',
+          }}
+        />
+        <div className="container px-4 mx-auto relative z-10">
           <div className="max-w-4xl mx-auto text-center">
-            <h1 className="text-4xl md:text-5xl font-bold text-[#673AB7] mb-6">
+            <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Intelligent Technology for End-to-End & First Mile Impact
             </h1>
-            <p className="text-xl text-gray-600 leading-relaxed">
+            <p className="text-xl text-white/90 leading-relaxed mb-8">
               Empowering industries with intelligent solutions that drive transformation 
               from the first mile to the end user, creating unprecedented efficiency and sustainable growth.
             </p>
+            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-8 border border-white/20">
+              <p className="text-white/90">
+                Revolutionizing operations through AI-driven solutions, mobile-first applications, 
+                and comprehensive cloud services.
+              </p>
+            </div>
           </div>
         </div>
       </section>
@@ -155,4 +169,3 @@ const AboutKrushal = () => {
 };
 
 export default AboutKrushal;
-
