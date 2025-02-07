@@ -1,4 +1,3 @@
-
 export const navigationMenu = [
   {
     title: "Services",
@@ -24,8 +23,8 @@ export const navigationMenu = [
         description: "Intelligent agent solutions for enhanced operations"
       },
       { 
-        title: "Cloud & Devops", 
-        href: "#cloud-devops",
+        title: "Cloud & DevOps", 
+        href: "/cloud-and-devops",
         description: "Modern cloud infrastructure and DevOps practices"
       },
     ],
