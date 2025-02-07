@@ -8,7 +8,7 @@ const Hero = () => {
   
   const images = [
     {
-      url: "https://images.unsplash.com/photo-1595841696146-9c19408648f7?auto=format&fit=crop&w=2000&q=80", // Rural India farmer with cattle
+      url: "https://images.unsplash.com/photo-1530176612058-d0cd2c71e034?auto=format&fit=crop&q=80", // Rural farmer with cattle
       title: "First Mile Modernization",
       tagline: "Empowering Underserved Markets with Dairy, Agritech, Financial Services & Healthcare Solutions"
     },
@@ -46,7 +46,7 @@ const Hero = () => {
             currentImage === index ? "opacity-100" : "opacity-0"
           }`}
           style={{
-            backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(${image.url})`,
+            backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('${image.url}')`,
             backgroundSize: 'cover',
             backgroundPosition: 'center',
             backgroundRepeat: 'no-repeat',
