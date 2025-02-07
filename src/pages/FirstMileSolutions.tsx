@@ -162,7 +162,7 @@ const FirstMileSolutions = () => {
       <section className="py-16 px-4 bg-gradient-to-br from-[#673AB7] to-[#9b87f5] text-white">
         <div className="container mx-auto text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-6">
-            First Mile Modernization - Dairy, Agritech, Healthcare, Insurance, Banking
+            First Mile as a Service for Underserved Markets
           </h2>
           <p className="text-xl mb-8 text-white/90">
             Join the revolution in rural transformation
