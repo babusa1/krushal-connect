@@ -1,3 +1,4 @@
+
 import {
   NavigationMenu,
   NavigationMenuContent,
@@ -32,9 +33,9 @@ const Navigation = () => {
           description: "Web, mobile, and voice applications with human-centered design"
         },
         { 
-          title: "AI powered Agents", 
-          href: "#ai-agents",
-          description: "Intelligent agent solutions for enhanced operations"
+          title: "AI-powered Insights", 
+          href: "#ai-insights",
+          description: "Intelligent insights and analytics for enhanced decision making"
         },
         { 
           title: "Cloud & Devops", 
