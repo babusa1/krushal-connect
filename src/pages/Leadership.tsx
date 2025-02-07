@@ -9,37 +9,37 @@ const Leadership = () => {
       name: "Gauravharan",
       role: "CEO & MD",
       linkedin: "https://linkedin.com/in/gauravharan",
-      image: "/lovable-uploads/placeholder-avatar.png" // Replace with actual image path once uploaded
+      image: "/lovable-uploads/79a196b4-e97d-4308-a4e5-41fcec739a22.png"
     },
     {
       name: "Rochan S",
       role: "CTO",
       linkedin: "https://linkedin.com/in/rochan-s",
-      image: "/lovable-uploads/placeholder-avatar.png"
+      image: "/lovable-uploads/88c6a233-bbf5-4c43-8f9a-1da562a18059.png"
     },
     {
       name: "Naveen Babu S A",
       role: "Head of AI & Technology Solutions",
       linkedin: "https://linkedin.com/in/naveen-babu",
-      image: "/lovable-uploads/placeholder-avatar.png"
+      image: "/lovable-uploads/f7a042e8-a011-4465-8e68-2c2e2d5be32e.png"
     },
     {
       name: "Sandeep",
       role: "Chairman & CFO",
       linkedin: "https://linkedin.com/in/sandeep",
-      image: "/lovable-uploads/placeholder-avatar.png"
+      image: "/lovable-uploads/b75b0f6c-5053-478e-8458-a0021a8d5fc3.png"
     },
     {
       name: "Namratha",
       role: "Chief Impact Officer",
       linkedin: "https://linkedin.com/in/namratha",
-      image: "/lovable-uploads/placeholder-avatar.png"
+      image: "/lovable-uploads/d07d4147-9f40-490a-a363-39dfd25e216b.png"
     },
     {
       name: "Geetika Goel",
       role: "CIO",
       linkedin: "https://linkedin.com/in/geetika-goel",
-      image: "/lovable-uploads/placeholder-avatar.png"
+      image: "/lovable-uploads/77b95b64-9527-4de8-9ef7-fd1e8dc12ef6.png"
     },
     {
       name: "Ravish",
