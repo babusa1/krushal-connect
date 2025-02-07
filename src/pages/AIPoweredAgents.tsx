@@ -12,19 +12,19 @@ const AIPoweredAgents = () => {
 
   const carouselImages = [
     {
-      url: "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b",
-      title: "AI-Powered Innovation",
-      tagline: "Empowering Industries with Intelligent AI Agents for Transformative Solutions"
-    },
-    {
-      url: "https://images.unsplash.com/photo-1485827404703-89b55fcc595e",
+      url: "https://images.unsplash.com/photo-1677442136019-21780ecad995",
       title: "Intelligent Automation",
-      tagline: "Streamline Operations with Advanced AI Technologies"
+      tagline: "Transform Your Business with Advanced AI-Powered Process Automation"
     },
     {
-      url: "https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7",
-      title: "Data-Driven Excellence",
-      tagline: "Harness the Power of AI for Actionable Insights"
+      url: "https://images.unsplash.com/photo-1639322537228-f710d846310a",
+      title: "Data-Driven Services",
+      tagline: "Unlock Insights and Drive Innovation with AI-Powered Analytics"
+    },
+    {
+      url: "https://images.unsplash.com/photo-1676375525463-bdbc45563a41",
+      title: "AI-Powered Innovation",
+      tagline: "Revolutionize Your Industry with Cutting-Edge AI Solutions"
     }
   ];
 
