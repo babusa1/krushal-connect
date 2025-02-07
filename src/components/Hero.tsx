@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 
 const Hero = () => {
   return (
-    <section className="min-h-[90vh] flex items-center justify-center bg-gradient-to-b from-white to-secondary py-20">
+    <section className="min-h-[90vh] flex items-center justify-center bg-gradient-to-b from-primary-light to-white py-20">
       <div className="container px-4 mx-auto">
         <div className="max-w-4xl mx-auto text-center">
           <h1 className="animate-fadeIn text-4xl md:text-6xl font-bold text-primary mb-6">
@@ -23,7 +23,7 @@ const Hero = () => {
             </div>
           </div>
           <Button 
-            className="animate-fadeIn bg-primary-accent hover:bg-primary-accent/90 text-white px-8 py-6 rounded-full text-lg font-medium flex items-center gap-2 mx-auto"
+            className="animate-fadeIn bg-secondary hover:bg-secondary/90 text-white px-8 py-6 rounded-full text-lg font-medium flex items-center gap-2 mx-auto"
           >
             Modernize Your Operations <ArrowRight className="w-5 h-5" />
           </Button>

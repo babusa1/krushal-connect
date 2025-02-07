@@ -26,13 +26,13 @@ export default {
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
         primary: {
-          DEFAULT: "#1A1F2C",
-          light: "#E8F1F9",
-          accent: "#6366F1",
+          DEFAULT: "#673AB7", // Deep Purple 500
+          light: "#D1C4E9", // Deep Purple 100
+          accent: "#FF5722", // Deep Orange 500
         },
         secondary: {
-          DEFAULT: "#E8F1F9",
-          dark: "#1A1F2C",
+          DEFAULT: "#FF5722", // Deep Orange 500
+          dark: "#673AB7", // Deep Purple 500
         },
         success: {
           DEFAULT: "#10B981",
