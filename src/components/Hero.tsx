@@ -8,7 +8,7 @@ const Hero = () => {
   
   const images = [
     {
-      url: "https://images.unsplash.com/photo-1530176612058-d0cd2c71e034?auto=format&fit=crop&q=80", // Rural farmer with cattle
+      url: "/lovable-uploads/9114eb0c-c8f9-4859-ac25-dfea74a21dbc.png", // Using the uploaded image for First Mile
       title: "First Mile Modernization",
       tagline: "Empowering Underserved Markets with Dairy, Agritech, Financial Services & Healthcare Solutions"
     },
