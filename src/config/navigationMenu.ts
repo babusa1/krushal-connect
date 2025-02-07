@@ -63,11 +63,13 @@ export const navigationMenu = [
       },
       { 
         title: "Our Leadership", 
-        href: "/leadership"
+        href: "/leadership",
+        description: "Passionate Leadership Driving Excellence"
       },
       { 
         title: "Careers", 
-        href: "/careers"
+        href: "/careers",
+        description: "Join us to shape the future with transforming solutions"
       },
     ],
   },
