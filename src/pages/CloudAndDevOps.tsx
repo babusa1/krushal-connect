@@ -26,7 +26,7 @@ const CloudAndDevOps = () => {
   ];
 
   const buttonConfig = {
-    text: "Contact Us Today",
+    text: "Explore Cloud Services",
     onClick: () => navigate("/contact")
   };
 
