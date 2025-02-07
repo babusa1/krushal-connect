@@ -12,6 +12,7 @@ import MobileFirstDigital from "./pages/MobileFirstDigital";
 import Expl_MobileService from "./pages/Expl_MobileService";
 import ExploreFirstMileServices from "./pages/ExploreFirstMileServices";
 import AIPoweredInsights from "./pages/AIPoweredInsights";
+import ExploreAIServices from "./pages/ExploreAIServices";
 
 const queryClient = new QueryClient();
 
@@ -29,6 +30,7 @@ const App = () => (
           <Route path="/explore-mobile-services" element={<Expl_MobileService />} />
           <Route path="/explore-firstmile-services" element={<ExploreFirstMileServices />} />
           <Route path="/ai-insights" element={<AIPoweredInsights />} />
+          <Route path="/explore-ai-services" element={<ExploreAIServices />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
