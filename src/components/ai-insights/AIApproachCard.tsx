@@ -24,3 +24,4 @@ const AIApproachCard = ({ icon: Icon, title, description }: AIApproachCardProps)
 };
 
 export default AIApproachCard;
+

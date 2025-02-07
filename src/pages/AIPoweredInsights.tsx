@@ -1,4 +1,3 @@
-
 import { Brain, ChartBar, ChartLine, Database, Network, Signal, Target, Users } from "lucide-react";
 import Navigation from "@/components/Navigation";
 import { Button } from "@/components/ui/button";
@@ -60,49 +59,35 @@ const AIPoweredInsights = () => {
       {/* Harness the Power of AI Section */}
       <section className="py-16">
         <div className="container mx-auto px-4">
-          <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div className="space-y-6 animate-fade-in">
-              <h2 className="text-3xl font-bold text-[#6E59A5] mb-6">Transform Data into Your Competitive Advantage</h2>
-              <p className="text-gray-700 mb-8">
-                In today's fast-paced world, data is your most valuable asset, but only if you can unlock its hidden potential. AI-Powered Insights are the key. We use cutting-edge Artificial Intelligence to sift through the noise and deliver clear, actionable intelligence, enabling your business to make smarter decisions, faster.
-              </p>
-              <h3 className="text-2xl font-semibold text-[#6E59A5] mb-4">Our AI-Driven Approach</h3>
-              <div className="space-y-6">
-                <AIApproachCard
-                  icon={Brain}
-                  title="Artificial Intelligence (AI)"
-                  description="Think Smarter, Not Harder. Imagine machines that can analyze massive datasets with human-like intelligence, but at superhuman speed and scale. That's AI. We leverage AI to process your complex data, identify hidden patterns, and surface the insights that would otherwise be missed."
-                />
-                <AIApproachCard
-                  icon={Network}
-                  title="Machine Learning (ML)"
-                  description="Insights That Evolve With Your Business. Stop relying on static reports. Machine Learning empowers our systems to learn from your historical data, constantly refining their accuracy and predictive power. As your business grows and changes, your insights become sharper and more relevant over time."
-                />
-                <AIApproachCard
-                  icon={Signal}
-                  title="Natural Language Processing (NLP)"
-                  description="Understand Your Customers Like Never Before. Unlock the voice of your customer. NLP allows us to analyze text data – from customer feedback and surveys to social media and beyond – to understand sentiment, identify emerging trends, and gain a deeper understanding of your market."
-                />
-              </div>
-              
-              <div className="mt-8 p-6 bg-[#F8F7FF] rounded-lg border border-[#E5DEFF]">
-                <h3 className="text-2xl font-semibold text-[#6E59A5] mb-4">Impact</h3>
-                <p className="text-gray-700">
-                  With Krushal's AI-Powered Insights, you're not just collecting data, you're gaining a strategic advantage. Make data-driven decisions with confidence, optimize your operations, understand your customers on a deeper level, and uncover new opportunities for growth.
-                </p>
-              </div>
+          <div className="space-y-6 animate-fade-in">
+            <h2 className="text-3xl font-bold text-[#6E59A5] mb-6">Transform Data into Your Competitive Advantage</h2>
+            <p className="text-gray-700 mb-8">
+              In today's fast-paced world, data is your most valuable asset, but only if you can unlock its hidden potential. AI-Powered Insights are the key. We use cutting-edge Artificial Intelligence to sift through the noise and deliver clear, actionable intelligence, enabling your business to make smarter decisions, faster.
+            </p>
+            <h3 className="text-2xl font-semibold text-[#6E59A5] mb-4">Our AI-Driven Approach</h3>
+            <div className="space-y-6">
+              <AIApproachCard
+                icon={Brain}
+                title="Artificial Intelligence (AI): Smarter, Faster Insights"
+                description="Leverage AI to analyze massive datasets at superhuman speed. We process complex data to reveal hidden patterns and surface insights you'd otherwise miss."
+              />
+              <AIApproachCard
+                icon={Network}
+                title="Machine Learning (ML): Evolving Insights for Business Growth"
+                description="Move beyond static reports. ML systems learn from your data, constantly refining accuracy and prediction. Insights become sharper and more relevant as your business evolves."
+              />
+              <AIApproachCard
+                icon={Signal}
+                title="Natural Language Processing (NLP): Deep Customer Understanding"
+                description="Unlock the voice of your customer. NLP analyzes text data from feedback to social media, revealing sentiment, trends, and a deeper understanding of your market."
+              />
             </div>
-            <div className="relative animate-fade-in">
-              <div className="relative rounded-lg overflow-hidden shadow-xl">
-                <img
-                  src="https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7"
-                  alt="AI Technology Visual"
-                  className="w-full h-full object-cover rounded-lg"
-                />
-                <div className="absolute inset-0 bg-gradient-to-tr from-[#9b87f5]/30 to-transparent rounded-lg" />
-              </div>
-              <div className="absolute -bottom-4 -right-4 w-32 h-32 bg-[#E5DEFF] rounded-full -z-10" />
-              <div className="absolute -top-4 -left-4 w-24 h-24 bg-[#9b87f5]/20 rounded-full -z-10" />
+            
+            <div className="mt-8 p-6 bg-[#F8F7FF] rounded-lg border border-[#E5DEFF]">
+              <h3 className="text-2xl font-semibold text-[#6E59A5] mb-4">Impact</h3>
+              <p className="text-gray-700">
+                With Krushal's AI-Powered Insights, you're not just collecting data, you're gaining a strategic advantage. Make data-driven decisions with confidence, optimize your operations, understand your customers on a deeper level, and uncover new opportunities for growth.
+              </p>
             </div>
           </div>
         </div>
