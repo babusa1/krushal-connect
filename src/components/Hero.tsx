@@ -1,4 +1,3 @@
-
 import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useEffect, useState } from "react";
@@ -8,7 +7,7 @@ const Hero = () => {
   
   const images = [
     {
-      url: "https://images.unsplash.com/photo-1595841696146-9c19408648f7", // Rural India farmer with cattle
+      url: "https://images.unsplash.com/photo-1595841696146-9c19408648f7?auto=format&fit=crop&w=2000&q=80", // Rural India farmer with cattle
       title: "First Mile Modernization",
       tagline: "Empowering Rural India with Dairy, Agritech, Financial Services & Healthcare Solutions"
     },
@@ -46,24 +45,12 @@ const Hero = () => {
             currentImage === index ? "opacity-100" : "opacity-0"
           }`}
           style={{
-            backgroundImage: index === 2 ? `
-              linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
-              url('${images[2].url}'), /* Rural India with cattle farmer */
-              url('https://images.unsplash.com/photo-1595841696146-9c19408648f7'), /* Smart agriculture/AgriTech */
-              url('https://images.unsplash.com/photo-1601597111158-2fceff292cdc'), /* Rural banking */
-              url('https://images.unsplash.com/photo-1553877522-43269d4ea984')  /* Insurance services */
-            ` : `url('${image.url}')`,
-            backgroundSize: index === 2 ? 'cover, 50% 50%, 50% 50%, 50% 50%' : 'cover',
-            backgroundPosition: index === 2 ? 'center, top left, top right, bottom left, bottom right' : 'center',
+            backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('${image.url}')`,
+            backgroundSize: 'cover',
+            backgroundPosition: 'center',
             backgroundRepeat: 'no-repeat',
-            ...(index === 2 && {
-              backgroundBlendMode: 'overlay, normal, normal, normal, normal',
-              backgroundAttachment: 'fixed'
-            })
           }}
-        >
-          <div className="absolute inset-0 bg-gradient-to-r from-[#6E59A5]/95 to-transparent" />
-        </div>
+        />
       ))}
 
       <div className="container px-4 mx-auto relative z-10">
