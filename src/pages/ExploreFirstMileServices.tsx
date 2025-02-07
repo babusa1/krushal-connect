@@ -1,3 +1,4 @@
+
 import { Button } from "@/components/ui/button";
 import Navigation from "@/components/Navigation";
 import { ArrowRight, Tractor, Building2, LineChart, BookOpen, PiggyBank, GraduationCap, Heart, Stethoscope, Brain, Phone, ChartPie, Users, Truck, BarChart3, Leaf, Timer, AlertTriangle } from "lucide-react";
@@ -147,17 +148,17 @@ const ExploreFirstMileServices = () => {
         <div className="container mx-auto px-4">
           <div className="grid md:grid-cols-3 gap-8">
             {services.map((service, index) => (
-              <div key={index} className="bg-white p-8 rounded-xl shadow-lg border border-gray-100 hover:border-[#673AB7] transition-all">
-                <service.icon className="w-12 h-12 text-[#673AB7] mb-6" />
+              <div key={index} className="bg-white p-8 rounded-xl shadow-lg border border-gray-100 hover:border-[#1EAEDB] transition-all">
+                <service.icon className="w-12 h-12 text-[#1EAEDB] mb-6" />
                 <h3 className="text-2xl font-bold mb-4 text-gray-900">{service.title}</h3>
                 <p className="text-gray-600 mb-6">{service.description}</p>
                 {service.items.map((item, idx) => (
                   <div key={idx} className="mb-6">
-                    <h4 className="font-semibold text-[#673AB7] mb-3">{item.subtitle}</h4>
+                    <h4 className="font-semibold text-[#1EAEDB] mb-3">{item.subtitle}</h4>
                     <ul className="space-y-2">
                       {item.points.map((point, pointIdx) => (
                         <li key={pointIdx} className="flex items-start space-x-2 text-gray-600">
-                          <ArrowRight className="w-4 h-4 mt-1 text-[#673AB7]" />
+                          <ArrowRight className="w-4 h-4 mt-1 text-[#1EAEDB]" />
                           <span>{point}</span>
                         </li>
                       ))}
@@ -177,8 +178,8 @@ const ExploreFirstMileServices = () => {
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {caseStudies.map((study, index) => (
               <div key={index} className="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition-shadow">
-                <study.icon className="w-12 h-12 text-[#673AB7] mb-4" />
-                <div className="inline-block px-3 py-1 rounded-full bg-[#E5DEFF] text-[#673AB7] text-sm font-medium mb-4">
+                <study.icon className="w-12 h-12 text-[#1EAEDB] mb-4" />
+                <div className="inline-block px-3 py-1 rounded-full bg-[#E5F7FB] text-[#1EAEDB] text-sm font-medium mb-4">
                   {study.region}
                 </div>
                 <h3 className="font-semibold mb-3 text-gray-900">Challenge:</h3>
@@ -194,7 +195,7 @@ const ExploreFirstMileServices = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 bg-gradient-to-br from-[#673AB7] to-[#9b87f5] text-white">
+      <section className="py-16 bg-gradient-to-br from-[#1EAEDB] to-[#33C3F0] text-white">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl font-bold mb-6">Ready to Transform Your Operations?</h2>
           <p className="text-xl mb-8 max-w-2xl mx-auto">
@@ -202,7 +203,7 @@ const ExploreFirstMileServices = () => {
           </p>
           <Button 
             onClick={() => navigate("/contact")}
-            className="bg-white text-[#673AB7] hover:bg-[#E5DEFF] px-8 py-6 rounded-full text-lg font-medium"
+            className="bg-white text-[#1EAEDB] hover:bg-[#E5F7FB] px-8 py-6 rounded-full text-lg font-medium"
           >
             Get Started Today <ArrowRight className="ml-2 h-5 w-5" />
           </Button>
