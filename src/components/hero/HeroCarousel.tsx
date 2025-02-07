@@ -2,6 +2,7 @@
 import { useEffect, useState } from "react";
 import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { useNavigate } from "react-router-dom";
 
 interface CarouselImage {
   url: string;
@@ -15,6 +16,7 @@ interface HeroCarouselProps {
 
 const HeroCarousel = ({ images }: HeroCarouselProps) => {
   const [currentImage, setCurrentImage] = useState(0);
+  const navigate = useNavigate();
 
   useEffect(() => {
     const timer = setInterval(() => {
@@ -58,9 +60,10 @@ const HeroCarousel = ({ images }: HeroCarouselProps) => {
               </p>
             </div>
             <Button 
+              onClick={() => navigate("/explore-services")}
               className="animate-fadeIn bg-[#9b87f5] hover:bg-[#8B5CF6] text-white px-8 py-6 rounded-full text-lg font-medium flex items-center gap-2 mx-auto md:mx-0 md:inline-flex"
             >
-              Modernize Your Operations <ArrowRight className="w-5 h-5" />
+              Explore Services <ArrowRight className="w-5 h-5" />
             </Button>
           </div>
         </div>
@@ -82,3 +85,4 @@ const HeroCarousel = ({ images }: HeroCarouselProps) => {
 };
 
 export default HeroCarousel;
+
