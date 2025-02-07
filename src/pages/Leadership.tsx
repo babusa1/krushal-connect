@@ -15,7 +15,7 @@ const Leadership = () => {
       name: "Rochan S",
       role: "CTO",
       linkedin: "https://linkedin.com/in/rochan-s",
-      image: "/lovable-uploads/88c6a233-bbf5-4c43-8f9a-1da562a18059.png"
+      image: "/lovable-uploads/b75b0f6c-5053-478e-8458-a0021a8d5fc3.png"  // Switched with Sandeep's image
     },
     {
       name: "Naveen Babu S A",
@@ -27,23 +27,23 @@ const Leadership = () => {
       name: "Sandeep",
       role: "Chairman & CFO",
       linkedin: "https://linkedin.com/in/sandeep",
-      image: "/lovable-uploads/b75b0f6c-5053-478e-8458-a0021a8d5fc3.png"
+      image: "/lovable-uploads/88c6a233-bbf5-4c43-8f9a-1da562a18059.png"  // Switched with Rochan's image
     },
     {
       name: "Namratha",
       role: "Chief Impact Officer",
       linkedin: "https://linkedin.com/in/namratha",
-      image: "/lovable-uploads/d07d4147-9f40-490a-a363-39dfd25e216b.png"
+      image: "/lovable-uploads/77b95b64-9527-4de8-9ef7-fd1e8dc12ef6.png"  // Switched with Geetika's image
     },
     {
       name: "Geetika Goel",
       role: "CIO",
       linkedin: "https://linkedin.com/in/geetika-goel",
-      image: "/lovable-uploads/77b95b64-9527-4de8-9ef7-fd1e8dc12ef6.png"
+      image: "/lovable-uploads/d07d4147-9f40-490a-a363-39dfd25e216b.png"  // Switched with Namratha's image
     },
     {
       name: "Ravish",
-      role: "Director",
+      role: "Chief Program Manager",  // Updated designation
       linkedin: "https://linkedin.com/in/ravish",
       image: "/lovable-uploads/placeholder-avatar.png"
     }
@@ -55,7 +55,15 @@ const Leadership = () => {
       
       {/* Hero Section */}
       <section className="relative py-20 mt-16">
-        <div className="absolute inset-0 z-0 bg-gradient-to-r from-[#673AB7] to-[#8B5CF6] opacity-90" />
+        <div 
+          className="absolute inset-0 z-0 bg-cover bg-center bg-no-repeat"
+          style={{
+            backgroundImage: "url('/lovable-uploads/9114eb0c-c8f9-4859-ac25-dfea74a21dbc.png')",
+            backgroundBlendMode: "overlay"
+          }}
+        >
+          <div className="absolute inset-0 bg-gradient-to-r from-[#673AB7] to-[#8B5CF6] opacity-90" />
+        </div>
         <div className="container px-4 mx-auto relative z-10">
           <div className="max-w-4xl mx-auto text-center text-white">
             <h1 className="text-4xl md:text-5xl font-bold mb-6">
