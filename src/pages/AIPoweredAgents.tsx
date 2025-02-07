@@ -22,7 +22,7 @@ const AIPoweredAgents = () => {
       tagline: "Unlock Insights and Drive Innovation with AI-Powered Analytics"
     },
     {
-      url: "https://images.unsplash.com/photo-1676375525463-bdbc45563a41",
+      url: "https://images.unsplash.com/photo-1518770660439-4636190af475",
       title: "AI-Powered Innovation",
       tagline: "Revolutionize Your Industry with Cutting-Edge AI Solutions"
     }
