@@ -1,5 +1,6 @@
+
 import Navigation from "@/components/Navigation";
-import { Target, Rocket, Brain, BarChart, Users, Sparkles } from "lucide-react";
+import { Target, Rocket, Brain, BarChart, Users, Sparkles, Truck, Network } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useNavigate } from "react-router-dom";
 
@@ -85,24 +86,24 @@ const AboutKrushal = () => {
             <div className="grid md:grid-cols-2 gap-8">
               {[
                 {
+                  icon: <Truck className="w-10 h-10 text-[#673AB7]" />,
+                  title: "First Mile Solutions",
+                  description: "Specialized solutions for transforming foundational operations, procurement, and field services in rural and underserved markets."
+                },
+                {
                   icon: <Brain className="w-10 h-10 text-[#673AB7]" />,
                   title: "AI & Intelligent Automation",
                   description: "AI Agents driving efficiency and proactive problem-solving, with specialized focus on First Mile operations."
                 },
                 {
-                  icon: <BarChart className="w-10 h-10 text-[#673AB7]" />,
-                  title: "Data-Driven Insights",
-                  description: "Actionable intelligence extracted from data across the value chain, unlocking critical First Mile insights."
+                  icon: <Network className="w-10 h-10 text-[#673AB7]" />,
+                  title: "End-to-End Transformation",
+                  description: "Comprehensive solutions spanning the entire value chain, from first mile operations to end-user experiences."
                 },
                 {
                   icon: <Sparkles className="w-10 h-10 text-[#673AB7]" />,
                   title: "Mobile-First Applications",
                   description: "User-friendly solutions empowering field teams and enhancing operational efficiency in First Mile operations."
-                },
-                {
-                  icon: <Users className="w-10 h-10 text-[#673AB7]" />,
-                  title: "Cloud & DevOps Excellence",
-                  description: "Scalable, secure infrastructure supporting modern operations across the entire value chain."
                 }
               ].map((solution, index) => (
                 <div key={index} className="bg-white p-6 rounded-lg shadow-sm border hover:border-[#673AB7] transition-colors">
@@ -169,3 +170,4 @@ const AboutKrushal = () => {
 };
 
 export default AboutKrushal;
+
