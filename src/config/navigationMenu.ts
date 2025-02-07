@@ -53,7 +53,8 @@ export const navigationMenu = [
     items: [
       { 
         title: "About Krushal", 
-        href: "/about-krushal"
+        href: "/about-krushal",
+        description: "Empowering Transformation through Engineering Excellence"
       },
       { 
         title: "What We Do", 
@@ -71,4 +72,3 @@ export const navigationMenu = [
     ],
   },
 ];
-
