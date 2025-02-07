@@ -15,7 +15,7 @@ const Hero = () => {
     {
       url: "https://images.unsplash.com/photo-1605810230434-7631ac76ec81?auto=format&fit=crop&q=80",
       title: "Rural Innovation",
-      tagline: "Revolutionizing Rural India through Digital Innovation"
+      tagline: "Krushal: Modernizing the First Mile"
     },
     {
       url: "https://images.unsplash.com/photo-1495107334309-fcf20504a5ab?auto=format&fit=crop&q=80",
