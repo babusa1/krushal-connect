@@ -55,40 +55,7 @@ const Solution = () => {
   return (
     <section className="py-20 bg-gradient-to-b from-[#F3F4F6] to-white">
       <div className="container px-4 mx-auto">
-        {/* Industry Coverage Section */}
-        <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-[#1E293B] mb-4">
-            Industry Coverage
-          </h2>
-          <p className="text-[#64748B] max-w-2xl mx-auto">
-            Comprehensive solutions transforming rural India through technology and innovation
-          </p>
-        </div>
-
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-20">
-          {industries.map((industry, index) => (
-            <div 
-              key={index} 
-              className="group bg-white rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden border border-[#E2E8F0]"
-            >
-              <div className="relative h-48 overflow-hidden">
-                <img 
-                  src={industry.image} 
-                  alt={industry.title}
-                  className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-[#0EA5E9]/90 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-              </div>
-              <div className="p-6 text-center">
-                {industry.icon}
-                <h3 className="text-xl font-semibold text-[#1E293B] mb-2">{industry.title}</h3>
-                <p className="text-[#64748B]">{industry.description}</p>
-              </div>
-            </div>
-          ))}
-        </div>
-
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-7xl mx-auto">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-7xl mx-auto mb-20">
           {/* First Mile as a Service */}
           <div className="space-y-8">
             <div className="text-center lg:text-left">
@@ -182,6 +149,39 @@ const Solution = () => {
               </div>
             </div>
           </div>
+        </div>
+
+        {/* Industry Coverage Section */}
+        <div className="text-center mb-16">
+          <h2 className="text-4xl font-bold text-[#1E293B] mb-4">
+            Industry Coverage
+          </h2>
+          <p className="text-[#64748B] max-w-2xl mx-auto">
+            Comprehensive solutions transforming rural India through technology and innovation
+          </p>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          {industries.map((industry, index) => (
+            <div 
+              key={index} 
+              className="group bg-white rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden border border-[#E2E8F0]"
+            >
+              <div className="relative h-48 overflow-hidden">
+                <img 
+                  src={industry.image} 
+                  alt={industry.title}
+                  className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-[#0EA5E9]/90 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+              </div>
+              <div className="p-6 text-center">
+                {industry.icon}
+                <h3 className="text-xl font-semibold text-[#1E293B] mb-2">{industry.title}</h3>
+                <p className="text-[#64748B]">{industry.description}</p>
+              </div>
+            </div>
+          ))}
         </div>
       </div>
     </section>
