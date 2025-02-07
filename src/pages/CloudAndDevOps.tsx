@@ -27,7 +27,7 @@ const CloudAndDevOps = () => {
 
   const buttonConfig = {
     text: "Explore Cloud Services",
-    onClick: () => navigate("/contact")
+    onClick: () => navigate("/explore-cloud-services")  // Updated this line
   };
 
   return (
