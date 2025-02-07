@@ -8,7 +8,7 @@ const Hero = () => {
   
   const images = [
     {
-      url: "https://images.unsplash.com/photo-1465379944081-7f47de8d74ac", // Brown cattle in forest for dairy theme
+      url: "https://images.unsplash.com/photo-1517022812141-23620dba5c23", // Rural setting with sheep in fields
       title: "First Mile Modernization",
       tagline: "Empowering Underserved Markets with Dairy, Agritech, Financial Services & Healthcare Solutions"
     },
