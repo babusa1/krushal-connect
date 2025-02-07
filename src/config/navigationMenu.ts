@@ -58,7 +58,7 @@ export const navigationMenu = [
       { 
         title: "What We Do", 
         href: "/about",
-        description: "Learn about our mission, expertise, and impact in modernizing essential industries"
+        description: "Transforming Industries Through Innovation"
       },
       { 
         title: "Our Leadership", 
@@ -71,3 +71,4 @@ export const navigationMenu = [
     ],
   },
 ];
+
