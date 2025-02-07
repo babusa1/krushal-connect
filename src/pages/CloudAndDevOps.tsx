@@ -2,6 +2,7 @@ import Navigation from "@/components/Navigation";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 import { useNavigate } from "react-router-dom";
+import { ArrowRight, Rocket, Percent, Scale, ShieldCheck, Gauge } from "lucide-react";
 
 const CloudAndDevOps = () => {
   const navigate = useNavigate();
@@ -109,7 +110,7 @@ const CloudAndDevOps = () => {
         </div>
       </section>
 
-      {/* Benefits Section */}
+      {/* Key Benefits Section */}
       <section className="py-16 bg-white">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold text-center mb-12 text-[#6E59A5]">
@@ -118,29 +119,47 @@ const CloudAndDevOps = () => {
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {[
               {
+                icon: <Rocket className="w-12 h-12 text-[#9b87f5]" />,
                 title: "Accelerated Innovation",
-                description: "Release new features and applications up to 50% faster."
+                description: "Release new features and applications up to 50% faster",
+                animation: "animate-float"
               },
               {
+                icon: <Gauge className="w-12 h-12 text-[#9b87f5]" />,
                 title: "Enhanced Efficiency",
-                description: "Reduce operational overhead and improve resource utilization by 30%."
+                description: "Reduce operational overhead and improve resource utilization by 30%",
+                animation: "animate-fadeIn"
               },
               {
+                icon: <Scale className="w-12 h-12 text-[#9b87f5]" />,
                 title: "Improved Scalability & Agility",
-                description: "Scale your infrastructure and applications on demand to meet fluctuating business needs."
+                description: "Scale your infrastructure and applications on demand to meet fluctuating business needs",
+                animation: "animate-slideIn"
               },
               {
+                icon: <Percent className="w-12 h-12 text-[#9b87f5]" />,
                 title: "Reduced Costs",
-                description: "Optimize cloud spending and infrastructure management costs by 20%."
+                description: "Optimize cloud spending and infrastructure management costs by 20%",
+                animation: "animate-float"
               },
               {
+                icon: <ShieldCheck className="w-12 h-12 text-[#9b87f5]" />,
                 title: "Strengthened Security",
-                description: "Minimize security risks and ensure compliance with industry standards."
+                description: "Minimize security risks and ensure compliance with industry standards",
+                animation: "animate-fadeIn"
               }
             ].map((benefit, index) => (
-              <div key={index} className="bg-[#F8F7FF] p-8 rounded-lg shadow-lg hover:shadow-xl transition-all">
-                <h3 className="text-xl font-semibold mb-4 text-[#6E59A5]">{benefit.title}</h3>
-                <p className="text-[#7E69AB]">{benefit.description}</p>
+              <div 
+                key={index} 
+                className={`bg-[#F8F7FF] p-8 rounded-lg shadow-lg hover:shadow-xl transition-all ${benefit.animation}`}
+              >
+                <div className="flex flex-col items-center text-center">
+                  <div className="mb-6 p-4 bg-white rounded-full shadow-md">
+                    {benefit.icon}
+                  </div>
+                  <h3 className="text-xl font-semibold mb-4 text-[#6E59A5]">{benefit.title}</h3>
+                  <p className="text-[#7E69AB]">{benefit.description}</p>
+                </div>
               </div>
             ))}
           </div>
