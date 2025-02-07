@@ -9,6 +9,7 @@ import NotFound from "./pages/NotFound";
 import FirstMileSolutions from "./pages/FirstMileSolutions";
 import Contact from "./pages/Contact";
 import MobileFirstDigital from "./pages/MobileFirstDigital";
+import ExploreServices from "./pages/ExploreServices";
 
 const queryClient = new QueryClient();
 
@@ -23,6 +24,7 @@ const App = () => (
           <Route path="/first-mile-solutions" element={<FirstMileSolutions />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/mobile-first-digital" element={<MobileFirstDigital />} />
+          <Route path="/explore-services" element={<ExploreServices />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>

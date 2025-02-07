@@ -1,3 +1,4 @@
+
 import { Button } from "@/components/ui/button";
 import Navigation from "@/components/Navigation";
 import { ArrowRight, Smartphone, Globe, Users, ShieldCheck, Code, Container, MessageSquare, Database } from "lucide-react";
@@ -32,6 +33,7 @@ const MobileFirstDigital = () => {
                 Get a Free Consultation <ArrowRight className="ml-2" />
               </Button>
               <Button 
+                onClick={() => navigate("/explore-services")}
                 variant="outline"
                 className="border-[#9b87f5] text-[#9b87f5] hover:bg-[#E5DEFF] px-8 py-6 text-lg"
               >
