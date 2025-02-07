@@ -35,7 +35,7 @@ const AIPoweredAgents = () => {
       <HeroCarousel 
         images={carouselImages}
         buttonConfig={{
-          text: "Explore AI Services",
+          text: "Explore AI Agents",
           onClick: () => navigate("/explore-ai-services")
         }}
       />
