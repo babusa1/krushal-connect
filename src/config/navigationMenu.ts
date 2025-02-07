@@ -49,7 +49,7 @@ export const navigationMenu = [
     ],
   },
   {
-    title: "About",
+    title: "About Krushal",
     items: [
       { title: "What we do", href: "#about" },
       { title: "Our Leadership", href: "#leadership" },
@@ -57,4 +57,3 @@ export const navigationMenu = [
     ],
   },
 ];
-
