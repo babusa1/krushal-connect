@@ -1,4 +1,3 @@
-
 import {
   NavigationMenu,
   NavigationMenuContent,
@@ -28,14 +27,9 @@ const Navigation = () => {
           description: "Extension Services, Procurement Operations, Field Operations, Risk Management, First Mile Data & Insights"
         },
         { 
-          title: "AI Powered Insights", 
-          href: "#ai-insights",
-          description: "Leverage artificial intelligence for actionable business insights"
-        },
-        { 
           title: "Mobile First Digital", 
-          href: "#mobile-digital",
-          description: "Digital solutions optimized for mobile experiences"
+          href: "/mobile-first-digital",
+          description: "Web, mobile, and voice applications with human-centered design"
         },
         { 
           title: "AI powered Agents", 

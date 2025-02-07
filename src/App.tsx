@@ -8,6 +8,7 @@ import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
 import FirstMileSolutions from "./pages/FirstMileSolutions";
 import Contact from "./pages/Contact";
+import MobileFirstDigital from "./pages/MobileFirstDigital";
 
 const queryClient = new QueryClient();
 
@@ -21,6 +22,7 @@ const App = () => (
           <Route path="/" element={<Index />} />
           <Route path="/first-mile-solutions" element={<FirstMileSolutions />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/mobile-first-digital" element={<MobileFirstDigital />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
