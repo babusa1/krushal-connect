@@ -23,56 +23,17 @@ const ExploreAIAgents = () => {
         <div className="container mx-auto px-4 py-24 relative z-20">
           <div className="max-w-3xl mx-auto text-center">
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 animate-fadeIn">
-              Pioneering Intelligent AI Agents
+              Krushal: Pioneering Intelligent AI Agents Across Industries
             </h1>
             <p className="text-xl md:text-2xl text-gray-200 max-w-2xl mx-auto mb-12 animate-fadeIn">
-              Unleash the transformative power of Artificial Intelligence with cutting-edge AI Agent development services
+              Unleash the transformative power of Artificial Intelligence with Krushal's cutting-edge AI Agent development services. We create bespoke AI Agents tailored to your unique needs across various sectors, delivering intelligent automation and game-changing results.
             </p>
           </div>
         </div>
       </section>
 
-      {/* Our Approach Section */}
-      <section className="py-16 bg-white">
-        <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold text-center text-[#1EAEDB] mb-12">
-            Our Approach to AI Agent Development
-          </h2>
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {[
-              {
-                icon: <Brain className="w-12 h-12 text-[#1EAEDB]" />,
-                title: "Understand Your Needs",
-                description: "Deep analysis of your business challenges and opportunities"
-              },
-              {
-                icon: <LineChart className="w-12 h-12 text-[#1EAEDB]" />,
-                title: "Design Solutions",
-                description: "Develop tailored AI Agents for your unique requirements"
-              },
-              {
-                icon: <Network className="w-12 h-12 text-[#1EAEDB]" />,
-                title: "Develop & Deploy",
-                description: "Build and deploy reliable and scalable AI Agents"
-              },
-              {
-                icon: <Bot className="w-12 h-12 text-[#1EAEDB]" />,
-                title: "Support & Optimize",
-                description: "Continuous monitoring and optimization for peak performance"
-              }
-            ].map((item, index) => (
-              <div key={index} className="bg-white p-8 rounded-lg shadow-lg hover:shadow-xl transition-shadow">
-                <div className="mb-6">{item.icon}</div>
-                <h3 className="text-xl font-semibold mb-4 text-[#403E43]">{item.title}</h3>
-                <p className="text-[#8E9196]">{item.description}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* Industries Section */}
-      <section className="py-16 bg-[#F6F6F7]">
+      <section className="py-16 bg-white">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold text-center text-[#1EAEDB] mb-12">
             Industries We Serve
@@ -81,60 +42,105 @@ const ExploreAIAgents = () => {
             {[
               {
                 title: "Dairy",
+                description: "Transform your dairy operations with AI-driven solutions:",
                 features: [
-                  "Automated Herd Monitoring",
-                  "Milk Quality Analysis",
-                  "Smart Feed Management",
-                  "Supply Chain Optimization"
+                  "Automated Herd Monitoring: Continuously track animal health, behavior, and milk production using sensor data, offering early alerts for potential issues.",
+                  "Milk Quality Analysis & Prediction: Predict milk quality and detect contamination risks through automated sensor data and trend analysis.",
+                  "Smart Feed Management: Optimize feed distribution based on individual animal needs, weather patterns, and production goals, reducing waste and enhancing health.",
+                  "Supply Chain & Logistics Optimization: Streamline milk collection, processing, and distribution with AI-powered route optimization, demand prediction, and inventory management."
                 ]
               },
               {
                 title: "Healthcare",
+                description: "Enhance patient care and operational efficiency with intelligent AI Agents:",
                 features: [
-                  "Virtual Patient Assistants",
-                  "AI-Powered Diagnostic Support",
-                  "Automated Administrative Tasks",
-                  "Treatment Recommendations"
+                  "Virtual Patient Assistants: Provide 24/7 support, schedule appointments, manage medications, and offer personalized health information.",
+                  "AI-Powered Diagnostic Support: Assist medical professionals with preliminary diagnosis using patient data, medical images, and research analysis.",
+                  "Automated Administrative Tasks: Simplify insurance pre-authorization, medical coding, and report generation, freeing staff for patient-centric care.",
+                  "Personalized Treatment Recommendations: Utilize patient history, genetic data, and treatment outcomes to suggest personalized treatment plans."
                 ]
               },
               {
                 title: "Insurance",
+                description: "Revolutionize insurance processes and customer experiences:",
                 features: [
-                  "Automated Claims Processing",
-                  "Fraud Detection & Prevention",
-                  "Policy Recommendations",
-                  "Risk Assessment"
+                  "Automated Claims Processing: Accelerate claims processing by analyzing documents, verifying information, and detecting fraud.",
+                  "Fraud Detection & Prevention: Identify and flag fraudulent claims in real-time, minimizing losses.",
+                  "Personalized Policy Recommendations: Offer tailored policies based on customer profiles and risk assessments.",
+                  "AI-Driven Risk Assessment: Enhance risk accuracy through comprehensive data analysis for precise underwriting and pricing."
                 ]
               },
               {
                 title: "Finance & Banking",
+                description: "Transform financial services and banking with AI innovation:",
                 features: [
-                  "Customer Service Chatbots",
-                  "Fraud Prevention",
-                  "Financial Advice",
-                  "Algorithmic Trading"
+                  "AI-Powered Customer Service Chatbots: Deliver instant, personalized support, answer queries, and improve customer satisfaction.",
+                  "Fraud Prevention & Security Enhancement: Detect and prevent fraudulent transactions and cyber threats in real-time.",
+                  "Personalized Financial Advice & Planning: Provide customized financial advice and investment recommendations.",
+                  "Algorithmic Trading & Investment Optimization: Support trading strategies, optimize portfolios, and identify market opportunities."
                 ]
               },
               {
                 title: "Agritech",
+                description: "Drive sustainable agriculture with AI advancements:",
                 features: [
-                  "Precision Farming",
-                  "Automated Irrigation",
-                  "Pest Detection",
-                  "Supply Chain Optimization"
+                  "Precision Farming & Crop Monitoring: Optimize water, fertilizer, and pesticide use by analyzing real-time data.",
+                  "Automated Irrigation & Resource Management: Adjust water usage based on soil conditions, forecasts, and crop needs.",
+                  "Pest & Disease Detection & Management: Detect pests and diseases early through image and sensor data analysis.",
+                  "Supply Chain Optimization: Enhance logistics, predict demand, and reduce food waste with AI-driven solutions."
                 ]
               }
             ].map((industry, index) => (
               <div key={index} className="bg-white p-8 rounded-lg shadow-lg hover:shadow-xl transition-shadow">
-                <h3 className="text-xl font-semibold text-[#1EAEDB] mb-6">{industry.title}</h3>
+                <h3 className="text-xl font-semibold text-[#1EAEDB] mb-4">{industry.title}</h3>
+                <p className="text-gray-600 mb-4">{industry.description}</p>
                 <ul className="space-y-3">
                   {industry.features.map((feature, idx) => (
-                    <li key={idx} className="flex items-center space-x-2">
-                      <Bot className="w-4 h-4 text-[#1EAEDB]" />
-                      <span className="text-[#8E9196]">{feature}</span>
+                    <li key={idx} className="flex items-start space-x-2">
+                      <Bot className="w-5 h-5 text-[#1EAEDB] mt-1 flex-shrink-0" />
+                      <span className="text-gray-600">{feature}</span>
                     </li>
                   ))}
                 </ul>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Approach Section */}
+      <section className="py-16 bg-[#F6F6F7]">
+        <div className="container mx-auto px-4">
+          <h2 className="text-3xl font-bold text-center text-[#1EAEDB] mb-12">
+            Krushal's Approach to AI Agent Development
+          </h2>
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {[
+              {
+                icon: <Brain className="w-12 h-12 text-[#1EAEDB]" />,
+                title: "Understand Your Specific Needs",
+                description: "We deeply analyze your business challenges and opportunities."
+              },
+              {
+                icon: <LineChart className="w-12 h-12 text-[#1EAEDB]" />,
+                title: "Design Custom AI Agent Solutions",
+                description: "Develop tailored AI Agents to address your unique requirements."
+              },
+              {
+                icon: <Network className="w-12 h-12 text-[#1EAEDB]" />,
+                title: "Develop & Deploy Robust AI Agents",
+                description: "Utilize cutting-edge AI technologies for reliable and scalable solutions."
+              },
+              {
+                icon: <Bot className="w-12 h-12 text-[#1EAEDB]" />,
+                title: "Provide Ongoing Support & Optimization",
+                description: "Continuous monitoring and maintenance to ensure peak performance."
+              }
+            ].map((step, index) => (
+              <div key={index} className="bg-white p-8 rounded-lg shadow-lg hover:shadow-xl transition-shadow">
+                <div className="mb-6">{step.icon}</div>
+                <h3 className="text-xl font-semibold mb-4">{step.title}</h3>
+                <p className="text-gray-600">{step.description}</p>
               </div>
             ))}
           </div>
@@ -145,10 +151,10 @@ const ExploreAIAgents = () => {
       <section className="py-16 bg-white">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl font-bold text-[#1EAEDB] mb-6">
-            Ready to Transform Your Business?
+            Ready to explore the potential of AI Agents for your industry?
           </h2>
-          <p className="text-lg text-[#8E9196] mb-8 max-w-2xl mx-auto">
-            Contact us today to discuss your specific needs and discover how our AI Agent development services can drive innovation and growth for your business.
+          <p className="text-lg text-gray-600 mb-8 max-w-2xl mx-auto">
+            Contact Krushal today to discuss your specific needs and discover how our AI Agent development services can drive innovation and growth for your business.
           </p>
           <Button 
             onClick={() => navigate("/contact")}
