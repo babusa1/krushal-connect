@@ -1,4 +1,3 @@
-
 import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useEffect, useState } from "react";
@@ -18,10 +17,9 @@ const Hero = () => {
       tagline: "Unlocking the Power of Unified Data"
     },
     {
-      // Using more relevant image for First Mile representation
       url: "https://images.unsplash.com/photo-1465379944081-7f47de8d74ac", // Rural India with cattle farmer
       title: "First Mile Modernization",
-      tagline: "Revolutionizing Rural Connect with Innovative Tech Solutions"
+      tagline: "Empowering Rural India with Dairy, Agritech, Financial Services & Healthcare Solutions"
     },
     {
       url: "https://images.unsplash.com/photo-1483058712412-4245e9b90334",
