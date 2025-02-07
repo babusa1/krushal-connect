@@ -1,16 +1,7 @@
-import { useNavigate } from "react-router-dom";
 import Navigation from "@/components/Navigation";
 import { Button } from "@/components/ui/button";
-import { 
-  Cloud, 
-  Server, 
-  Database, 
-  Cog, 
-  Rocket, 
-  Infinity, 
-  Network,
-  ChartBar
-} from "lucide-react";
+import { useNavigate } from "react-router-dom";
+import { Cloud, Server, Database, Cog, Rocket, Infinity, Network, ChartBar } from "lucide-react";
 
 const ExploreCloudServices = () => {
   const navigate = useNavigate();
