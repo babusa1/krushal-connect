@@ -38,27 +38,29 @@ const FirstMileSolutions = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-white overflow-x-hidden">
       <Navigation />
       <HeroCarousel images={images} />
-      <MarketOpportunity />
-      <SolutionSection />
-      <IndustryUseCases />
-      <OutcomesSection />
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <MarketOpportunity />
+        <SolutionSection />
+        <IndustryUseCases />
+        <OutcomesSection />
+      </div>
 
       {/* CTA Section */}
-      <section className="py-16 px-4 bg-gradient-to-br from-[#673AB7] to-[#9b87f5] text-white">
-        <div className="container mx-auto text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-6">
+      <section className="py-12 sm:py-16 px-4 bg-gradient-to-br from-[#673AB7] to-[#9b87f5] text-white">
+        <div className="container mx-auto max-w-4xl text-center">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 sm:mb-6">
             First Mile as a Service for Underserved Markets
           </h2>
-          <p className="text-xl mb-8 text-white/90">
+          <p className="text-lg sm:text-xl mb-6 sm:mb-8 text-white/90">
             Join the revolution in rural transformation
           </p>
           <Button 
-            className="bg-white text-[#673AB7] hover:bg-[#E5DEFF] px-8 py-6 rounded-full text-lg font-medium flex items-center gap-2 mx-auto"
+            className="bg-white text-[#673AB7] hover:bg-[#E5DEFF] px-6 sm:px-8 py-4 sm:py-6 rounded-full text-base sm:text-lg font-medium flex items-center gap-2 mx-auto"
           >
-            Contact Us <ArrowRight className="w-5 h-5" />
+            Contact Us <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5" />
           </Button>
         </div>
       </section>
