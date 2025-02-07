@@ -83,13 +83,13 @@ const ExploreAIServices = () => {
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {services.map((service, index) => (
               <div key={index} className="bg-white p-8 rounded-lg shadow-lg hover:shadow-xl transition-all group hover:-translate-y-2 duration-300">
-                <service.icon className="w-12 h-12 text-[#9b87f5] mb-6 group-hover:scale-110 transition-transform" />
+                <service.icon className="w-12 h-12 text-[#1EAEDB] mb-6 group-hover:scale-110 transition-transform" />
                 <h3 className="text-2xl font-semibold mb-4">{service.title}</h3>
                 <p className="text-[#8E9196] mb-4 italic">"{service.description}"</p>
                 <ul className="space-y-3 text-gray-600">
                   {service.bullets.map((bullet, idx) => (
                     <li key={idx} className="flex items-center space-x-2">
-                      <span className="w-2 h-2 bg-[#9b87f5] rounded-full"></span>
+                      <span className="w-2 h-2 bg-[#1EAEDB] rounded-full"></span>
                       <span>{bullet}</span>
                     </li>
                   ))}
@@ -102,7 +102,7 @@ const ExploreAIServices = () => {
           <div className="text-center mt-16">
             <Button
               onClick={() => navigate("/contact")}
-              className="bg-[#9b87f5] hover:bg-[#8B5CF6] text-white px-8 py-6 text-lg animate-fade-in hover:scale-105 transition-transform duration-300"
+              className="bg-[#1EAEDB] hover:bg-[#33C3F0] text-white px-8 py-6 text-lg animate-fade-in hover:scale-105 transition-transform duration-300"
             >
               Get a Free Consultation <ChartLine className="ml-2" />
             </Button>
@@ -121,7 +121,7 @@ const ExploreAIServices = () => {
           </p>
           <Button 
             onClick={() => navigate("/contact")}
-            className="bg-[#9b87f5] hover:bg-[#8B5CF6] text-white px-8 py-6 text-lg"
+            className="bg-[#1EAEDB] hover:bg-[#33C3F0] text-white px-8 py-6 text-lg"
           >
             Request a Consultation
           </Button>
