@@ -9,19 +9,19 @@ const CloudAndDevOps = () => {
 
   const carouselImages = [
     {
-      url: "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b",
-      title: "Krushal: Your Partner for Cloud & DevOps Success",
-      tagline: "Unlock agility, scalability, and efficiency with Krushal's expertise"
+      url: "https://images.unsplash.com/photo-1451187580459-43490279c0fa",
+      title: "Enterprise Cloud Solutions",
+      tagline: "Transform your business with secure, scalable cloud infrastructure"
     },
     {
-      url: "https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7",
-      title: "Accelerate Your Digital Transformation",
-      tagline: "Empower your business with modern cloud solutions"
+      url: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31",
+      title: "DevOps Excellence",
+      tagline: "Automate, deploy, and scale with confidence"
     },
     {
-      url: "https://images.unsplash.com/photo-1483058712412-4245e9b90334",
-      title: "Enterprise-Grade DevOps Solutions",
-      tagline: "Streamline your development pipeline with proven methodologies"
+      url: "https://images.unsplash.com/photo-1563986768494-4dee2763ff3f",
+      title: "Cloud Migration & Optimization",
+      tagline: "Seamless transitions to modern cloud architecture"
     }
   ];
 
