@@ -10,22 +10,22 @@ const MobileFirstDigital = () => {
 
   const carouselImages = [
     {
-      url: "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b",
+      url: "https://images.unsplash.com/photo-1451187580459-43490279c0fa",
       title: "Modern Digital Solutions for Tomorrow's Challenges",
       tagline: "Building seamless experiences across web, mobile, and voice platforms"
     },
     {
-      url: "https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7",
+      url: "https://images.unsplash.com/photo-1498050108023-c5249f4df085",
       title: "Web Application Development",
       tagline: "Create powerful, responsive web applications that drive business growth"
     },
     {
-      url: "https://images.unsplash.com/photo-1434494878577-86c23bcb06b9",
+      url: "https://images.unsplash.com/photo-1526498460520-4c246339dccb",
       title: "Mobile Application Development",
       tagline: "Native and cross-platform solutions for iOS and Android"
     },
     {
-      url: "https://images.unsplash.com/photo-1483058712412-4245e9b90334",
+      url: "https://images.unsplash.com/photo-1535378620166-273708d44e4c",
       title: "Voice Application Development",
       tagline: "Next-generation voice interfaces for Alexa and Google Assistant"
     }
