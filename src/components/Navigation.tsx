@@ -111,24 +111,37 @@ const Navigation = () => {
           <NavigationMenuList className="flex-1 justify-end">
             {menu.map((section) => (
               <NavigationMenuItem key={section.title}>
-                <NavigationMenuTrigger>{section.title}</NavigationMenuTrigger>
+                <NavigationMenuTrigger className="bg-transparent hover:bg-gray-50 data-[state=open]:bg-gray-50 text-gray-700">
+                  {section.title}
+                </NavigationMenuTrigger>
                 <NavigationMenuContent>
-                  <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px]">
-                    {section.items.map((item) => (
-                      <li key={item.title}>
-                        <NavigationMenuLink asChild>
-                          <a
-                            href={item.href}
-                            className={cn(
-                              "block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
-                            )}
-                          >
-                            <div className="text-sm font-medium leading-none">{item.title}</div>
-                          </a>
-                        </NavigationMenuLink>
-                      </li>
-                    ))}
-                  </ul>
+                  <div className="w-[500px] p-4 bg-white rounded-lg shadow-lg border border-gray-100">
+                    <div className="mb-2 text-sm font-medium text-primary/80">{section.title}</div>
+                    <ul className="grid gap-3 md:grid-cols-2">
+                      {section.items.map((item) => (
+                        <li key={item.title}>
+                          <NavigationMenuLink asChild>
+                            <a
+                              href={item.href}
+                              className={cn(
+                                "block select-none rounded-md p-3 leading-none no-underline outline-none transition-all duration-200",
+                                "hover:bg-gray-50 hover:text-primary",
+                                "focus:bg-gray-50 focus:text-primary",
+                                "group"
+                              )}
+                            >
+                              <div className="text-sm font-medium leading-none group-hover:text-primary">
+                                {item.title}
+                              </div>
+                              <p className="mt-1 text-xs leading-relaxed text-gray-500 line-clamp-2 group-hover:text-primary/70">
+                                Explore {item.title.toLowerCase()} solutions and services
+                              </p>
+                            </a>
+                          </NavigationMenuLink>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
                 </NavigationMenuContent>
               </NavigationMenuItem>
             ))}
