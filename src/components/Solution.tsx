@@ -25,6 +25,29 @@ const Solution = () => {
     },
   ];
 
+  const industries = [
+    {
+      title: "Dairy Operations",
+      image: "https://images.unsplash.com/photo-1465379944081-7f47de8d74ac",
+      description: "End-to-end dairy supply chain solutions"
+    },
+    {
+      title: "Insurance Services",
+      image: "https://images.unsplash.com/photo-1450101499163-c8848c66ca85",
+      description: "Rural insurance delivery platform"
+    },
+    {
+      title: "Financial Solutions",
+      image: "https://images.unsplash.com/photo-1518186285589-2f7649de83e0",
+      description: "Digital financial services for rural India"
+    },
+    {
+      title: "Agritech Integration",
+      image: "https://images.unsplash.com/photo-1501854140801-50d01698950b",
+      description: "Smart farming and agriculture solutions"
+    }
+  ];
+
   return (
     <section className="py-20 bg-gradient-to-b from-primary-light to-white">
       <div className="container px-4 mx-auto">
@@ -39,6 +62,29 @@ const Solution = () => {
               <p className="text-gray-600">
                 Comprehensive solutions for Dairy, Insurance, Finance, and Agritech sectors
               </p>
+            </div>
+
+            {/* Industry Coverage Section */}
+            <div className="bg-white/80 backdrop-blur-sm p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100">
+              <h3 className="text-xl font-semibold text-primary mb-6">Industry Coverage</h3>
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                {industries.map((industry, index) => (
+                  <div key={index} className="group relative overflow-hidden rounded-lg hover:shadow-xl transition-all duration-300">
+                    <div className="relative h-48 overflow-hidden">
+                      <img 
+                        src={industry.image} 
+                        alt={industry.title}
+                        className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-300"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent" />
+                    </div>
+                    <div className="absolute bottom-0 left-0 right-0 p-4 text-white">
+                      <h4 className="font-semibold text-lg mb-1">{industry.title}</h4>
+                      <p className="text-sm opacity-90">{industry.description}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
             </div>
 
             {/* Critical Gaps Section */}
@@ -56,28 +102,6 @@ const Solution = () => {
                 ))}
               </div>
             </div>
-
-            <div className="bg-white/80 backdrop-blur-sm p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100">
-              <h3 className="text-xl font-semibold text-primary mb-4">Industry Coverage</h3>
-              <ul className="space-y-2 text-gray-600">
-                <li className="flex items-center gap-2">
-                  <div className="w-2 h-2 rounded-full bg-secondary"></div>
-                  Dairy Operations
-                </li>
-                <li className="flex items-center gap-2">
-                  <div className="w-2 h-2 rounded-full bg-secondary"></div>
-                  Insurance Services
-                </li>
-                <li className="flex items-center gap-2">
-                  <div className="w-2 h-2 rounded-full bg-secondary"></div>
-                  Financial Solutions
-                </li>
-                <li className="flex items-center gap-2">
-                  <div className="w-2 h-2 rounded-full bg-secondary"></div>
-                  Agritech Integration
-                </li>
-              </ul>
-            </div>
           </div>
 
           {/* Tech Solutions at SPEED */}
@@ -91,60 +115,67 @@ const Solution = () => {
                 How we deliver cutting-edge technology solutions
               </p>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <div className="bg-white/80 backdrop-blur-sm p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100">
-                <Brain className="w-8 h-8 text-secondary mb-4" />
-                <h3 className="text-xl font-semibold text-primary mb-2">
-                  AI-Driven Development
-                </h3>
-                <p className="text-gray-600">
-                  Accelerated customization using AI tools for tailored solutions
-                </p>
-              </div>
-              <div className="bg-white/80 backdrop-blur-sm p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100">
-                <Blocks className="w-8 h-8 text-secondary mb-4" />
-                <h3 className="text-xl font-semibold text-primary mb-2">
-                  Standardized Components
-                </h3>
-                <p className="text-gray-600">
-                  Pre-built components, libraries, and frameworks for rapid deployment
-                </p>
-              </div>
-              <div className="bg-white/80 backdrop-blur-sm p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100">
-                <Users className="w-8 h-8 text-secondary mb-4" />
-                <h3 className="text-xl font-semibold text-primary mb-2">
-                  Client-Oriented Team
-                </h3>
-                <p className="text-gray-600">
-                  A team trained to use the latest tools and align to client priorities
-                </p>
-              </div>
-              <div className="bg-white/80 backdrop-blur-sm p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100">
-                <DollarSign className="w-8 h-8 text-secondary mb-4" />
-                <h3 className="text-xl font-semibold text-primary mb-2">
-                  Competitive Pricing
-                </h3>
-                <p className="text-gray-600">
-                  SaaS-like pricing with custom solutions tailored to client needs
-                </p>
-              </div>
-              <div className="bg-white/80 backdrop-blur-sm p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100">
-                <Award className="w-8 h-8 text-secondary mb-4" />
-                <h3 className="text-xl font-semibold text-primary mb-2">
-                  People Excellence
-                </h3>
-                <p className="text-gray-600">
-                  Client-centric, prioritized, continuous improvement
-                </p>
-              </div>
-              <div className="bg-white/80 backdrop-blur-sm p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100">
-                <Handshake className="w-8 h-8 text-secondary mb-4" />
-                <h3 className="text-xl font-semibold text-primary mb-2">
-                  Flexible Engagement
-                </h3>
-                <p className="text-gray-600">
-                  Outcome-driven services or collaborative co-development, adaptable to client needs
-                </p>
+            <div className="relative">
+              <img 
+                src="https://images.unsplash.com/photo-1488590528505-98d2b5aba04b" 
+                alt="Tech Solutions"
+                className="w-full h-64 object-cover rounded-xl mb-6"
+              />
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div className="bg-white/80 backdrop-blur-sm p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100">
+                  <Brain className="w-8 h-8 text-secondary mb-4" />
+                  <h3 className="text-xl font-semibold text-primary mb-2">
+                    AI-Driven Development
+                  </h3>
+                  <p className="text-gray-600">
+                    Accelerated customization using AI tools for tailored solutions
+                  </p>
+                </div>
+                <div className="bg-white/80 backdrop-blur-sm p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100">
+                  <Blocks className="w-8 h-8 text-secondary mb-4" />
+                  <h3 className="text-xl font-semibold text-primary mb-2">
+                    Standardized Components
+                  </h3>
+                  <p className="text-gray-600">
+                    Pre-built components, libraries, and frameworks for rapid deployment
+                  </p>
+                </div>
+                <div className="bg-white/80 backdrop-blur-sm p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100">
+                  <Users className="w-8 h-8 text-secondary mb-4" />
+                  <h3 className="text-xl font-semibold text-primary mb-2">
+                    Client-Oriented Team
+                  </h3>
+                  <p className="text-gray-600">
+                    A team trained to use the latest tools and align to client priorities
+                  </p>
+                </div>
+                <div className="bg-white/80 backdrop-blur-sm p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100">
+                  <DollarSign className="w-8 h-8 text-secondary mb-4" />
+                  <h3 className="text-xl font-semibold text-primary mb-2">
+                    Competitive Pricing
+                  </h3>
+                  <p className="text-gray-600">
+                    SaaS-like pricing with custom solutions tailored to client needs
+                  </p>
+                </div>
+                <div className="bg-white/80 backdrop-blur-sm p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100">
+                  <Award className="w-8 h-8 text-secondary mb-4" />
+                  <h3 className="text-xl font-semibold text-primary mb-2">
+                    People Excellence
+                  </h3>
+                  <p className="text-gray-600">
+                    Client-centric, prioritized, continuous improvement
+                  </p>
+                </div>
+                <div className="bg-white/80 backdrop-blur-sm p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100">
+                  <Handshake className="w-8 h-8 text-secondary mb-4" />
+                  <h3 className="text-xl font-semibold text-primary mb-2">
+                    Flexible Engagement
+                  </h3>
+                  <p className="text-gray-600">
+                    Outcome-driven services or collaborative co-development, adaptable to client needs
+                  </p>
+                </div>
               </div>
             </div>
           </div>
