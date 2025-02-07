@@ -89,8 +89,12 @@ const Navigation = () => {
   };
 
   const MobileMenu = () => (
-    <div className={`fixed inset-0 bg-white z-50 transition-transform duration-300 ${isMenuOpen ? 'translate-x-0' : '-translate-x-full'}`}>
-      <div className="flex justify-between items-center p-4 border-b">
+    <div 
+      className={`fixed inset-0 bg-white/95 backdrop-blur-md z-[100] transition-transform duration-300 ${
+        isMenuOpen ? 'translate-x-0' : '-translate-x-full'
+      }`}
+    >
+      <div className="fixed top-0 left-0 right-0 flex justify-between items-center p-4 border-b bg-white/95 backdrop-blur-sm">
         <div className="w-24">
           <img
             src="/lovable-uploads/9114eb0c-c8f9-4859-ac25-dfea74a21dbc.png"
@@ -98,33 +102,41 @@ const Navigation = () => {
             className="h-8 w-auto"
           />
         </div>
-        <button onClick={toggleMenu} className="p-2">
-          <X className="h-6 w-6 text-[#9b87f5] hover:text-[#7E69AB] transition-colors" />
+        <button 
+          onClick={toggleMenu} 
+          className="p-2 rounded-full hover:bg-[#E5DEFF] transition-colors"
+        >
+          <X className="h-6 w-6 text-[#6E59A5]" />
         </button>
       </div>
-      <div className="p-4">
-        {menu.map((section) => (
-          <div key={section.title} className="mb-6">
-            <h3 className="text-lg font-semibold mb-2 text-[#6E59A5]">{section.title}</h3>
-            <ul className="space-y-2">
-              {section.items.map((item) => (
-                <li key={item.title}>
-                  <button 
+      <div className="mt-16 h-[calc(100vh-4rem)] overflow-y-auto">
+        <div className="p-4 space-y-6">
+          {menu.map((section) => (
+            <div key={section.title} className="space-y-3">
+              <h3 className="text-lg font-semibold text-[#6E59A5] px-2">
+                {section.title}
+              </h3>
+              <div className="space-y-1">
+                {section.items.map((item) => (
+                  <button
+                    key={item.title}
                     onClick={() => handleNavigation(item.href)}
-                    className="block w-full text-left p-2 text-gray-600 hover:text-[#9b87f5] hover:bg-[#E5DEFF] rounded-md transition-colors"
+                    className="w-full text-left p-2 rounded-lg hover:bg-[#E5DEFF] transition-colors group"
                   >
-                    {item.title}
+                    <span className="text-[#6E59A5] group-hover:text-[#9b87f5] font-medium">
+                      {item.title}
+                    </span>
                     {item.description && (
-                      <span className="block text-xs text-gray-500 mt-1">
+                      <p className="text-sm text-gray-500 mt-1 group-hover:text-[#7E69AB]">
                         {item.description}
-                      </span>
+                      </p>
                     )}
                   </button>
-                </li>
-              ))}
-            </ul>
-          </div>
-        ))}
+                ))}
+              </div>
+            </div>
+          ))}
+        </div>
       </div>
     </div>
   );
@@ -140,19 +152,24 @@ const Navigation = () => {
           />
         </div>
         {isMobile ? (
-          <button onClick={toggleMenu} className="p-2">
-            <Menu className="h-6 w-6 text-[#9b87f5] hover:text-[#7E69AB] transition-colors" />
+          <button 
+            onClick={toggleMenu} 
+            className="p-2 rounded-full hover:bg-[#E5DEFF] transition-colors"
+          >
+            <Menu className="h-6 w-6 text-[#6E59A5]" />
           </button>
         ) : (
           <NavigationMenuList className="flex-1 justify-end">
             {menu.map((section) => (
               <NavigationMenuItem key={section.title}>
-                <NavigationMenuTrigger className="bg-transparent hover:bg-[#E5DEFF] data-[state=open]:bg-[#E5DEFF] text-[#6E59A5] hover:text-[#9b87f5]">
+                <NavigationMenuTrigger className="bg-transparent hover:bg-[#E5DEFF] data-[state=open]:bg-[#E5DEFF] text-[#6E59A5]">
                   {section.title}
                 </NavigationMenuTrigger>
                 <NavigationMenuContent>
-                  <div className="w-[500px] p-4 bg-white rounded-lg shadow-lg border border-[#E5DEFF]">
-                    <div className="mb-2 text-sm font-medium text-[#7E69AB]">{section.title}</div>
+                  <div className="w-[500px] p-4 md:grid-cols-2 bg-white rounded-lg shadow-lg border border-[#E5DEFF]">
+                    <div className="mb-2 text-sm font-medium text-[#7E69AB]">
+                      {section.title}
+                    </div>
                     <ul className="grid gap-3 md:grid-cols-2">
                       {section.items.map((item) => (
                         <li key={item.title}>
@@ -160,13 +177,13 @@ const Navigation = () => {
                             <button
                               onClick={() => handleNavigation(item.href)}
                               className={cn(
-                                "block select-none rounded-md p-3 leading-none no-underline outline-none transition-all duration-200 w-full text-left",
+                                "block select-none rounded-md p-3 leading-none no-underline outline-none transition-colors w-full text-left",
                                 "hover:bg-[#E5DEFF] hover:text-[#9b87f5]",
                                 "focus:bg-[#E5DEFF] focus:text-[#9b87f5]",
                                 "group"
                               )}
                             >
-                              <div className="text-sm font-medium leading-none group-hover:text-[#9b87f5]">
+                              <div className="text-sm font-medium leading-none text-[#6E59A5] group-hover:text-[#9b87f5]">
                                 {item.title}
                               </div>
                               {item.description && (
