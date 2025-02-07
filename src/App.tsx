@@ -20,6 +20,7 @@ import ExploreCloudServices from "./pages/ExploreCloudServices";
 import WhatWeDo from "./pages/WhatWeDo";
 import AboutKrushal from "./pages/AboutKrushal";
 import Leadership from "./pages/Leadership";
+import Careers from "./pages/Careers";
 
 const queryClient = new QueryClient();
 
@@ -45,6 +46,7 @@ const App = () => (
           <Route path="/about" element={<WhatWeDo />} />
           <Route path="/about-krushal" element={<AboutKrushal />} />
           <Route path="/leadership" element={<Leadership />} />
+          <Route path="/careers" element={<Careers />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
@@ -53,4 +55,3 @@ const App = () => (
 );
 
 export default App;
-
