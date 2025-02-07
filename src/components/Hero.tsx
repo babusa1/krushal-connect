@@ -8,19 +8,19 @@ const Hero = () => {
   
   const images = [
     {
-      url: "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&q=80",
-      title: "Tech Solutions at Speed",
-      tagline: "Speed Powered by AI, Data, Low Code Frameworks"
+      url: "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b",
+      title: "Mobile First Digital",
+      tagline: "Digital Transformation for Rural India"
     },
     {
-      url: "https://images.unsplash.com/photo-1642952469120-eed4b65104be?auto=format&fit=crop&q=80",
-      title: "Rural Innovation",
-      tagline: "Krushal: Modernizing the First Mile"
+      url: "https://images.unsplash.com/photo-1518770660439-4636190af475",
+      title: "AI & Data Analytics",
+      tagline: "Intelligent Solutions Powered by AI and Data"
     },
     {
-      url: "https://images.unsplash.com/photo-1580584126903-c17d41830450?auto=format&fit=crop&q=80",
-      title: "Agricultural Technology",
-      tagline: "Empowering Agriculture with Smart Technology Solutions"
+      url: "https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7",
+      title: "First Mile Innovation",
+      tagline: "Integrated Solutions for Agritech, Insurance, Banking & Dairy"
     }
   ];
 
@@ -54,7 +54,7 @@ const Hero = () => {
         <div className="max-w-4xl mx-auto">
           <div className="text-left md:text-center">
             <h1 className="animate-fadeIn text-4xl md:text-6xl font-bold text-white mb-6">
-              Krushal - Delivering Solutions at Speed
+              {images[currentImage].title}
             </h1>
             <p className="animate-fadeIn text-lg md:text-xl text-white/90 mb-8 delay-100">
               {images[currentImage].tagline}
