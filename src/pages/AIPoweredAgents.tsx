@@ -12,19 +12,19 @@ const AIPoweredAgents = () => {
 
   const carouselImages = [
     {
-      url: "https://images.unsplash.com/photo-1555949963-aa79dcee981c",
-      title: "First Mile Modernization",
+      url: "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b",
+      title: "AI-Powered Innovation",
       tagline: "Empowering Industries with Intelligent AI Agents for Transformative Solutions"
     },
     {
-      url: "https://images.unsplash.com/photo-1451187580459-43490279c0fa",
-      title: "Mobile First Digital",
-      tagline: "Human-Centric Solutions, Seamless Experiences"
+      url: "https://images.unsplash.com/photo-1485827404703-89b55fcc595e",
+      title: "Intelligent Automation",
+      tagline: "Streamline Operations with Advanced AI Technologies"
     },
     {
-      url: "https://images.unsplash.com/photo-1507146153580-69a1fe6d8aa1",
-      title: "Insights and Data",
-      tagline: "Unlocking the Power of Unified Data"
+      url: "https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7",
+      title: "Data-Driven Excellence",
+      tagline: "Harness the Power of AI for Actionable Insights"
     }
   ];
 
