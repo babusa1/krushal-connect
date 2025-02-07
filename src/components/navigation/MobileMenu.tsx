@@ -1,6 +1,7 @@
 
-import { X } from "lucide-react";
+import { X, ChevronDown } from "lucide-react";
 import { navigationMenu } from "@/config/navigationMenu";
+import { useState } from "react";
 
 interface MobileMenuProps {
   isOpen: boolean;
@@ -9,6 +10,16 @@ interface MobileMenuProps {
 }
 
 const MobileMenu = ({ isOpen, onClose, onNavigate }: MobileMenuProps) => {
+  const [expandedSections, setExpandedSections] = useState<string[]>([]);
+
+  const toggleSection = (sectionTitle: string) => {
+    setExpandedSections(prev =>
+      prev.includes(sectionTitle)
+        ? prev.filter(title => title !== sectionTitle)
+        : [...prev, sectionTitle]
+    );
+  };
+
   return (
     <div 
       className={`fixed inset-0 bg-white z-[9999] transition-transform duration-300 ${
@@ -32,29 +43,45 @@ const MobileMenu = ({ isOpen, onClose, onNavigate }: MobileMenuProps) => {
         </button>
       </div>
       <div className="mt-20 h-[calc(100vh-5rem)] overflow-y-auto pb-20">
-        <div className="p-4 space-y-8">
+        <div className="p-4 space-y-4">
           {navigationMenu.map((section) => (
-            <div key={section.title} className="space-y-4">
-              <h3 className="text-lg font-semibold text-[#6E59A5] px-2">
-                {section.title}
-              </h3>
-              <div className="space-y-2">
-                {section.items.map((item) => (
-                  <button
-                    key={item.title}
-                    onClick={() => onNavigate(item.href)}
-                    className="w-full text-left p-3 rounded-lg hover:bg-[#E5DEFF] transition-colors group"
-                  >
-                    <span className="text-[#6E59A5] group-hover:text-[#9b87f5] font-medium">
-                      {item.title}
-                    </span>
-                    {item.description && (
-                      <p className="text-sm text-gray-500 mt-2 group-hover:text-[#7E69AB] line-clamp-2">
-                        {item.description}
-                      </p>
-                    )}
-                  </button>
-                ))}
+            <div key={section.title} className="border rounded-lg overflow-hidden">
+              <button
+                onClick={() => toggleSection(section.title)}
+                className="w-full flex justify-between items-center p-4 bg-[#F8F7FF] text-[#6E59A5] font-semibold"
+              >
+                <span>{section.title}</span>
+                <ChevronDown 
+                  className={`h-5 w-5 transition-transform ${
+                    expandedSections.includes(section.title) ? 'rotate-180' : ''
+                  }`}
+                />
+              </button>
+              <div 
+                className={`transition-all duration-300 ${
+                  expandedSections.includes(section.title) 
+                    ? 'max-h-[500px] opacity-100' 
+                    : 'max-h-0 opacity-0 overflow-hidden'
+                }`}
+              >
+                <div className="p-2 space-y-1 bg-white">
+                  {section.items.map((item) => (
+                    <button
+                      key={item.title}
+                      onClick={() => onNavigate(item.href)}
+                      className="w-full text-left p-3 rounded-lg hover:bg-[#E5DEFF] transition-colors group"
+                    >
+                      <span className="text-[#6E59A5] group-hover:text-[#9b87f5] font-medium">
+                        {item.title}
+                      </span>
+                      {item.description && (
+                        <p className="text-sm text-gray-500 mt-1 group-hover:text-[#7E69AB] line-clamp-2">
+                          {item.description}
+                        </p>
+                      )}
+                    </button>
+                  ))}
+                </div>
               </div>
             </div>
           ))}
@@ -65,4 +92,3 @@ const MobileMenu = ({ isOpen, onClose, onNavigate }: MobileMenuProps) => {
 };
 
 export default MobileMenu;
-
