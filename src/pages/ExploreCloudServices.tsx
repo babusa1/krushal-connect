@@ -10,27 +10,31 @@ const ExploreCloudServices = () => {
     <div className="min-h-screen bg-white">
       <Navigation />
       
-      {/* Hero Section */}
-      <section className="relative py-20 px-4 bg-gradient-to-br from-[#0EA5E9] to-[#1EAEDB] text-white">
-        <div className="container mx-auto text-center">
-          <h1 className="text-4xl md:text-5xl font-bold mb-6 animate-fadeIn">
-            Krushal: Cloud & DevOps Services - Powering Your Digital Future
-          </h1>
-          <p className="text-xl text-white/90 max-w-3xl mx-auto mb-8 animate-fadeIn">
-            Transform your IT from a cost center to a competitive weapon. Krushal's Cloud & DevOps expertise delivers agility, scalability, and efficiency, accelerating your digital transformation and driving innovation.
-          </p>
-          <Button 
-            onClick={() => navigate("/contact")}
-            className="bg-white text-[#0EA5E9] hover:bg-white/90 px-8 py-6 text-lg rounded-full animate-fadeIn"
-          >
-            Get a Free Consultation
-          </Button>
+      {/* Hero Section with Background Image */}
+      <section className="relative pt-20">
+        <div className="absolute inset-0">
+          <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/50 to-transparent z-10" />
+          <img 
+            src="https://images.unsplash.com/photo-1451187580459-43490279c0fa"
+            alt="Cloud Services"
+            className="w-full h-[500px] object-cover"
+          />
+        </div>
+        <div className="container mx-auto px-4 py-24 relative z-20">
+          <div className="max-w-3xl mx-auto text-center">
+            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 animate-fadeIn">
+              Krushal: Cloud & DevOps Services
+            </h1>
+            <p className="text-xl md:text-2xl text-gray-200 max-w-2xl mx-auto mb-12 animate-fadeIn">
+              Transform your IT from a cost center to a competitive weapon. Krushal's Cloud & DevOps expertise delivers agility, scalability, and efficiency.
+            </p>
+          </div>
         </div>
       </section>
 
       {/* Cloud Solutions Section */}
-      <section className="py-16 px-4 bg-[#F1F0FB]">
-        <div className="container mx-auto">
+      <section className="py-16 bg-[#F1F0FB]">
+        <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-[#403E43] mb-4">
               Unlock the Power of Cloud with Krushal
