@@ -1,3 +1,4 @@
+
 import { Button } from "@/components/ui/button";
 import Navigation from "@/components/Navigation";
 import HeroCarousel from "@/components/hero/HeroCarousel";
@@ -9,22 +10,22 @@ const MobileFirstDigital = () => {
 
   const carouselImages = [
     {
-      url: "/lovable-uploads/9114eb0c-c8f9-4859-ac25-dfea74a21dbc.png",
+      url: "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b",
       title: "Modern Digital Solutions for Tomorrow's Challenges",
       tagline: "Building seamless experiences across web, mobile, and voice platforms"
     },
     {
-      url: "/lovable-uploads/9114eb0c-c8f9-4859-ac25-dfea74a21dbc.png",
+      url: "https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7",
       title: "Web Application Development",
       tagline: "Create powerful, responsive web applications that drive business growth"
     },
     {
-      url: "/lovable-uploads/9114eb0c-c8f9-4859-ac25-dfea74a21dbc.png",
+      url: "https://images.unsplash.com/photo-1434494878577-86c23bcb06b9",
       title: "Mobile Application Development",
       tagline: "Native and cross-platform solutions for iOS and Android"
     },
     {
-      url: "/lovable-uploads/9114eb0c-c8f9-4859-ac25-dfea74a21dbc.png",
+      url: "https://images.unsplash.com/photo-1483058712412-4245e9b90334",
       title: "Voice Application Development",
       tagline: "Next-generation voice interfaces for Alexa and Google Assistant"
     }
