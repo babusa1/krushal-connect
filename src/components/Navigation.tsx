@@ -52,32 +52,34 @@ const Navigation = () => {
   return (
     <NavigationMenu className="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-sm border-b">
       <div className="container mx-auto py-2 flex justify-between items-center">
-        <NavigationMenuList>
-          {menu.map((section) => (
-            <NavigationMenuItem key={section.title}>
-              <NavigationMenuTrigger>{section.title}</NavigationMenuTrigger>
-              <NavigationMenuContent>
-                <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px]">
-                  {section.items.map((item) => (
-                    <li key={item.title}>
-                      <NavigationMenuLink asChild>
-                        <a
-                          href={item.href}
-                          className={cn(
-                            "block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
-                          )}
-                        >
-                          <div className="text-sm font-medium leading-none">{item.title}</div>
-                        </a>
-                      </NavigationMenuLink>
-                    </li>
-                  ))}
-                </ul>
-              </NavigationMenuContent>
-            </NavigationMenuItem>
-          ))}
-        </NavigationMenuList>
-        <div className="w-32">
+        <div className="flex-1">
+          <NavigationMenuList>
+            {menu.map((section) => (
+              <NavigationMenuItem key={section.title}>
+                <NavigationMenuTrigger>{section.title}</NavigationMenuTrigger>
+                <NavigationMenuContent>
+                  <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px]">
+                    {section.items.map((item) => (
+                      <li key={item.title}>
+                        <NavigationMenuLink asChild>
+                          <a
+                            href={item.href}
+                            className={cn(
+                              "block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
+                            )}
+                          >
+                            <div className="text-sm font-medium leading-none">{item.title}</div>
+                          </a>
+                        </NavigationMenuLink>
+                      </li>
+                    ))}
+                  </ul>
+                </NavigationMenuContent>
+              </NavigationMenuItem>
+            ))}
+          </NavigationMenuList>
+        </div>
+        <div className="w-32 ml-auto">
           <img
             src="/lovable-uploads/9114eb0c-c8f9-4859-ac25-dfea74a21dbc.png"
             alt="Krushal Logo"
