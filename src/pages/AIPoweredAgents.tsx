@@ -1,7 +1,5 @@
-
 import Navigation from "@/components/Navigation";
 import { Button } from "@/components/ui/button";
-import { useNavigate } from "react-router-dom";
 import { Bot, Cpu, Database, LineChart, Brain, Network, ArrowRight } from "lucide-react";
 import HeroCarousel from "@/components/hero/HeroCarousel";
 
@@ -10,19 +8,24 @@ const AIPoweredAgents = () => {
 
   const carouselImages = [
     {
-      url: "https://images.unsplash.com/photo-1677442135703-1787c823b2b2",
-      title: "Empowering Industries with Intelligent AI Agents",
-      tagline: "Unleash the transformative power of Artificial Intelligence with cutting-edge solutions"
+      url: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158", // Person working with technology
+      title: "First Mile Modernization",
+      tagline: "Empowering Industries with Intelligent AI Agents for Transformative Solutions"
     },
     {
-      url: "https://images.unsplash.com/photo-1676299081847-c837f2deed85",
-      title: "Tailored AI Solutions",
-      tagline: "Custom AI Agents designed for your specific business needs"
+      url: "https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7", // Code on screen
+      title: "Mobile First Digital",
+      tagline: "Human-Centric Solutions, Seamless Experiences"
     },
     {
-      url: "https://images.unsplash.com/photo-1682686580036-b5e25932ce9a",
-      title: "Intelligent Automation",
-      tagline: "Streamline processes and enhance efficiency with AI-driven automation"
+      url: "https://images.unsplash.com/photo-1523240795612-9a054b0db644",
+      title: "Insights and Data",
+      tagline: "Unlocking the Power of Unified Data"
+    },
+    {
+      url: "https://images.unsplash.com/photo-1483058712412-4245e9b90334",
+      title: "FutureReady CloudOps",
+      tagline: "Automate, Orchestrate, Innovate: Your DevOps Partner"
     }
   ];
 
