@@ -61,11 +61,11 @@ const AIPoweredInsights = () => {
       <section className="py-16">
         <div className="container mx-auto px-4">
           <div className="space-y-6 animate-fade-in">
-            <h2 className="text-3xl font-bold text-[#6E59A5] mb-6">Transform Data into Your Competitive Advantage</h2>
+            <h2 className="text-3xl font-bold text-primary mb-6">Transform Data into Your Competitive Advantage</h2>
             <p className="text-gray-700 mb-8">
               In today's fast-paced world, data is your most valuable asset, but only if you can unlock its hidden potential. AI-Powered Insights are the key. We use cutting-edge Artificial Intelligence to sift through the noise and deliver clear, actionable intelligence, enabling your business to make smarter decisions, faster.
             </p>
-            <h3 className="text-2xl font-semibold text-[#6E59A5] mb-4">Our AI-Driven Approach</h3>
+            <h3 className="text-2xl font-semibold text-primary mb-4">Our AI-Driven Approach</h3>
             <div className="space-y-6">
               <AIApproachCard
                 icon={Brain}
@@ -85,7 +85,7 @@ const AIPoweredInsights = () => {
             </div>
             
             <div className="mt-8 p-6 bg-[#F8F7FF] rounded-lg border border-[#E5DEFF]">
-              <h3 className="text-2xl font-semibold text-[#6E59A5] mb-4">Impact: Strategic Advantage, Data-Driven Success</h3>
+              <h3 className="text-2xl font-semibold text-primary mb-4">Impact: Strategic Advantage, Data-Driven Success</h3>
               <p className="text-gray-700">
                 Krushal's AI Insights transform data into your strategic weapon. Decide with confidence, optimize operations, deeply understand customers, and unlock new growth opportunities.
               </p>
@@ -97,7 +97,7 @@ const AIPoweredInsights = () => {
       {/* Key Areas of Application */}
       <section className="py-16 bg-[#F8F7FF]">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold text-center text-[#6E59A5] mb-12">Key Areas of Application</h2>
+          <h2 className="text-3xl font-bold text-center text-primary mb-12">Key Areas of Application</h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {[
               {
@@ -135,7 +135,7 @@ const AIPoweredInsights = () => {
       {/* Success Stories */}
       <section className="py-16">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold text-center text-[#6E59A5] mb-12">Success Stories</h2>
+          <h2 className="text-3xl font-bold text-center text-primary mb-12">Success Stories</h2>
           <div className="grid md:grid-cols-2 gap-8">
             {[
               {
@@ -167,12 +167,12 @@ const AIPoweredInsights = () => {
       {/* Call to Action */}
       <section className="py-16 bg-gradient-to-br from-[#E5DEFF] to-white">
         <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl font-bold text-[#6E59A5] mb-6">Ready to Transform Your Business?</h2>
+          <h2 className="text-3xl font-bold text-primary mb-6">Ready to Transform Your Business?</h2>
           <p className="text-lg text-gray-700 mb-8 max-w-2xl mx-auto">
             Contact us today for a free consultation and discover how AI-powered insights can drive your business forward.
           </p>
           <Button 
-            className="bg-[#9b87f5] hover:bg-[#7E69AB] text-white px-8 py-6 text-lg rounded-full"
+            className="bg-primary hover:bg-primary-light text-white px-8 py-6 text-lg rounded-full"
             onClick={() => window.location.href = '/contact'}
           >
             Request a Demo
