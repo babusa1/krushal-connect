@@ -1,3 +1,4 @@
+
 import { Truck, Rocket, Brain, Blocks, Users, DollarSign, Building2, Globe, BriefcaseBusiness, AlertTriangle, TrendingDown, Clock, Activity } from "lucide-react";
 
 const Solution = () => {
@@ -18,7 +19,7 @@ const Solution = () => {
       title: "Financial Solutions",
       icon: <BriefcaseBusiness className="w-12 h-12 text-[#673AB7] mb-4" />,
       description: "Digital financial services for rural India",
-      image: "https://images.unsplash.com/photo-1518458028785-8fbcd101ebb9"
+      image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f"
     },
     {
       title: "Agritech Integration",
