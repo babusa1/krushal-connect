@@ -2,29 +2,42 @@ import Navigation from "@/components/Navigation";
 import { Button } from "@/components/ui/button";
 import { useNavigate } from "react-router-dom";
 import { ArrowRight, Rocket, Percent, Scale, ShieldCheck, Gauge } from "lucide-react";
+import HeroCarousel from "@/components/hero/HeroCarousel";
 
 const CloudAndDevOps = () => {
   const navigate = useNavigate();
+
+  const carouselImages = [
+    {
+      url: "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b",
+      title: "Krushal: Your Partner for Cloud & DevOps Success",
+      tagline: "Unlock agility, scalability, and efficiency with Krushal's expertise"
+    },
+    {
+      url: "https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7",
+      title: "Accelerate Your Digital Transformation",
+      tagline: "Empower your business with modern cloud solutions"
+    },
+    {
+      url: "https://images.unsplash.com/photo-1483058712412-4245e9b90334",
+      title: "Enterprise-Grade DevOps Solutions",
+      tagline: "Streamline your development pipeline with proven methodologies"
+    }
+  ];
+
+  const buttonConfig = {
+    text: "Contact Us Today",
+    onClick: () => navigate("/contact")
+  };
 
   return (
     <div className="min-h-screen bg-white">
       <Navigation />
       
-      {/* Hero Section */}
-      <section className="relative h-[60vh] min-h-[500px] bg-[#E5DEFF]">
-        <div className="absolute inset-0">
-          <div className="container mx-auto px-4 h-full flex items-center justify-center text-center">
-            <div className="max-w-4xl">
-              <h1 className="text-5xl md:text-6xl font-bold text-[#6E59A5] mb-6 animate-fadeIn">
-                Krushal: Your Partner for Cloud & DevOps Success
-              </h1>
-              <p className="text-xl md:text-2xl text-[#7E69AB] max-w-3xl mx-auto mb-8 animate-fadeIn">
-                Unlock agility, scalability, and efficiency with Krushal's expertise. We empower businesses to thrive in the cloud era, accelerating innovation and driving digital transformation.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
+      <HeroCarousel 
+        images={carouselImages}
+        buttonConfig={buttonConfig}
+      />
 
       {/* Why Choose Us Section */}
       <section className="py-16 bg-white">
