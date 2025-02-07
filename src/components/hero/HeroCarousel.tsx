@@ -51,9 +51,9 @@ const HeroCarousel = ({ images }: HeroCarouselProps) => {
             </p>
             <div className="bg-white/95 backdrop-blur-sm rounded-lg p-6 mb-8 shadow-lg">
               <p className="text-[#7E69AB] font-medium">
-                Krushal: Reimagining the First Mile for Underserved Markets
+                Democratizing Digital Access with Mobile-First Solutions
                 <br />
-                Unlocking Untapped Potential and Transforming Rural Economies
+                Where Digital Transformation Meets Real-World Impact
               </p>
             </div>
             <Button 
