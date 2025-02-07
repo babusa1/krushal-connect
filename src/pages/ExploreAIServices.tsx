@@ -47,88 +47,84 @@ const ExploreAIServices = () => {
     <div className="min-h-screen bg-white">
       <Navigation />
       
-      {/* Hero Section */}
-      <section className="relative py-20 mt-16 bg-gradient-to-br from-blue-50 to-white">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6 animate-fade-in">
-              Transform Data into Your Strategic Advantage with Krushal's AI-Powered Insights
+      {/* Hero Section with Background Image */}
+      <section className="relative pt-20">
+        <div className="absolute inset-0">
+          <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/50 to-transparent z-10" />
+          <img 
+            src="https://images.unsplash.com/photo-1485827404703-89b55fcc595e?auto=format&fit=crop&q=80"
+            alt="AI Data Analytics"
+            className="w-full h-[500px] object-cover"
+          />
+        </div>
+        <div className="container mx-auto px-4 py-24 relative z-20">
+          <div className="max-w-3xl mx-auto text-center">
+            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 animate-fade-in">
+              Transform Data into Strategic Advantage
             </h1>
-            <p className="text-lg text-gray-700 mb-8 animate-fade-in">
-              In today's data-rich world, unlock hidden potential with Krushal. We leverage cutting-edge Artificial Intelligence to transform your raw data into clear, actionable intelligence. Drive smarter decisions, optimize operations, and gain a competitive edge.
+            <p className="text-xl md:text-2xl text-gray-200 max-w-2xl mx-auto mb-12 animate-fade-in">
+              Unlock hidden potential with Krushal's AI-Powered Insights
             </p>
-            <Button 
+          </div>
+        </div>
+      </section>
+
+      {/* Services Grid */}
+      <section className="py-16 bg-white">
+        <div className="container mx-auto px-4">
+          <div className="max-w-3xl mx-auto text-center mb-16">
+            <h2 className="text-3xl font-bold mb-6 text-[#403E43]">
+              Krushal: AI-Powered Insight Services
+            </h2>
+            <p className="text-[#8E9196]">
+              Unlock the full potential of your data with our AI-Powered Insight services. We transform complex data into clear, actionable intelligence.
+            </p>
+          </div>
+          
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {services.map((service, index) => (
+              <div key={index} className="bg-white p-8 rounded-lg shadow-lg hover:shadow-xl transition-all group hover:-translate-y-2 duration-300">
+                <service.icon className="w-12 h-12 text-[#1EAEDB] mb-6 group-hover:scale-110 transition-transform" />
+                <h3 className="text-2xl font-semibold mb-4">{service.title}</h3>
+                <p className="text-[#8E9196] mb-4 italic">"{service.description}"</p>
+                <ul className="space-y-3 text-gray-600">
+                  {service.bullets.map((bullet, idx) => (
+                    <li key={idx} className="flex items-center space-x-2">
+                      <span className="w-2 h-2 bg-[#1EAEDB] rounded-full"></span>
+                      <span>{bullet}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </div>
+
+          {/* Call to Action Button */}
+          <div className="text-center mt-16">
+            <Button
               onClick={() => navigate("/contact")}
-              className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-6 text-lg rounded-full animate-fade-in"
+              className="bg-[#1EAEDB] hover:bg-[#33C3F0] text-white px-8 py-6 text-lg animate-fade-in hover:scale-105 transition-transform duration-300"
             >
-              Request a Consultation
+              Get a Free Consultation <ChartLine className="ml-2" />
             </Button>
           </div>
         </div>
       </section>
 
-      {/* Services Overview */}
-      <section className="py-16">
-        <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">
-            Krushal: AI-Powered Insight Services
-          </h2>
-          <p className="text-lg text-gray-700 text-center max-w-3xl mx-auto mb-16">
-            Unlock the full potential of your data with Krushal's AI-Powered Insight services. We transform complex data into clear, actionable intelligence, driving smarter decisions and a stronger competitive edge for your business.
-          </p>
-          
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {services.map((service, index) => (
-              <Card key={index} className="hover:shadow-lg transition-shadow duration-300 group">
-                <CardContent className="p-6">
-                  <div className="mb-4 w-12 h-12 bg-blue-50 rounded-full flex items-center justify-center group-hover:bg-blue-100 transition-colors">
-                    <service.icon className="w-6 h-6 text-blue-600" />
-                  </div>
-                  <h3 className="text-xl font-semibold text-gray-900 mb-4">{service.title}</h3>
-                  <p className="text-gray-600 mb-6">{service.description}</p>
-                  <ul className="space-y-2">
-                    {service.bullets.map((bullet, idx) => (
-                      <li key={idx} className="text-sm text-gray-600 flex items-start gap-2">
-                        <ChartLine className="w-4 h-4 text-blue-600 mt-1 flex-shrink-0" />
-                        <span>{bullet}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Impact Section */}
-      <section className="py-16 bg-gray-50">
-        <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold text-center text-gray-900 mb-8">
-            Impact: Strategic Advantage, Data-Driven Success
-          </h2>
-          <div className="max-w-3xl mx-auto text-center">
-            <p className="text-lg text-gray-700">
-              Krushal's AI Insights transform data into your strategic weapon. Decide with confidence, optimize operations, deeply understand customers, and unlock new growth opportunities.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      {/* Call to Action */}
-      <section className="py-16 bg-gradient-to-br from-blue-50 to-white">
+      {/* Call to Action Section */}
+      <section className="py-16 bg-[#F6F6F7]">
         <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl font-bold text-gray-900 mb-6">
+          <h2 className="text-3xl font-bold text-[#403E43] mb-6">
             Ready to Unlock Your Data's Potential?
           </h2>
-          <p className="text-lg text-gray-700 mb-8 max-w-2xl mx-auto">
+          <p className="text-[#8E9196] mb-8 max-w-2xl mx-auto">
             Contact Krushal today to discuss how our AI-Powered Insight services can transform your business.
           </p>
           <Button 
             onClick={() => navigate("/contact")}
-            className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-6 text-lg rounded-full"
+            className="bg-[#1EAEDB] hover:bg-[#33C3F0] text-white px-8 py-6 text-lg"
           >
-            Get a Free Consultation
+            Request a Consultation
           </Button>
         </div>
       </section>
