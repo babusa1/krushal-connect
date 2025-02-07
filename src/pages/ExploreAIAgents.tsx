@@ -1,7 +1,7 @@
 import Navigation from "@/components/Navigation";
 import { Button } from "@/components/ui/button";
 import { useNavigate } from "react-router-dom";
-import { Bot, Brain, LineChart, Network } from "lucide-react";
+import { Bot } from "lucide-react";
 
 const ExploreAIAgents = () => {
   const navigate = useNavigate();
@@ -102,45 +102,6 @@ const ExploreAIAgents = () => {
                     </li>
                   ))}
                 </ul>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Approach Section */}
-      <section className="py-16 bg-[#F6F6F7]">
-        <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold text-center text-[#1EAEDB] mb-12">
-            Krushal's Approach to AI Agent Development
-          </h2>
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {[
-              {
-                icon: <Brain className="w-12 h-12 text-[#1EAEDB]" />,
-                title: "Understand Your Specific Needs",
-                description: "We deeply analyze your business challenges and opportunities."
-              },
-              {
-                icon: <LineChart className="w-12 h-12 text-[#1EAEDB]" />,
-                title: "Design Custom AI Agent Solutions",
-                description: "Develop tailored AI Agents to address your unique requirements."
-              },
-              {
-                icon: <Network className="w-12 h-12 text-[#1EAEDB]" />,
-                title: "Develop & Deploy Robust AI Agents",
-                description: "Utilize cutting-edge AI technologies for reliable and scalable solutions."
-              },
-              {
-                icon: <Bot className="w-12 h-12 text-[#1EAEDB]" />,
-                title: "Provide Ongoing Support & Optimization",
-                description: "Continuous monitoring and maintenance to ensure peak performance."
-              }
-            ].map((step, index) => (
-              <div key={index} className="bg-white p-8 rounded-lg shadow-lg hover:shadow-xl transition-shadow">
-                <div className="mb-6">{step.icon}</div>
-                <h3 className="text-xl font-semibold mb-4">{step.title}</h3>
-                <p className="text-gray-600">{step.description}</p>
               </div>
             ))}
           </div>
