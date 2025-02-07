@@ -11,10 +11,12 @@ import { cn } from "@/lib/utils";
 import { Menu, X } from "lucide-react";
 import React, { useState } from "react";
 import { useIsMobile } from "@/hooks/use-mobile";
+import { useNavigate } from "react-router-dom";
 
 const Navigation = () => {
   const isMobile = useIsMobile();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const navigate = useNavigate();
 
   const menu = [
     {
@@ -22,7 +24,7 @@ const Navigation = () => {
       items: [
         { 
           title: "First Mile Solutions",
-          href: "#first-mile",
+          href: "/first-mile-solutions",
           description: "Extension Services, Procurement Operations, Field Operations, Risk Management, First Mile Data & Insights"
         },
         { 
@@ -77,6 +79,15 @@ const Navigation = () => {
 
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
 
+  const handleNavigation = (href: string) => {
+    if (href.startsWith('/')) {
+      navigate(href);
+    } else {
+      window.location.href = href;
+    }
+    setIsMenuOpen(false);
+  };
+
   const MobileMenu = () => (
     <div className={`fixed inset-0 bg-white z-50 transition-transform duration-300 ${isMenuOpen ? 'translate-x-0' : '-translate-x-full'}`}>
       <div className="flex justify-between items-center p-4 border-b">
@@ -98,10 +109,9 @@ const Navigation = () => {
             <ul className="space-y-2">
               {section.items.map((item) => (
                 <li key={item.title}>
-                  <a 
-                    href={item.href}
-                    className="block p-2 text-gray-600 hover:text-[#9b87f5] hover:bg-[#E5DEFF] rounded-md transition-colors"
-                    onClick={toggleMenu}
+                  <button 
+                    onClick={() => handleNavigation(item.href)}
+                    className="block w-full text-left p-2 text-gray-600 hover:text-[#9b87f5] hover:bg-[#E5DEFF] rounded-md transition-colors"
                   >
                     {item.title}
                     {item.description && (
@@ -109,7 +119,7 @@ const Navigation = () => {
                         {item.description}
                       </span>
                     )}
-                  </a>
+                  </button>
                 </li>
               ))}
             </ul>
@@ -147,10 +157,10 @@ const Navigation = () => {
                       {section.items.map((item) => (
                         <li key={item.title}>
                           <NavigationMenuLink asChild>
-                            <a
-                              href={item.href}
+                            <button
+                              onClick={() => handleNavigation(item.href)}
                               className={cn(
-                                "block select-none rounded-md p-3 leading-none no-underline outline-none transition-all duration-200",
+                                "block select-none rounded-md p-3 leading-none no-underline outline-none transition-all duration-200 w-full text-left",
                                 "hover:bg-[#E5DEFF] hover:text-[#9b87f5]",
                                 "focus:bg-[#E5DEFF] focus:text-[#9b87f5]",
                                 "group"
@@ -164,7 +174,7 @@ const Navigation = () => {
                                   {item.description}
                                 </p>
                               )}
-                            </a>
+                            </button>
                           </NavigationMenuLink>
                         </li>
                       ))}
@@ -182,4 +192,3 @@ const Navigation = () => {
 };
 
 export default Navigation;
-
