@@ -11,9 +11,15 @@ const ExploreServices = () => {
     <div className="min-h-screen bg-white">
       <Navigation />
       
-      {/* Hero Section */}
+      {/* Hero Section with Background Image */}
       <section className="relative pt-20">
-        <div className="absolute inset-0 bg-gradient-to-br from-[#E5DEFF] to-white/50 -z-10" />
+        <div className="absolute inset-0 bg-gradient-to-br from-[#E5DEFF] to-white/50 -z-10">
+          <img 
+            src="https://images.unsplash.com/photo-1488590528505-98d2b5aba04b" 
+            alt="Digital Services"
+            className="w-full h-full object-cover opacity-20 mix-blend-overlay"
+          />
+        </div>
         <div className="container mx-auto px-4 py-16">
           <h1 className="text-4xl md:text-5xl font-bold text-center text-gray-900 mb-8 animate-fade-in">
             Our Comprehensive Digital Services
