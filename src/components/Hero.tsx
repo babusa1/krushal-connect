@@ -16,7 +16,8 @@ const Hero = () => {
       testimonials: [
         "You're building AWS for Rural, - Foundation CEO",
         "Everyone in the industry needs this, - Dairy CEO"
-      ]
+      ],
+      route: "/first-mile-solutions"
     },
     {
       url: "https://images.unsplash.com/photo-1523240795612-9a054b0db644",
@@ -26,7 +27,8 @@ const Hero = () => {
       testimonials: [
         "Transformed our digital presence, - Technology Head",
         "Incredible user adoption rates, - Product Manager"
-      ]
+      ],
+      route: "/mobile-first-digital"
     },
     {
       url: "https://images.unsplash.com/photo-1518770660439-4636190af475",
@@ -36,7 +38,8 @@ const Hero = () => {
       testimonials: [
         "Data-driven decisions made simple, - Analytics Lead",
         "Revolutionary insights platform, - CTO"
-      ]
+      ],
+      route: "/ai-insights"
     },
     {
       url: "https://images.unsplash.com/photo-1483058712412-4245e9b90334",
@@ -46,7 +49,8 @@ const Hero = () => {
       testimonials: [
         "Enterprise-grade reliability, - Operations Director",
         "Future-ready architecture, - Cloud Architect"
-      ]
+      ],
+      route: "/cloud-and-devops"
     }
   ];
 
@@ -95,9 +99,9 @@ const Hero = () => {
             </div>
             <Button 
               className="animate-fadeIn bg-[#9b87f5] hover:bg-[#8B5CF6] text-white px-8 py-6 rounded-full text-lg font-medium flex items-center gap-2 mx-auto md:mx-0 md:inline-flex transition-colors duration-300"
-              onClick={() => navigate('/first-mile-solutions')}
+              onClick={() => navigate(images[currentImage].route)}
             >
-              Modernize Your Operations <ArrowRight className="w-5 h-5" />
+              Explore {images[currentImage].title} <ArrowRight className="w-5 h-5" />
             </Button>
           </div>
         </div>
