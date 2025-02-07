@@ -77,13 +77,13 @@ const CloudAndDevOps = () => {
             <p className="text-lg mb-6 text-[#7E69AB]">Navigate the cloud with confidence. Krushal's Cloud Services encompass:</p>
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
               {[
-                "Strategy & Consulting: Cloud Readiness, Migration Strategy, Cost Optimization",
-                "Migration & Implementation: Application & Database Migration, IaC Deployment",
-                "Managed Services: 24/7 Monitoring, Security, Performance Tuning",
-                "Security Services: Architecture Design, Vulnerability Management, Compliance"
+                "Strategy & Consulting:\nCloud Readiness\nMigration Strategy\nCost Optimization",
+                "Migration & Implementation:\nApplication & Database Migration\nIaC Deployment",
+                "Managed Services:\n24/7 Monitoring\nSecurity\nPerformance Tuning",
+                "Security Services:\nArchitecture Design\nVulnerability Management\nCompliance"
               ].map((service, index) => (
                 <div key={index} className="bg-white p-6 rounded-lg shadow hover:shadow-lg transition-shadow">
-                  <p className="text-[#7E69AB]">{service}</p>
+                  <p className="text-[#7E69AB] whitespace-pre-line">{service}</p>
                 </div>
               ))}
             </div>
@@ -95,13 +95,13 @@ const CloudAndDevOps = () => {
             <p className="text-lg mb-6 text-[#7E69AB]">Accelerate your software delivery pipeline. Krushal's DevOps Services include:</p>
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
               {[
-                "Consulting & Implementation: DevOps Strategy, CI/CD Pipeline Design, Toolchain Setup",
-                "Infrastructure-as-Code (IaC): Automated Infrastructure Provisioning & Management",
-                "CI/CD Services: Automated Build, Test, & Deployment Pipelines",
-                "Containerization & Orchestration: Docker, Kubernetes, Microservices"
+                "Consulting & Implementation:\nDevOps Strategy\nCI/CD Pipeline Design\nToolchain Setup",
+                "Infrastructure-as-Code (IaC):\nAutomated Infrastructure Provisioning\nManagement",
+                "CI/CD Services:\nAutomated Build\nTest\nDeployment Pipelines",
+                "Containerization & Orchestration:\nDocker\nKubernetes\nMicroservices"
               ].map((service, index) => (
                 <div key={index} className="bg-white p-6 rounded-lg shadow hover:shadow-lg transition-shadow">
-                  <p className="text-[#7E69AB]">{service}</p>
+                  <p className="text-[#7E69AB] whitespace-pre-line">{service}</p>
                 </div>
               ))}
             </div>
