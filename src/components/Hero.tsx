@@ -13,7 +13,7 @@ const Hero = () => {
       url: "https://images.unsplash.com/photo-1517022812141-23620dba5c23",
       title: "First Mile Modernization",
       tagline: "Empowering Underserved Markets with Dairy, Agritech, Financial Services & Insurance",
-      stats: ">60% early detection of mastitis, Farm-level antibiotics signalling, and Reduce procurement cost of milk by Rs. 0.36 / liter of milk",
+      stats: ">60% early detection of mastitis, farm-level antibiotics signaling, and reduce procurement cost of milk by Rs 0.1 to Rs 0.2",
       testimonials: [
         "You're building AWS for Rural - Foundation CEO",
         "Everyone in the industry needs this - Dairy CEO"
