@@ -33,10 +33,21 @@ export const navigationMenu = [
   {
     title: "Products & Solutions",
     items: [
-      { title: "First Mile as a Service", href: "#first-mile" },
-      { title: "Tech Solutions at SPEED", href: "#tech-solutions" },
-      { title: "Rural Insurance Platform", href: "#insurance-platform" },
-      { title: "Digital Financial Services", href: "#financial-services" },
+      { 
+        title: "Mobile First Digital", 
+        href: "/products/mobile-first",
+        description: "Innovative mobile-first solutions for modern business needs"
+      },
+      { 
+        title: "Personalized Insights", 
+        href: "/products/personalized-insights",
+        description: "Data-driven personalized insights for informed decision making"
+      },
+      { 
+        title: "AI Driven Software Reimagined", 
+        href: "/products/ai-software",
+        description: "Next-generation software solutions powered by artificial intelligence"
+      }
     ],
   },
   {
@@ -52,7 +63,6 @@ export const navigationMenu = [
     title: "Insights",
     items: [
       { title: "Case Studies", href: "/case-studies", description: "Success stories and implementation examples from our clients" },
-      { title: "Blog", href: "/blog", description: "Latest trends, insights and thought leadership in digital transformation" },
     ],
   },
   {
