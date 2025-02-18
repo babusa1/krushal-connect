@@ -4,7 +4,7 @@ export const navigationMenu = [
     title: "Services",
     items: [
       { 
-        title: "First Mile Solutions",
+        title: "First Mile Services",
         href: "/first-mile-solutions",
         description: "Extension Services, Procurement Operations, Field Operations, Risk Management, First Mile Data & Insights"
       },
