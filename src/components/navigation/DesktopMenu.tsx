@@ -22,11 +22,11 @@ const DesktopMenu = ({ onNavigate }: DesktopMenuProps) => {
             {section.title}
           </NavigationMenuTrigger>
           <NavigationMenuContent>
-            <div className="w-[500px] p-4 md:grid-cols-2 bg-white rounded-lg shadow-lg">
+            <div className="w-[400px] p-4 bg-white rounded-lg shadow-lg">
               <div className="mb-3 text-sm font-medium text-[#7E69AB]">
                 {section.title}
               </div>
-              <ul className="grid gap-3 md:grid-cols-2">
+              <ul className="space-y-2">
                 {section.items.map((item) => (
                   <li key={item.title}>
                     <NavigationMenuLink asChild>
@@ -61,4 +61,3 @@ const DesktopMenu = ({ onNavigate }: DesktopMenuProps) => {
 };
 
 export default DesktopMenu;
-
