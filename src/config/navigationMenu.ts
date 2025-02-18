@@ -59,7 +59,7 @@ export const navigationMenu = [
         description: "First Mile Solutions for a Sustainable Dairy Future" 
       },
       { title: "Insurance Services", href: "/industries/insurance" },
-      { title: "Financial Solutions", href: "/industries/finance" },
+      { title: "Finance", href: "/industries/finance" },
       { title: "Agritech", href: "/industries/agritech" },
     ],
   },
