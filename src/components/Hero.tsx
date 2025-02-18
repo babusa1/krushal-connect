@@ -1,3 +1,4 @@
+
 import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useEffect, useState } from "react";
@@ -52,6 +53,17 @@ const Hero = () => {
         '"Future-ready architecture" - Cloud Architect'
       ],
       route: "/cloud-and-devops"
+    },
+    {
+      url: "https://images.unsplash.com/photo-1677442136019-21780ecad995",
+      title: "AI Powered Agents",
+      tagline: "Transform Your Business with Advanced AI-Powered Process Automation",
+      stats: "Intelligent automation across industries with 40% reduction in operational costs",
+      testimonials: [
+        '"Revolutionary automation capabilities" - Operations Manager',
+        '"Game-changing AI solutions" - Innovation Director'
+      ],
+      route: "/ai-agents"
     }
   ];
 
