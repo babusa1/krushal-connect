@@ -31,11 +31,6 @@ const FirstMileSolutions = () => {
       url: "https://images.unsplash.com/photo-1601597111158-2fceff292cdc",
       title: "Banking Solutions",
       tagline: "Revolutionizing rural banking accessibility"
-    },
-    {
-      url: "https://images.unsplash.com/photo-1576091160550-2173dba999ef",
-      title: "Healthcare Access",
-      tagline: "Bridging healthcare gaps in rural communities"
     }
   ];
 
