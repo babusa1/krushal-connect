@@ -1,31 +1,38 @@
 
 import { Truck, Rocket, Brain, Blocks, Users, DollarSign, Building2, Globe, BriefcaseBusiness, AlertTriangle, TrendingDown, Clock, Activity } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 
 const Solution = () => {
+  const navigate = useNavigate();
+  
   const industries = [
     {
       title: "Dairy Operations",
       icon: <Building2 className="w-12 h-12 text-[#673AB7] mb-4" />,
       description: "End-to-end dairy supply chain solutions",
-      image: "https://images.unsplash.com/photo-1465379944081-7f47de8d74ac"
+      image: "https://images.unsplash.com/photo-1465379944081-7f47de8d74ac",
+      route: "/industries/dairy"
     },
     {
       title: "Insurance Services",
       icon: <Globe className="w-12 h-12 text-[#673AB7] mb-4" />,
       description: "Rural insurance delivery platform",
-      image: "https://images.unsplash.com/photo-1450101499163-c8848c66ca85"
+      image: "https://images.unsplash.com/photo-1450101499163-c8848c66ca85",
+      route: "/industries/insurance"
     },
     {
       title: "Financial Solutions",
       icon: <BriefcaseBusiness className="w-12 h-12 text-[#673AB7] mb-4" />,
       description: "Digital financial services for rural India",
-      image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f"
+      image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f",
+      route: "/industries/finance"
     },
     {
       title: "Agritech Integration",
       icon: <Globe className="w-12 h-12 text-[#673AB7] mb-4" />,
       description: "Smart farming and agriculture solutions",
-      image: "https://images.unsplash.com/photo-1472396961693-142e6e269027"
+      image: "https://images.unsplash.com/photo-1472396961693-142e6e269027",
+      route: "/industries/agritech"
     }
   ];
 
@@ -165,7 +172,10 @@ const Solution = () => {
           {industries.map((industry, index) => (
             <div 
               key={index} 
-              className="group bg-white rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden border border-[#E2E8F0]"
+              className="group bg-white rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden border border-[#E2E8F0] cursor-pointer"
+              onClick={() => navigate(industry.route)}
+              role="button"
+              aria-label={`Learn more about ${industry.title}`}
             >
               <div className="relative h-48 overflow-hidden">
                 <img 
