@@ -34,7 +34,7 @@ export const navigationMenu = [
     title: "Products & Solutions",
     items: [
       { 
-        title: "Field Operations AI Driven", 
+        title: "Field Operations", 
         href: "/products/field-operations",
         description: "Transform your field operations with our AI-driven technology solutions"
       },
@@ -44,9 +44,9 @@ export const navigationMenu = [
         description: "Data-driven personalized insights for informed decision making"
       },
       { 
-        title: "AI Driven Software Reimagined", 
+        title: "AI Development Tools Suite", 
         href: "/products/ai-software",
-        description: "Next-generation software solutions powered by artificial intelligence"
+        description: "Intelligent testing, code analysis, and AI-driven SDLC automation tools"
       }
     ],
   },
