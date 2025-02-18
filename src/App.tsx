@@ -1,3 +1,4 @@
+
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
@@ -24,6 +25,7 @@ import FieldOperations from "./pages/products/FieldOperations";
 import PersonalizedInsights from "./pages/products/PersonalizedInsights";
 import AISoftware from "./pages/products/AISoftware";
 import Dairy from "./pages/industries/Dairy";
+import Finance from "./pages/industries/Finance";
 
 const queryClient = new QueryClient();
 
@@ -54,6 +56,7 @@ const App = () => (
           <Route path="/products/personalized-insights" element={<PersonalizedInsights />} />
           <Route path="/products/ai-software" element={<AISoftware />} />
           <Route path="/industries/dairy" element={<Dairy />} />
+          <Route path="/industries/finance" element={<Finance />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
