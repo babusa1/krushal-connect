@@ -1,3 +1,4 @@
+
 import { useEffect, useState } from "react";
 import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -21,6 +22,7 @@ interface HeroCarouselProps {
 
 const HeroCarousel = ({ images, buttonConfig }: HeroCarouselProps) => {
   const [currentImage, setCurrentImage] = useState(0);
+  const [isPaused, setIsPaused] = useState(false);
   const navigate = useNavigate();
 
   // Add safety check for empty images array
@@ -29,11 +31,16 @@ const HeroCarousel = ({ images, buttonConfig }: HeroCarouselProps) => {
   }
 
   useEffect(() => {
-    const timer = setInterval(() => {
-      setCurrentImage((prev) => (prev + 1) % images.length);
-    }, 5000);
+    let timer: NodeJS.Timeout;
+    
+    if (!isPaused) {
+      timer = setInterval(() => {
+        setCurrentImage((prev) => (prev + 1) % images.length);
+      }, 5000);
+    }
+    
     return () => clearInterval(timer);
-  }, [images.length]); // Add images.length as dependency
+  }, [images.length, isPaused]); // Add isPaused as dependency
 
   const defaultButtonConfig = {
     text: "Explore Services",
@@ -41,6 +48,14 @@ const HeroCarousel = ({ images, buttonConfig }: HeroCarouselProps) => {
   };
 
   const activeButtonConfig = buttonConfig || defaultButtonConfig;
+
+  const handleInteractionStart = () => {
+    setIsPaused(true);
+  };
+
+  const handleInteractionEnd = () => {
+    setIsPaused(false);
+  };
 
   return (
     <section className="relative min-h-[90vh] flex items-center justify-center py-20 mt-16">
@@ -59,7 +74,13 @@ const HeroCarousel = ({ images, buttonConfig }: HeroCarouselProps) => {
         />
       ))}
 
-      <div className="container px-4 mx-auto relative z-10">
+      <div 
+        className="container px-4 mx-auto relative z-10"
+        onMouseEnter={handleInteractionStart}
+        onMouseLeave={handleInteractionEnd}
+        onTouchStart={handleInteractionStart}
+        onTouchEnd={handleInteractionEnd}
+      >
         <div className="max-w-4xl mx-auto">
           <div className="text-left md:text-center">
             <h1 className="animate-fadeIn text-3xl md:text-5xl font-bold text-white mb-6">
