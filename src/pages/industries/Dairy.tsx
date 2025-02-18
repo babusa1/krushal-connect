@@ -4,9 +4,28 @@ import Navigation from "@/components/Navigation";
 import { ArrowRight, Leaf, LineChart, Users, Tractor, 
          BarChart2, Heart, Zap, ChartPie } from "lucide-react";
 import { useNavigate } from "react-router-dom";
+import HeroCarousel from "@/components/hero/HeroCarousel";
 
 const Dairy = () => {
   const navigate = useNavigate();
+
+  const carouselImages = [
+    {
+      url: "https://images.unsplash.com/photo-1465379944081-7f47de8d74ac",
+      title: "Transforming Dairy, Empowering Farmers",
+      tagline: "From Optimized Farm Operations to Enhanced Milk Quality and Safety, Krushal is Redefining Dairy in Underserved Markets."
+    },
+    {
+      url: "https://images.unsplash.com/photo-1594761077961-cadd5ce417be",
+      title: "Innovative Dairy Solutions",
+      tagline: "Leveraging Technology to Transform Traditional Dairy Farming"
+    },
+    {
+      url: "https://images.unsplash.com/photo-1527847263472-aa686c170828",
+      title: "Sustainable Dairy Practices",
+      tagline: "Creating a Better Future for Dairy Farmers and Communities"
+    }
+  ];
 
   const challenges = [
     {
@@ -120,34 +139,13 @@ const Dairy = () => {
     <div className="min-h-screen bg-white">
       <Navigation />
       
-      {/* Hero Section */}
-      <section className="relative pt-20">
-        <div className="absolute inset-0">
-          <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/50 to-transparent z-10" />
-          <img 
-            src="https://images.unsplash.com/photo-1465379944081-7f47de8d74ac"
-            alt="Dairy Operations"
-            className="w-full h-[600px] object-cover"
-          />
-        </div>
-        <div className="container mx-auto px-4 py-32 relative z-20">
-          <div className="max-w-3xl">
-            <h1 className="text-5xl font-bold text-white mb-6">
-              Transforming Dairy, Empowering Farmers
-            </h1>
-            <p className="text-xl text-gray-200 mb-8">
-              From Optimized Farm Operations to Enhanced Milk Quality and Safety, 
-              Krushal is Redefining Dairy in Underserved Markets.
-            </p>
-            <Button 
-              onClick={() => navigate("/contact")}
-              className="bg-white text-[#8B5CF6] hover:bg-gray-100 px-8 py-6 text-lg"
-            >
-              Transform Your Dairy Operations <ArrowRight className="ml-2" />
-            </Button>
-          </div>
-        </div>
-      </section>
+      <HeroCarousel 
+        images={carouselImages}
+        buttonConfig={{
+          text: "Transform Your Dairy Operations",
+          onClick: () => navigate("/contact")
+        }}
+      />
 
       {/* Challenges Section */}
       <section className="py-16 bg-[#F6F6F7]">
