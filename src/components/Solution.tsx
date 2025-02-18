@@ -7,30 +7,30 @@ const Solution = () => {
   
   const industries = [
     {
-      title: "Dairy Operations",
+      title: "Dairy",
       icon: <Building2 className="w-12 h-12 text-[#673AB7] mb-4" />,
-      description: "End-to-end dairy supply chain solutions",
+      description: "First Mile Solutions for a Sustainable Dairy Future",
       image: "https://images.unsplash.com/photo-1465379944081-7f47de8d74ac",
       route: "/industries/dairy"
     },
     {
       title: "Insurance Services",
       icon: <Globe className="w-12 h-12 text-[#673AB7] mb-4" />,
-      description: "Rural insurance delivery platform",
+      description: "AI-Powered Solutions for Rural Insurance",
       image: "https://images.unsplash.com/photo-1450101499163-c8848c66ca85",
       route: "/industries/insurance"
     },
     {
-      title: "Financial Solutions",
+      title: "Finance",
       icon: <BriefcaseBusiness className="w-12 h-12 text-[#673AB7] mb-4" />,
-      description: "Digital financial services for rural India",
+      description: "Empowering Rural Communities Through Innovative Financial Solutions",
       image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f",
       route: "/industries/finance"
     },
     {
-      title: "Agritech Integration",
+      title: "Agritech",
       icon: <Globe className="w-12 h-12 text-[#673AB7] mb-4" />,
-      description: "Smart farming and agriculture solutions",
+      description: "Data-Driven Farming Solutions for Enhanced Productivity",
       image: "https://images.unsplash.com/photo-1472396961693-142e6e269027",
       route: "/industries/agritech"
     }
