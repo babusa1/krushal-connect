@@ -63,7 +63,11 @@ export const navigationMenu = [
         href: "/industries/finance",
         description: "Empowering Rural Communities Through Innovative Financial Solutions" 
       },
-      { title: "Insurance Services", href: "/industries/insurance" },
+      { 
+        title: "Insurance Services", 
+        href: "/industries/insurance",
+        description: "AI-Powered Solutions for Rural Insurance - From Field Operations to Risk Management" 
+      },
       { title: "Agritech", href: "/industries/agritech" },
     ],
   },
