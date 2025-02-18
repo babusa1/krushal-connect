@@ -247,6 +247,9 @@ const CaseStudies = () => {
     return () => clearInterval(timer);
   }, [filteredCaseStudies.length]);
 
+  const currentStudy = filteredCaseStudies[currentIndex];
+  const Icon = currentStudy.icon;
+
   return (
     <div className="min-h-screen bg-gradient-to-b from-[#F8F7FF] to-white">
       <Navigation />
@@ -273,22 +276,22 @@ const CaseStudies = () => {
                   <CardContent className="p-8">
                     <div className="grid md:grid-cols-2 gap-8 items-center">
                       <div>
-                        <filteredCaseStudies[currentIndex].icon className="w-16 h-16 text-[#9b87f5] mb-6" />
+                        <Icon className="w-16 h-16 text-[#9b87f5] mb-6" />
                         <div className="inline-block px-4 py-2 rounded-full bg-[#E5DEFF] text-[#8B5CF6] text-sm font-medium mb-4">
-                          {filteredCaseStudies[currentIndex].industry}
+                          {currentStudy.industry}
                         </div>
                         <h2 className="text-2xl font-bold mb-4 text-[#1A1F2C]">
-                          {filteredCaseStudies[currentIndex].title}
+                          {currentStudy.title}
                         </h2>
                         <p className="text-gray-600 mb-6">
-                          {filteredCaseStudies[currentIndex].project}
+                          {currentStudy.project}
                         </p>
                       </div>
                       <div className="space-y-6">
                         <div className="bg-[#F8F7FF] p-6 rounded-lg">
                           <h3 className="font-semibold mb-3 text-[#6E59A5]">Key Results</h3>
                           <ul className="space-y-2">
-                            {filteredCaseStudies[currentIndex].results.map((result, idx) => (
+                            {currentStudy.results.map((result, idx) => (
                               <li key={idx} className="flex items-start gap-2">
                                 <span className="text-[#9b87f5]">•</span>
                                 <span className="text-gray-700">{result}</span>
