@@ -1,4 +1,3 @@
-
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
@@ -23,6 +22,7 @@ import Leadership from "./pages/Leadership";
 import Careers from "./pages/Careers";
 import FieldOperations from "./pages/products/FieldOperations";
 import PersonalizedInsights from "./pages/products/PersonalizedInsights";
+import AISoftware from "./pages/products/AISoftware";
 
 const queryClient = new QueryClient();
 
@@ -51,6 +51,7 @@ const App = () => (
           <Route path="/careers" element={<Careers />} />
           <Route path="/products/field-operations" element={<FieldOperations />} />
           <Route path="/products/personalized-insights" element={<PersonalizedInsights />} />
+          <Route path="/products/ai-software" element={<AISoftware />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
