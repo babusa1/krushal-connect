@@ -1,4 +1,3 @@
-
 import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useEffect, useState } from "react";
@@ -17,7 +16,7 @@ const Hero = () => {
       stats: ">60% early detection of mastitis, Farm-level antibiotics signalling, and Reduce procurement cost of milk by Rs. 0.36 / liter of milk",
       testimonials: [
         "You're building AWS for Rural - Foundation CEO",
-        "Everyone in the industry needs this, - Dairy CEO"
+        "Everyone in the industry needs this - Dairy CEO"
       ],
       route: "/first-mile-solutions"
     },
@@ -27,8 +26,8 @@ const Hero = () => {
       tagline: "Human-Centric Solutions, Seamless Experiences",
       stats: "Seamless digital experiences across 100+ rural touchpoints",
       testimonials: [
-        "Transformed our digital presence, - Technology Head",
-        "Incredible user adoption rates, - Product Manager"
+        "Transformed our digital presence - Technology Head",
+        "Incredible user adoption rates - Product Manager"
       ],
       route: "/mobile-first-digital"
     },
@@ -38,8 +37,8 @@ const Hero = () => {
       tagline: "Unlocking the Power of Unified Data",
       stats: "Unified data platform processing millions of rural transactions",
       testimonials: [
-        "Data-driven decisions made simple, - Analytics Lead",
-        "Revolutionary insights platform, - CTO"
+        "Data-driven decisions made simple - Analytics Lead",
+        "Revolutionary insights platform - CTO"
       ],
       route: "/ai-insights"
     },
@@ -49,8 +48,8 @@ const Hero = () => {
       tagline: "Automate, Orchestrate, Innovate: Your DevOps Partner",
       stats: "99.9% uptime with scalable cloud infrastructure",
       testimonials: [
-        "Enterprise-grade reliability, - Operations Director",
-        "Future-ready architecture, - Cloud Architect"
+        "Enterprise-grade reliability - Operations Director",
+        "Future-ready architecture - Cloud Architect"
       ],
       route: "/cloud-and-devops"
     }
