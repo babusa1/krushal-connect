@@ -1,4 +1,3 @@
-
 import React, { useState } from "react";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
@@ -276,7 +275,7 @@ const CaseStudies = () => {
     );
   }
 
-  const currentStudy = filteredCaseStudies[currentIndex];
+  const currentStudy = filteredCaseStudies[currentIndex] || caseStudies[0]; // Fallback to first case study if current index is invalid
   const Icon = currentStudy.icon;
 
   return (
