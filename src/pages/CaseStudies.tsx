@@ -241,11 +241,40 @@ const CaseStudies = () => {
     : caseStudies.filter(study => study.industry === activeTab);
 
   React.useEffect(() => {
+    if (filteredCaseStudies.length === 0) return;
+    
     const timer = setInterval(() => {
       setCurrentIndex((prev) => (prev + 1) % filteredCaseStudies.length);
     }, 5000);
     return () => clearInterval(timer);
   }, [filteredCaseStudies.length]);
+
+  // Reset current index when filtered studies change
+  React.useEffect(() => {
+    setCurrentIndex(0);
+  }, [activeTab]);
+
+  // Guard against empty filtered studies
+  if (filteredCaseStudies.length === 0) {
+    return (
+      <div className="min-h-screen bg-gradient-to-b from-[#F8F7FF] to-white">
+        <Navigation />
+        <div className="pt-20 pb-16">
+          <div className="container mx-auto px-4">
+            <div className="text-center">
+              <h1 className="text-4xl md:text-5xl font-bold mb-6 text-[#8B5CF6]">
+                No Case Studies Found
+              </h1>
+              <p className="text-gray-600">
+                No case studies available for the selected industry.
+              </p>
+            </div>
+          </div>
+        </div>
+        <Footer />
+      </div>
+    );
+  }
 
   const currentStudy = filteredCaseStudies[currentIndex];
   const Icon = currentStudy.icon;
