@@ -28,6 +28,7 @@ import Dairy from "./pages/industries/Dairy";
 import Finance from "./pages/industries/Finance";
 import Insurance from "./pages/industries/Insurance";
 import Agritech from "./pages/industries/Agritech";
+import CaseStudies from "./pages/CaseStudies";
 
 const queryClient = new QueryClient();
 
@@ -61,6 +62,7 @@ const App = () => (
           <Route path="/industries/finance" element={<Finance />} />
           <Route path="/industries/insurance" element={<Insurance />} />
           <Route path="/industries/agritech" element={<Agritech />} />
+          <Route path="/case-studies" element={<CaseStudies />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>

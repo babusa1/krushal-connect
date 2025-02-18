@@ -1,3 +1,4 @@
+
 export const navigationMenu = [
   {
     title: "Services",
@@ -77,7 +78,11 @@ export const navigationMenu = [
   {
     title: "Insights",
     items: [
-      { title: "Case Studies", href: "/case-studies", description: "Success stories and implementation examples from our clients" },
+      { 
+        title: "Case Studies", 
+        href: "/case-studies", 
+        description: "Success stories and implementation examples from our clients" 
+      },
     ],
   },
   {
