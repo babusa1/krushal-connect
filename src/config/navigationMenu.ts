@@ -35,7 +35,7 @@ export const navigationMenu = [
     items: [
       { 
         title: "Field Operations AI Driven", 
-        href: "/products/mobile-first",
+        href: "/products/field-operations",
         description: "Transform your field operations with our AI-driven technology solutions"
       },
       { 

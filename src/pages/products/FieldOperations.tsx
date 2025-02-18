@@ -1,4 +1,3 @@
-
 import { Button } from "@/components/ui/button";
 import Navigation from "@/components/Navigation";
 import HeroCarousel from "@/components/hero/HeroCarousel";
@@ -7,18 +6,18 @@ import { ArrowRight, Smartphone, LineChart, Users, Zap,
          Leaf, Building2, Shield, Tractor } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 
-const MobileFirst = () => {
+const FieldOperations = () => {
   const navigate = useNavigate();
 
   const carouselImages = [
     {
       url: "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d",
-      title: "Transform Your Field Operations with AI-Driven Technology",
+      title: "Field Operations with Our AI-Driven Technology",
       tagline: "Boost efficiency by 30% and reduce costs by 20% with our innovative solutions"
     },
     {
       url: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158",
-      title: "Mobile-First Field Service Management",
+      title: "AI-Powered Field Service Management",
       tagline: "Empower your field teams with cutting-edge technology"
     },
     {
@@ -252,4 +251,4 @@ const MobileFirst = () => {
   );
 };
 
-export default MobileFirst;
+export default FieldOperations;
