@@ -34,7 +34,7 @@ const Hero = () => {
     },
     {
       url: "https://images.unsplash.com/photo-1518770660439-4636190af475",
-      title: "Insights and Data",
+      title: "AI Powered Insights",
       tagline: "Unlocking the Power of Unified Data",
       stats: "Unified data platform processing millions of rural transactions",
       testimonials: [
