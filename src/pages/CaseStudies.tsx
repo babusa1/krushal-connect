@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
-import { ChartLine, Users, Database, Percent, Bot, Cloud } from "lucide-react";
+import { ChartLine, Users, Database, Percent, Bot, Cloud, Stethoscope } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 
@@ -69,9 +69,9 @@ const CaseStudies = () => {
       icon: ChartLine
     },
     {
-      title: "Created visibility for a dairy into milk procurement over future time periods",
+      title: "Created visibility for a dairy into milk procurement",
       project: "A dairy sought to forecast milk procurement from its suppliers over the next year, considering the variability in milk production due to breed, lactation stages of animals, pregnancy condition, seasonal fluctuations and farm management practices",
-      solution: "Krushal developed a milk data projection algorithm using enhanced public source data tailored to local conditions. We managed both technology and operations, creating an offline-capable mobile app for data collection about farmers and their animals, and a web platform for data management. Ground operations and a call center collaborated for accurate data collection and periodic updates. Milk projections were continuously refined as more localized data became available.",
+      solution: "Krushal developed a milk data projection algorithm using enhanced public source data tailored to local conditions.",
       highlights: [
         "Optimization & Continuous Adjustment",
         "Deep Insights for dairy",
@@ -91,10 +91,10 @@ const CaseStudies = () => {
     {
       title: "Transforming livestock veterinarian services through analytics",
       project: "Multiple dairies providing veterinarian services to farmers wanted to improve customer satisfaction and ROI of their service",
-      solution: "Krushal developed a data analytics solution that integrated service-level data with dimensional data at animal, farmer, geography, & disease levels. We identified & validated key metrics with client and created cleaned data pipelines for comprehensive analysis.",
+      solution: "Krushal developed a data analytics solution that integrated service-level data with dimensional data at animal, farmer, geography, & disease levels.",
       highlights: [
         "Customer segmentation",
-        "Unprecedented traceability and insights to improve operational efficiency",
+        "Unprecedented traceability and insights",
       ],
       approach: [
         "Entity Driven Data Pipeline",
@@ -238,27 +238,6 @@ const CaseStudies = () => {
     ? caseStudies 
     : caseStudies.filter(study => study.industry === activeTab);
 
-  const Stethoscope = () => (
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      width="24"
-      height="24"
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="2"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-      className="lucide lucide-stethoscope"
-    >
-      <path d="M5.8 7.8a2 2 0 0 0-2.83 2.83L9.67 18.37a2 2 0 0 0 2.83-2.83z" />
-      <path d="M14.5 5.5a2 2 0 0 0-2.83 2.83l5.66 5.66a2 2 0 0 0 2.83-2.83z" />
-      <circle cx="12" cy="12" r="2" />
-      <path d="M12 14v4" />
-      <path d="M12 8V6" />
-    </svg>
-  );
-
   return (
     <div className="min-h-screen bg-gray-50">
       <Navigation />
@@ -289,10 +268,7 @@ const CaseStudies = () => {
 
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mt-8">
               {filteredCaseStudies.map((study, index) => {
-                let Icon: any = study.icon;
-                if (study.icon === "Stethoscope") {
-                  Icon = Stethoscope;
-                }
+                const Icon = study.icon;
                 return (
                   <Card key={index} className="hover:shadow-lg transition-shadow">
                     <CardContent className="p-6">
