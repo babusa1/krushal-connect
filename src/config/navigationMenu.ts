@@ -34,7 +34,7 @@ export const navigationMenu = [
     title: "Products & Solutions",
     items: [
       { 
-        title: "Mobile First Digital", 
+        title: "Field Operations AI Driven", 
         href: "/products/mobile-first",
         description: "Transform your field operations with our AI-driven technology solutions"
       },
