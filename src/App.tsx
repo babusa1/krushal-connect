@@ -22,6 +22,7 @@ import AboutKrushal from "./pages/AboutKrushal";
 import Leadership from "./pages/Leadership";
 import Careers from "./pages/Careers";
 import FieldOperations from "./pages/products/FieldOperations";
+import PersonalizedInsights from "./pages/products/PersonalizedInsights";
 
 const queryClient = new QueryClient();
 
@@ -49,6 +50,7 @@ const App = () => (
           <Route path="/leadership" element={<Leadership />} />
           <Route path="/careers" element={<Careers />} />
           <Route path="/products/field-operations" element={<FieldOperations />} />
+          <Route path="/products/personalized-insights" element={<PersonalizedInsights />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
