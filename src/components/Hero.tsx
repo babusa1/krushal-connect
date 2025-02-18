@@ -1,3 +1,4 @@
+
 import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useEffect, useState } from "react";
@@ -15,7 +16,7 @@ const Hero = () => {
       tagline: "Empowering Underserved Markets with Dairy, Agritech, Financial Services & Healthcare Solutions",
       stats: ">60% early detection of mastitis, Farm-level antibiotics signalling, and Reduce procurement cost of milk by Rs. 0.36 / liter of milk",
       testimonials: [
-        "You're building AWS for Rural, - Foundation CEO",
+        "You're building AWS for Rural - Foundation CEO",
         "Everyone in the industry needs this, - Dairy CEO"
       ],
       route: "/first-mile-solutions"
