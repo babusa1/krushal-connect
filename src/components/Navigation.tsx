@@ -23,10 +23,20 @@ const Navigation = () => {
     setIsMenuOpen(false);
   };
 
+  const handleLogoClick = () => {
+    navigate('/');
+    setIsMenuOpen(false);
+  };
+
   return (
     <NavigationMenu className="fixed top-0 left-0 right-0 z-[100] bg-white border-b shadow-sm">
       <div className="container mx-auto py-3 flex justify-between items-center">
-        <div className="w-32">
+        <div 
+          className="w-32 cursor-pointer"
+          onClick={handleLogoClick}
+          role="button"
+          aria-label="Go to homepage"
+        >
           <img
             src="/lovable-uploads/9114eb0c-c8f9-4859-ac25-dfea74a21dbc.png"
             alt="Krushal Logo"
@@ -57,4 +67,3 @@ const Navigation = () => {
 };
 
 export default Navigation;
-
