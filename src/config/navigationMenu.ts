@@ -1,4 +1,3 @@
-
 export const navigationMenu = [
   {
     title: "Services",
@@ -68,7 +67,11 @@ export const navigationMenu = [
         href: "/industries/insurance",
         description: "AI-Powered Solutions for Rural Insurance - From Field Operations to Risk Management" 
       },
-      { title: "Agritech", href: "/industries/agritech" },
+      { 
+        title: "Agritech", 
+        href: "/industries/agritech",
+        description: "Data-Driven Farming Solutions for Enhanced Productivity and Sustainability" 
+      },
     ],
   },
   {
