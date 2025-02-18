@@ -21,6 +21,7 @@ import WhatWeDo from "./pages/WhatWeDo";
 import AboutKrushal from "./pages/AboutKrushal";
 import Leadership from "./pages/Leadership";
 import Careers from "./pages/Careers";
+import FieldOperations from "./pages/products/FieldOperations";
 
 const queryClient = new QueryClient();
 
@@ -47,6 +48,7 @@ const App = () => (
           <Route path="/about-krushal" element={<AboutKrushal />} />
           <Route path="/leadership" element={<Leadership />} />
           <Route path="/careers" element={<Careers />} />
+          <Route path="/products/field-operations" element={<FieldOperations />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
