@@ -26,6 +26,7 @@ import PersonalizedInsights from "./pages/products/PersonalizedInsights";
 import AISoftware from "./pages/products/AISoftware";
 import Dairy from "./pages/industries/Dairy";
 import Finance from "./pages/industries/Finance";
+import Insurance from "./pages/industries/Insurance";
 
 const queryClient = new QueryClient();
 
@@ -57,6 +58,7 @@ const App = () => (
           <Route path="/products/ai-software" element={<AISoftware />} />
           <Route path="/industries/dairy" element={<Dairy />} />
           <Route path="/industries/finance" element={<Finance />} />
+          <Route path="/industries/insurance" element={<Insurance />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
