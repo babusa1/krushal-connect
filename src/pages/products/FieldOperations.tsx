@@ -1,3 +1,4 @@
+
 import { Button } from "@/components/ui/button";
 import Navigation from "@/components/Navigation";
 import HeroCarousel from "@/components/hero/HeroCarousel";
@@ -29,32 +30,32 @@ const FieldOperations = () => {
 
   const features = [
     {
-      icon: <LineChart className="w-12 h-12 text-[#1EAEDB]" />,
+      icon: <LineChart className="w-12 h-12 text-[#8B5CF6]" />,
       title: "Integrated Real-time Field Data",
       description: "Centralized platform for real-time visibility and monitoring of operations"
     },
     {
-      icon: <Smartphone className="w-12 h-12 text-[#1EAEDB]" />,
+      icon: <Smartphone className="w-12 h-12 text-[#8B5CF6]" />,
       title: "Mobile-First Approach",
       description: "Powerful tools at your field agents' fingertips"
     },
     {
-      icon: <Zap className="w-12 h-12 text-[#1EAEDB]" />,
+      icon: <Zap className="w-12 h-12 text-[#8B5CF6]" />,
       title: "AI-Powered Scheduling",
       description: "Optimize technician schedules and routes with advanced algorithms"
     },
     {
-      icon: <Wifi className="w-12 h-12 text-[#1EAEDB]" />,
+      icon: <Wifi className="w-12 h-12 text-[#8B5CF6]" />,
       title: "Seamless Mobile Operations",
       description: "Offline-capable mobile application for uninterrupted work"
     },
     {
-      icon: <Phone className="w-12 h-12 text-[#1EAEDB]" />,
+      icon: <Phone className="w-12 h-12 text-[#8B5CF6]" />,
       title: "Real-Time Data Access",
       description: "Essential information and invoicing at your fingertips"
     },
     {
-      icon: <FileText className="w-12 h-12 text-[#1EAEDB]" />,
+      icon: <FileText className="w-12 h-12 text-[#8B5CF6]" />,
       title: "Intelligent Reporting",
       description: "Over 1,000 reporting templates for comprehensive insights"
     }
@@ -157,7 +158,7 @@ const FieldOperations = () => {
       </section>
 
       {/* Domain Coverage Section */}
-      <section className="py-16 bg-gradient-to-br from-[#1EAEDB] to-[#0FA0CE] text-white">
+      <section className="py-16 bg-gradient-to-br from-[#9b87f5] to-[#8B5CF6] text-white">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
             Comprehensive Coverage Across Domains
@@ -190,7 +191,7 @@ const FieldOperations = () => {
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {results.map((result, index) => (
               <div key={index} className="text-center">
-                <div className="text-4xl font-bold text-[#1EAEDB] mb-2">
+                <div className="text-4xl font-bold text-[#8B5CF6] mb-2">
                   {result.stat}
                 </div>
                 <h3 className="text-xl font-semibold mb-2">{result.title}</h3>
@@ -231,7 +232,7 @@ const FieldOperations = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 bg-gradient-to-br from-[#1EAEDB] to-[#0FA0CE] text-white">
+      <section className="py-16 bg-gradient-to-br from-[#9b87f5] to-[#8B5CF6] text-white">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-6">
             Ready to Transform Your Field Operations?
@@ -241,7 +242,7 @@ const FieldOperations = () => {
           </p>
           <Button 
             onClick={() => navigate("/contact")}
-            className="bg-white text-[#1EAEDB] hover:bg-gray-100 px-8 py-6 text-lg"
+            className="bg-white text-[#8B5CF6] hover:bg-gray-100 px-8 py-6 text-lg"
           >
             Schedule a Demo Today <ArrowRight className="ml-2" />
           </Button>
