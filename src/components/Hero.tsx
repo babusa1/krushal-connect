@@ -1,3 +1,4 @@
+
 import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useEffect, useState } from "react";
@@ -15,8 +16,8 @@ const Hero = () => {
       tagline: "Empowering Underserved Markets with Dairy, Agritech, Financial Services & Insurance",
       stats: ">60% early detection of mastitis, farm-level antibiotics signaling, and reduce procurement cost of milk by Rs 0.1 to Rs 0.2",
       testimonials: [
-        "You're building AWS for Rural - Foundation CEO",
-        "Everyone in the industry needs this - Dairy CEO"
+        ""You're building AWS for Rural" - Foundation CEO",
+        ""Everyone in the industry needs this" - Dairy CEO"
       ],
       route: "/first-mile-solutions"
     },
@@ -26,8 +27,8 @@ const Hero = () => {
       tagline: "Human-Centric Solutions, Seamless Experiences",
       stats: "Seamless digital experiences across 100+ rural touchpoints",
       testimonials: [
-        "Transformed our digital presence - Technology Head",
-        "Incredible user adoption rates - Product Manager"
+        ""Transformed our digital presence" - Technology Head",
+        ""Incredible user adoption rates" - Product Manager"
       ],
       route: "/mobile-first-digital"
     },
@@ -37,8 +38,8 @@ const Hero = () => {
       tagline: "Unlocking the Power of Unified Data",
       stats: "Unified data platform processing millions of rural transactions",
       testimonials: [
-        "Data-driven decisions made simple - Analytics Lead",
-        "Revolutionary insights platform - CTO"
+        ""Data-driven decisions made simple" - Analytics Lead",
+        ""Revolutionary insights platform" - CTO"
       ],
       route: "/ai-insights"
     },
@@ -48,8 +49,8 @@ const Hero = () => {
       tagline: "Automate, Orchestrate, Innovate: Your DevOps Partner",
       stats: "99.9% uptime with scalable cloud infrastructure",
       testimonials: [
-        "Enterprise-grade reliability - Operations Director",
-        "Future-ready architecture - Cloud Architect"
+        ""Enterprise-grade reliability" - Operations Director",
+        ""Future-ready architecture" - Cloud Architect"
       ],
       route: "/cloud-and-devops"
     }
@@ -115,9 +116,15 @@ const Hero = () => {
               <p className="text-[#7E69AB] font-medium mb-4">
                 {images[currentImage].stats}
               </p>
-              <div className="flex flex-col space-y-2 text-[#6E59A5] italic">
+            </div>
+            <div className="bg-[#1a1a1a]/80 backdrop-blur-sm rounded-lg p-6 mb-8 shadow-lg border border-white/10">
+              <div className="flex flex-col space-y-4">
                 {images[currentImage].testimonials.map((testimonial, index) => (
-                  <p key={index}>{testimonial}</p>
+                  <div key={index} className="flex flex-col">
+                    <p className="text-white/90 italic text-lg">
+                      {testimonial}
+                    </p>
+                  </div>
                 ))}
               </div>
             </div>
