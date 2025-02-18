@@ -1,10 +1,12 @@
-import { ArrowRight } from "lucide-react";
+
+import { ArrowRight, Pause, Play } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 const Hero = () => {
   const [currentImage, setCurrentImage] = useState(0);
+  const [isPaused, setIsPaused] = useState(false);
   const navigate = useNavigate();
   
   const images = [
@@ -55,11 +57,26 @@ const Hero = () => {
   ];
 
   useEffect(() => {
-    const timer = setInterval(() => {
-      setCurrentImage((prev) => (prev + 1) % images.length);
-    }, 5000);
+    let timer: NodeJS.Timeout;
+    
+    if (!isPaused) {
+      timer = setInterval(() => {
+        setCurrentImage((prev) => (prev + 1) % images.length);
+      }, 5000);
+    }
+    
     return () => clearInterval(timer);
-  }, []);
+  }, [images.length, isPaused]);
+
+  const handleInteractionStart = () => {
+    console.log('Interaction started - pausing carousel');
+    setIsPaused(true);
+  };
+
+  const handleInteractionEnd = () => {
+    console.log('Interaction ended - resuming carousel');
+    setIsPaused(false);
+  };
 
   return (
     <section className="relative min-h-[90vh] flex items-center justify-center py-20 mt-16">
@@ -78,9 +95,24 @@ const Hero = () => {
         />
       ))}
 
-      <div className="container px-4 mx-auto relative z-10">
+      <div 
+        className={`container px-4 mx-auto relative z-10 transition-all duration-300 ${
+          isPaused ? 'ring-2 ring-white/20 rounded-lg' : ''
+        }`}
+        onMouseEnter={handleInteractionStart}
+        onMouseLeave={handleInteractionEnd}
+        onTouchStart={handleInteractionStart}
+        onTouchEnd={handleInteractionEnd}
+      >
         <div className="max-w-4xl mx-auto">
           <div className="text-left md:text-center">
+            <div className="flex items-center justify-center mb-4">
+              {isPaused ? (
+                <Pause className="w-6 h-6 text-white animate-pulse" />
+              ) : (
+                <Play className="w-6 h-6 text-white" />
+              )}
+            </div>
             <h1 className="animate-fadeIn text-4xl md:text-6xl font-bold text-white mb-6">
               {images[currentImage].title}
             </h1>
