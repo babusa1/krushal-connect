@@ -108,22 +108,49 @@ const FieldOperations = () => {
     {
       stat: "30%",
       title: "Efficiency Boost",
-      description: "Increase in operational efficiency through AI-driven optimization"
+      description: "Increased field productivity through streamlined operations"
+    },
+    {
+      stat: "25%",
+      title: "Success Rate Increase",
+      description: "Enhanced on-ground activities with actionable insights"
     },
     {
       stat: "20%",
       title: "Cost Reduction",
-      description: "Reduction in operational costs through smart resource allocation"
+      description: "Reduced operational costs through optimized resourcing"
     },
     {
-      stat: "<5%",
-      title: "Protocol Variance",
-      description: "Reduced protocol deviations through targeted training"
+      stat: "100%",
+      title: "Offline Capability",
+      description: "Uninterrupted functionality even in remote areas"
+    }
+  ];
+
+  const approaches = [
+    {
+      title: "Real-Time Data Collection",
+      description: "Captures field activity data in real-time, with seamless offline mobile integration for uninterrupted operations"
     },
     {
-      stat: "1000+",
-      title: "Report Templates",
-      description: "Comprehensive reporting solutions for all your needs"
+      title: "Centralized Monitoring",
+      description: "Comprehensive dashboards and detailed reports for complete operational visibility"
+    },
+    {
+      title: "Task Management",
+      description: "Smart scheduling, progress tracking, and resource optimization for maximum efficiency"
+    },
+    {
+      title: "Communication Hub",
+      description: "Facilitates seamless interactions between field teams and management"
+    },
+    {
+      title: "Advanced Analytics",
+      description: "Actionable insights and predictive analytics for informed decision-making"
+    },
+    {
+      title: "Compliance & Geolocation",
+      description: "Regulatory compliance monitoring with geospatial analysis capabilities"
     }
   ];
 
@@ -182,6 +209,28 @@ const FieldOperations = () => {
         </div>
       </section>
 
+      {/* Approach Section */}
+      <section className="py-16 bg-[#F6F6F7]">
+        <div className="container mx-auto px-4">
+          <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
+            Our Technology Approach
+          </h2>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {approaches.map((approach, index) => (
+              <div key={index} className="bg-white p-8 rounded-lg shadow-lg hover:shadow-xl transition-all">
+                <h3 className="text-xl font-semibold mb-4 text-[#8B5CF6]">{approach.title}</h3>
+                <p className="text-gray-600">{approach.description}</p>
+              </div>
+            ))}
+          </div>
+          <div className="mt-12 text-center">
+            <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+              Built on a microservices platform using an open-source stack, our solution delivers both online and offline functionality for uninterrupted field operations.
+            </p>
+          </div>
+        </div>
+      </section>
+
       {/* Results Section */}
       <section className="py-16 bg-white">
         <div className="container mx-auto px-4">
@@ -198,35 +247,6 @@ const FieldOperations = () => {
                 <p className="text-gray-600">{result.description}</p>
               </div>
             ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Approach Section */}
-      <section className="py-16 bg-[#F6F6F7]">
-        <div className="container mx-auto px-4">
-          <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
-            Our Approach
-          </h2>
-          <div className="grid md:grid-cols-3 gap-8">
-            <div className="bg-white p-8 rounded-lg shadow-lg">
-              <h3 className="text-xl font-semibold mb-4">Industry Standard Data Model</h3>
-              <p className="text-gray-600">
-                Implemented best practices for partial-use inventory management with proven industry standards.
-              </p>
-            </div>
-            <div className="bg-white p-8 rounded-lg shadow-lg">
-              <h3 className="text-xl font-semibold mb-4">Localized UI</h3>
-              <p className="text-gray-600">
-                User-friendly, localization-enabled interface designed for efficient usage with minimal training.
-              </p>
-            </div>
-            <div className="bg-white p-8 rounded-lg shadow-lg">
-              <h3 className="text-xl font-semibold mb-4">Offline Capabilities</h3>
-              <p className="text-gray-600">
-                Smooth operation in offline mode, perfect for remote areas with limited connectivity.
-              </p>
-            </div>
           </div>
         </div>
       </section>
