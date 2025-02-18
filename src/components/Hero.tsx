@@ -1,5 +1,4 @@
-
-import { ArrowRight, Pause, Play } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
@@ -106,13 +105,6 @@ const Hero = () => {
       >
         <div className="max-w-4xl mx-auto">
           <div className="text-left md:text-center">
-            <div className="flex items-center justify-center mb-4">
-              {isPaused ? (
-                <Pause className="w-6 h-6 text-white animate-pulse" />
-              ) : (
-                <Play className="w-6 h-6 text-white" />
-              )}
-            </div>
             <h1 className="animate-fadeIn text-4xl md:text-6xl font-bold text-white mb-6">
               {images[currentImage].title}
             </h1>
