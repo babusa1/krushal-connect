@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
-import { ChartLine, Users, Database, Percent, Bot, Cloud, Stethoscope } from "lucide-react";
+import { ChartLine, Users, Database, Percent, Bot, Cloud, Stethoscope, LucideIcon } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 
@@ -13,7 +13,7 @@ interface CaseStudy {
   approach: string[];
   results: string[];
   industry: string;
-  icon: React.ComponentType;
+  icon: LucideIcon;
 }
 
 const CaseStudies = () => {
@@ -267,33 +267,30 @@ const CaseStudies = () => {
             </TabsList>
 
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mt-8">
-              {filteredCaseStudies.map((study, index) => {
-                const Icon = study.icon;
-                return (
-                  <Card key={index} className="hover:shadow-lg transition-shadow">
-                    <CardContent className="p-6">
-                      <Icon className="w-12 h-12 text-[#1EAEDB] mb-4" />
-                      <div className="inline-block px-3 py-1 rounded-full bg-[#E5F7FB] text-[#1EAEDB] text-sm font-medium mb-4">
-                        {study.industry}
-                      </div>
-                      <h3 className="text-xl font-semibold mb-4 text-gray-900">
-                        {study.title}
-                      </h3>
-                      <p className="text-gray-600 mb-4">
-                        {study.project}
-                      </p>
-                      <div className="mb-4">
-                        <h4 className="font-semibold mb-2 text-gray-900">Key Results:</h4>
-                        <ul className="list-disc list-inside text-gray-600">
-                          {study.results.map((result, idx) => (
-                            <li key={idx}>{result}</li>
-                          ))}
-                        </ul>
-                      </div>
-                    </CardContent>
-                  </Card>
-                );
-              })}
+              {filteredCaseStudies.map((study, index) => (
+                <Card key={index} className="hover:shadow-lg transition-shadow">
+                  <CardContent className="p-6">
+                    <study.icon className="w-12 h-12 text-[#1EAEDB] mb-4" />
+                    <div className="inline-block px-3 py-1 rounded-full bg-[#E5F7FB] text-[#1EAEDB] text-sm font-medium mb-4">
+                      {study.industry}
+                    </div>
+                    <h3 className="text-xl font-semibold mb-4 text-gray-900">
+                      {study.title}
+                    </h3>
+                    <p className="text-gray-600 mb-4">
+                      {study.project}
+                    </p>
+                    <div className="mb-4">
+                      <h4 className="font-semibold mb-2 text-gray-900">Key Results:</h4>
+                      <ul className="list-disc list-inside text-gray-600">
+                        {study.results.map((result, idx) => (
+                          <li key={idx}>{result}</li>
+                        ))}
+                      </ul>
+                    </div>
+                  </CardContent>
+                </Card>
+              ))}
             </div>
           </Tabs>
         </div>
