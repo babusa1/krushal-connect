@@ -1,4 +1,3 @@
-
 export const navigationMenu = [
   {
     title: "Services",
@@ -53,10 +52,14 @@ export const navigationMenu = [
   {
     title: "Industries",
     items: [
-      { title: "Dairy Operations", href: "#dairy" },
-      { title: "Insurance Services", href: "#insurance" },
-      { title: "Financial Solutions", href: "#finance" },
-      { title: "Agritech", href: "#agritech" },
+      { 
+        title: "Dairy Operations", 
+        href: "/industries/dairy",
+        description: "First Mile Solutions for a Sustainable Dairy Future" 
+      },
+      { title: "Insurance Services", href: "/industries/insurance" },
+      { title: "Financial Solutions", href: "/industries/finance" },
+      { title: "Agritech", href: "/industries/agritech" },
     ],
   },
   {

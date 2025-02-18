@@ -23,6 +23,7 @@ import Careers from "./pages/Careers";
 import FieldOperations from "./pages/products/FieldOperations";
 import PersonalizedInsights from "./pages/products/PersonalizedInsights";
 import AISoftware from "./pages/products/AISoftware";
+import Dairy from "./pages/industries/Dairy";
 
 const queryClient = new QueryClient();
 
@@ -52,6 +53,7 @@ const App = () => (
           <Route path="/products/field-operations" element={<FieldOperations />} />
           <Route path="/products/personalized-insights" element={<PersonalizedInsights />} />
           <Route path="/products/ai-software" element={<AISoftware />} />
+          <Route path="/industries/dairy" element={<Dairy />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
