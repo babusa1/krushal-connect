@@ -1,4 +1,3 @@
-
 import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useEffect, useState } from "react";
@@ -104,24 +103,24 @@ const Hero = () => {
         onTouchStart={handleInteractionStart}
         onTouchEnd={handleInteractionEnd}
       >
-        <div className="max-w-4xl mx-auto">
+        <div className="max-w-3xl mx-auto">
           <div className="text-left md:text-center">
-            <h1 className="animate-fadeIn text-4xl md:text-6xl font-bold text-white mb-6">
+            <h1 className="animate-fadeIn text-4xl md:text-6xl font-bold text-white mb-4">
               {images[currentImage].title}
             </h1>
-            <p className="animate-fadeIn text-lg md:text-xl text-white/90 mb-8 delay-100">
+            <p className="animate-fadeIn text-lg md:text-xl text-white/90 mb-6 delay-100">
               {images[currentImage].tagline}
             </p>
-            <div className="bg-white/95 backdrop-blur-sm rounded-lg p-6 mb-8 shadow-lg">
-              <p className="text-[#7E69AB] font-medium mb-4">
+            <div className="bg-white/95 backdrop-blur-sm rounded-lg p-4 mb-4 shadow-lg max-w-2xl mx-auto">
+              <p className="text-[#7E69AB] font-medium text-sm md:text-base">
                 {images[currentImage].stats}
               </p>
             </div>
-            <div className="bg-[#1a1a1a]/80 backdrop-blur-sm rounded-lg p-6 mb-8 shadow-lg border border-white/10">
-              <div className="flex flex-col space-y-4">
+            <div className="bg-[#1a1a1a]/80 backdrop-blur-sm rounded-lg p-4 mb-6 shadow-lg border border-white/10 max-w-2xl mx-auto">
+              <div className="flex flex-col space-y-2">
                 {images[currentImage].testimonials.map((testimonial, index) => (
                   <div key={index} className="flex flex-col">
-                    <p className="text-white/90 italic text-lg">
+                    <p className="text-white/90 italic text-sm md:text-base">
                       {testimonial}
                     </p>
                   </div>
@@ -129,7 +128,7 @@ const Hero = () => {
               </div>
             </div>
             <Button 
-              className="animate-fadeIn bg-[#9b87f5] hover:bg-[#8B5CF6] text-white px-8 py-6 rounded-full text-lg font-medium flex items-center gap-2 mx-auto md:mx-0 md:inline-flex transition-colors duration-300"
+              className="animate-fadeIn bg-[#9b87f5] hover:bg-[#8B5CF6] text-white px-6 py-4 rounded-full text-lg font-medium flex items-center gap-2 mx-auto md:mx-0 md:inline-flex transition-colors duration-300"
               onClick={() => navigate(images[currentImage].route)}
             >
               Explore {images[currentImage].title} <ArrowRight className="w-5 h-5" />
