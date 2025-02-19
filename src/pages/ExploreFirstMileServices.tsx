@@ -11,6 +11,11 @@ const ExploreFirstMileServices = () => {
   return (
     <div className="min-h-screen bg-white">
       <Navigation />
+      <div className="container mx-auto px-4 pt-20">
+        <h1 className="text-4xl md:text-5xl font-bold text-center text-[#673AB7] mb-12 font-baloo">
+          First Mile Services
+        </h1>
+      </div>
       <HeroSection />
       <ServicesSection />
       <CaseStudiesSection />

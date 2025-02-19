@@ -49,6 +49,9 @@ const FirstMileSolutions = () => {
         }}
       />
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <h2 className="text-3xl md:text-4xl font-bold text-center text-[#673AB7] mb-12 font-baloo">
+          First Mile Solutions for Rural Industries
+        </h2>
         <MarketOpportunity />
         <SolutionSection />
         <IndustryUseCases />
@@ -58,7 +61,7 @@ const FirstMileSolutions = () => {
       {/* CTA Section */}
       <section className="py-12 sm:py-16 px-4 bg-gradient-to-br from-[#673AB7] to-[#9b87f5] text-white">
         <div className="container mx-auto max-w-4xl text-center">
-          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 sm:mb-6">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 sm:mb-6 font-baloo">
             First Mile as a Service for Underserved Markets
           </h2>
           <p className="text-lg sm:text-xl mb-6 sm:mb-8 text-white/90">
