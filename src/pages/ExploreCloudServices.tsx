@@ -1,3 +1,4 @@
+
 import Navigation from "@/components/Navigation";
 import { Button } from "@/components/ui/button";
 import { useNavigate } from "react-router-dom";
@@ -22,7 +23,7 @@ const ExploreCloudServices = () => {
         </div>
         <div className="container mx-auto px-4 py-24 relative z-20">
           <div className="max-w-3xl mx-auto text-center">
-            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 animate-fadeIn">
+            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 animate-fadeIn font-baloo">
               Krushal: Cloud & DevOps Services
             </h1>
             <p className="text-xl md:text-2xl text-gray-200 max-w-2xl mx-auto mb-12 animate-fadeIn">
@@ -36,7 +37,7 @@ const ExploreCloudServices = () => {
       <section className="py-16 bg-[#F1F0FB]">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-[#403E43] mb-4">
+            <h2 className="text-3xl font-bold text-[#403E43] mb-4 font-baloo">
               Unlock the Power of Cloud with Krushal
             </h2>
             <p className="text-xl text-[#8E9196]">Cloud Solutions: Optimize, Scale, Secure.</p>
@@ -71,7 +72,7 @@ const ExploreCloudServices = () => {
               >
                 <div className="flex flex-col items-center text-center">
                   {service.icon}
-                  <h3 className="text-xl font-semibold mt-4 mb-2 text-[#403E43]">
+                  <h3 className="text-xl font-semibold mt-4 mb-2 text-[#403E43] font-baloo">
                     {service.title}
                   </h3>
                   <p className="text-[#8E9196]">{service.description}</p>
@@ -86,7 +87,7 @@ const ExploreCloudServices = () => {
       <section className="py-16 px-4 bg-white">
         <div className="container mx-auto">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-[#403E43] mb-4">
+            <h2 className="text-3xl font-bold text-[#403E43] mb-4 font-baloo">
               DevOps: Fueling Agility and Speed
             </h2>
             <p className="text-xl text-[#8E9196]">DevOps Expertise: Agility, Speed, Reliability.</p>
@@ -133,9 +134,9 @@ const ExploreCloudServices = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 px-4 bg-gradient-to-br from-[#0EA5E9] to-[#1EAEDB] text-white">
+      <section className="py-16 bg-gradient-to-br from-[#0EA5E9] to-[#1EAEDB] text-white">
         <div className="container mx-auto text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-6">
+          <h2 className="text-3xl md:text-4xl font-bold mb-6 font-baloo">
             Ready to Accelerate Your Digital Transformation?
           </h2>
           <p className="text-xl mb-8 max-w-2xl mx-auto">

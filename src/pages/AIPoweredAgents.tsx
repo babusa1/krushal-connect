@@ -1,3 +1,4 @@
+
 import Navigation from "@/components/Navigation";
 import { Button } from "@/components/ui/button";
 import { useNavigate } from "react-router-dom";
@@ -47,7 +48,7 @@ const AIPoweredAgents = () => {
       {/* CTA Section */}
       <section className="py-16 bg-gradient-to-br from-[#673AB7] to-[#9b87f5] text-white">
         <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-8">
+          <h2 className="text-3xl md:text-4xl font-bold mb-8 font-baloo">
             Ready to explore the possibilities of AI Agents?
           </h2>
           <Button 

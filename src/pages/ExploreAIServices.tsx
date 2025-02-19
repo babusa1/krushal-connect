@@ -58,7 +58,7 @@ const ExploreAIServices = () => {
         </div>
         <div className="container mx-auto px-4 py-24 relative z-20">
           <div className="max-w-3xl mx-auto text-center">
-            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 animate-fade-in">
+            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 animate-fade-in font-baloo">
               Transform Data into Strategic Advantage
             </h1>
             <p className="text-xl md:text-2xl text-gray-200 max-w-2xl mx-auto mb-12 animate-fade-in">
@@ -72,7 +72,7 @@ const ExploreAIServices = () => {
       <section className="py-16 bg-white">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center mb-16">
-            <h2 className="text-3xl font-bold mb-6 text-[#403E43]">
+            <h2 className="text-3xl font-bold mb-6 text-[#403E43] font-baloo">
               Krushal: AI-Powered Insight Services
             </h2>
             <p className="text-[#8E9196]">
@@ -84,7 +84,7 @@ const ExploreAIServices = () => {
             {services.map((service, index) => (
               <div key={index} className="bg-white p-8 rounded-lg shadow-lg hover:shadow-xl transition-all group hover:-translate-y-2 duration-300">
                 <service.icon className="w-12 h-12 text-[#1EAEDB] mb-6 group-hover:scale-110 transition-transform" />
-                <h3 className="text-2xl font-semibold mb-4">{service.title}</h3>
+                <h3 className="text-2xl font-semibold mb-4 font-baloo">{service.title}</h3>
                 <p className="text-[#8E9196] mb-4 italic">"{service.description}"</p>
                 <ul className="space-y-3 text-gray-600">
                   {service.bullets.map((bullet, idx) => (
@@ -113,7 +113,7 @@ const ExploreAIServices = () => {
       {/* Call to Action Section */}
       <section className="py-16 bg-[#F6F6F7]">
         <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl font-bold text-[#403E43] mb-6">
+          <h2 className="text-3xl font-bold text-[#403E43] mb-6 font-baloo">
             Ready to Unlock Your Data's Potential?
           </h2>
           <p className="text-[#8E9196] mb-8 max-w-2xl mx-auto">
