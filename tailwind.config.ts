@@ -21,6 +21,7 @@ export default {
     extend: {
       fontFamily: {
         baloo: ['"Baloo 2"', 'cursive'],
+        sans: ['Inter', 'system-ui', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Arial', 'sans-serif'],
       },
       colors: {
         border: "hsl(var(--border))",
