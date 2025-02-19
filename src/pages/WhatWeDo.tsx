@@ -3,7 +3,7 @@ import React from "react";
 import Navigation from "@/components/Navigation";
 import { Button } from "@/components/ui/button";
 import { useNavigate } from "react-router-dom";
-import { Bot, Brain, Database, Cloud, Mobile, Truck } from "lucide-react";
+import { Bot, Brain, Database, Cloud, Smartphone, Truck } from "lucide-react";
 import MarketOpportunity from "@/components/sections/MarketOpportunity";
 import OutcomesSection from "@/components/sections/OutcomesSection";
 import SolutionSection from "@/components/sections/SolutionSection";
@@ -31,7 +31,7 @@ const WhatWeDo = () => {
       route: "/ai-insights"
     },
     {
-      icon: <Mobile className="w-12 h-12 text-[#673AB7]" />,
+      icon: <Smartphone className="w-12 h-12 text-[#673AB7]" />,
       title: "Mobile First Digital",
       description: "User-centric solutions for seamless experiences",
       route: "/mobile-first-digital"
