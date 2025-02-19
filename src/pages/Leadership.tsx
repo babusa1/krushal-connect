@@ -66,7 +66,7 @@ const Leadership = () => {
         </div>
         <div className="container px-4 mx-auto relative z-10">
           <div className="max-w-4xl mx-auto text-center text-white">
-            <h1 className="text-4xl md:text-5xl font-bold mb-6">
+            <h1 className="text-4xl md:text-5xl font-bold mb-6 font-baloo">
               Our Leadership
             </h1>
             <p className="text-xl leading-relaxed mb-8">
@@ -102,7 +102,7 @@ const Leadership = () => {
                         {executive.name.split(' ').map(n => n[0]).join('')}
                       </AvatarFallback>
                     </Avatar>
-                    <h3 className="text-xl font-bold text-[#673AB7] mb-2">{executive.name}</h3>
+                    <h3 className="text-xl font-bold text-[#673AB7] mb-2 font-baloo">{executive.name}</h3>
                     <p className="text-gray-600 mb-4">{executive.role}</p>
                     <a 
                       href={executive.linkedin}

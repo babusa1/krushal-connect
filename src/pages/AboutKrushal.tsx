@@ -24,7 +24,7 @@ const AboutKrushal = () => {
         />
         <div className="container px-4 mx-auto relative z-10">
           <div className="max-w-4xl mx-auto text-center">
-            <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
+            <h1 className="text-4xl md:text-5xl font-bold text-white mb-6 font-baloo">
               Intelligent Technology for End-to-End & First Mile Impact
             </h1>
             <p className="text-xl text-white/90 leading-relaxed mb-8">
@@ -50,7 +50,7 @@ const AboutKrushal = () => {
               <div className="bg-white p-8 rounded-xl shadow-sm border hover:border-[#673AB7] transition-colors">
                 <div className="flex items-center gap-3 mb-6">
                   <Target className="w-8 h-8 text-[#673AB7]" />
-                  <h2 className="text-2xl font-bold text-[#673AB7]">Our Vision</h2>
+                  <h2 className="text-2xl font-bold text-[#673AB7] font-baloo">Our Vision</h2>
                 </div>
                 <p className="text-gray-600 leading-relaxed">
                   To empower industries with intelligent technology across the entire value chain, 
@@ -63,7 +63,7 @@ const AboutKrushal = () => {
               <div className="bg-white p-8 rounded-xl shadow-sm border hover:border-[#673AB7] transition-colors">
                 <div className="flex items-center gap-3 mb-6">
                   <Rocket className="w-8 h-8 text-[#673AB7]" />
-                  <h2 className="text-2xl font-bold text-[#673AB7]">Our Mission</h2>
+                  <h2 className="text-2xl font-bold text-[#673AB7] font-baloo">Our Mission</h2>
                 </div>
                 <p className="text-gray-600 leading-relaxed">
                   To deliver impactful intelligent technology solutions that enable end-to-end transformation, 
@@ -80,7 +80,7 @@ const AboutKrushal = () => {
       <section className="py-20 bg-[#F8F7FF]">
         <div className="container px-4 mx-auto">
           <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl font-bold text-center mb-12 text-[#673AB7]">
+            <h2 className="text-3xl font-bold text-center mb-12 text-[#673AB7] font-baloo">
               Solutions We Deliver
             </h2>
             <div className="grid md:grid-cols-2 gap-8">
@@ -108,7 +108,7 @@ const AboutKrushal = () => {
               ].map((solution, index) => (
                 <div key={index} className="bg-white p-6 rounded-lg shadow-sm border hover:border-[#673AB7] transition-colors">
                   <div className="mb-4">{solution.icon}</div>
-                  <h3 className="text-xl font-semibold mb-3 text-[#673AB7]">{solution.title}</h3>
+                  <h3 className="text-xl font-semibold mb-3 text-[#673AB7] font-baloo">{solution.title}</h3>
                   <p className="text-gray-600">{solution.description}</p>
                 </div>
               ))}
@@ -121,11 +121,12 @@ const AboutKrushal = () => {
       <section className="py-20">
         <div className="container px-4 mx-auto">
           <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl font-bold mb-12 text-[#673AB7]">Our Impact</h2>
+            <h2 className="text-3xl font-bold mb-12 text-[#673AB7] font-baloo">Our Impact</h2>
             <div className="bg-white p-8 rounded-xl shadow-sm border">
               <div className="grid md:grid-cols-2 gap-8">
+                {/* Impact categories */}
                 <div className="text-left">
-                  <h3 className="text-xl font-semibold mb-4 text-[#673AB7]">First Mile Excellence</h3>
+                  <h3 className="text-xl font-semibold mb-4 text-[#673AB7] font-baloo">First Mile Excellence</h3>
                   <ul className="space-y-3 text-gray-600">
                     <li>• 60%+ early mastitis detection in dairy</li>
                     <li>• Farm-level antibiotic signalling</li>
@@ -166,7 +167,7 @@ const AboutKrushal = () => {
       <section className="py-20 bg-gradient-to-r from-[#673AB7] to-[#8B5CF6] text-white">
         <div className="container px-4 mx-auto text-center">
           <div className="max-w-3xl mx-auto">
-            <h2 className="text-3xl font-bold mb-6">
+            <h2 className="text-3xl font-bold mb-6 font-baloo">
               Shape the Future with Us
             </h2>
             <p className="text-xl text-white/90 mb-8">
@@ -186,4 +187,3 @@ const AboutKrushal = () => {
 };
 
 export default AboutKrushal;
-
