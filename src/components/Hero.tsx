@@ -1,4 +1,3 @@
-
 import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useEffect, useState } from "react";
@@ -107,9 +106,7 @@ const Hero = () => {
       ))}
 
       <div 
-        className={`container px-4 mx-auto relative z-10 transition-all duration-300 ${
-          isPaused ? 'ring-2 ring-white/20 rounded-lg' : ''
-        }`}
+        className="container px-4 mx-auto relative z-10"
         onMouseEnter={handleInteractionStart}
         onMouseLeave={handleInteractionEnd}
         onTouchStart={handleInteractionStart}
