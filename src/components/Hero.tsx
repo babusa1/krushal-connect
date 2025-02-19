@@ -1,3 +1,4 @@
+
 import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useEffect, useState } from "react";
@@ -114,7 +115,7 @@ const Hero = () => {
       >
         <div className="max-w-3xl mx-auto">
           <div className="text-left md:text-center">
-            <h1 className="animate-fadeIn text-4xl md:text-6xl font-bold text-white mb-4">
+            <h1 className="animate-fadeIn text-4xl md:text-6xl font-bold text-white mb-4 font-baloo">
               {images[currentImage].title}
             </h1>
             <p className="animate-fadeIn text-lg md:text-xl text-white/90 mb-6 delay-100">
