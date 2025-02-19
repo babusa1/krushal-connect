@@ -1,4 +1,3 @@
-
 import { useEffect, useState } from "react";
 import { ArrowRight, Pause, Play } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -25,7 +24,6 @@ const HeroCarousel = ({ images, buttonConfig }: HeroCarouselProps) => {
   const [isPaused, setIsPaused] = useState(false);
   const navigate = useNavigate();
 
-  // Add safety check for empty images array
   if (!images || images.length === 0) {
     return null;
   }
@@ -77,9 +75,7 @@ const HeroCarousel = ({ images, buttonConfig }: HeroCarouselProps) => {
       ))}
 
       <div 
-        className={`container px-4 mx-auto relative z-10 transition-all duration-300 ${
-          isPaused ? 'ring-2 ring-white/20 rounded-lg' : ''
-        }`}
+        className={`container px-4 mx-auto relative z-10 transition-all duration-300`}
         onMouseEnter={handleInteractionStart}
         onMouseLeave={handleInteractionEnd}
         onTouchStart={handleInteractionStart}
@@ -94,14 +90,14 @@ const HeroCarousel = ({ images, buttonConfig }: HeroCarouselProps) => {
                 <Play className="w-6 h-6 text-white" />
               )}
             </div>
-            <h1 className="animate-fadeIn text-3xl md:text-5xl font-bold text-white mb-6">
+            <h1 className="animate-fadeIn text-3xl md:text-5xl font-bold text-white mb-6 font-baloo">
               {images[currentImage]?.title}
             </h1>
             <p className="animate-fadeIn text-lg md:text-xl text-white/90 mb-8">
               {images[currentImage]?.tagline}
             </p>
             <div className="bg-gradient-to-r from-purple-600/90 to-indigo-600/90 backdrop-blur-sm rounded-lg p-8 mb-8 shadow-xl border border-white/10">
-              <p className="text-white font-medium text-lg md:text-xl leading-relaxed">
+              <p className="text-white font-medium text-lg md:text-xl leading-relaxed font-baloo">
                 Accelerate Your Digital Transformation with Modern Cloud & DevOps Solutions
               </p>
             </div>

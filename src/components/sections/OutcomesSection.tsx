@@ -15,14 +15,14 @@ const OutcomesSection = () => {
   return (
     <section className="py-16 px-4 bg-[#F8F9FA]">
       <div className="container mx-auto">
-        <h2 className="text-3xl md:text-4xl font-bold text-[#673AB7] mb-8">
+        <h2 className="text-3xl md:text-4xl font-bold text-[#673AB7] mb-8 font-baloo">
           Impact in Action: Transforming Rural Livelihoods
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {outcomes.map((outcome, index) => (
             <div key={index} className="bg-white rounded-lg shadow-lg p-6 text-center hover:shadow-xl transition-shadow">
-              <div className="text-4xl font-bold text-[#FF5722] mb-2">{outcome.metric}</div>
-              <div className="text-xl font-semibold text-[#673AB7] mb-2">{outcome.label}</div>
+              <div className="text-4xl font-bold text-[#FF5722] mb-2 font-baloo">{outcome.metric}</div>
+              <div className="text-xl font-semibold text-[#673AB7] mb-2 font-baloo">{outcome.label}</div>
               <div className="text-[#6E59A5]">{outcome.description}</div>
             </div>
           ))}
