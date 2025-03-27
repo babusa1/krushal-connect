@@ -29,6 +29,7 @@ import Finance from "./pages/industries/Finance";
 import Insurance from "./pages/industries/Insurance";
 import Agritech from "./pages/industries/Agritech";
 import CaseStudies from "./pages/CaseStudies";
+import Products from "./pages/Products";
 
 const queryClient = new QueryClient();
 
@@ -55,6 +56,7 @@ const App = () => (
           <Route path="/about-krushal" element={<AboutKrushal />} />
           <Route path="/leadership" element={<Leadership />} />
           <Route path="/careers" element={<Careers />} />
+          <Route path="/products" element={<Products />} />
           <Route path="/products/field-operations" element={<FieldOperations />} />
           <Route path="/products/personalized-insights" element={<PersonalizedInsights />} />
           <Route path="/products/ai-software" element={<AISoftware />} />

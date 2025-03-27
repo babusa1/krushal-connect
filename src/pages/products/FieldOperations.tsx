@@ -161,7 +161,7 @@ const FieldOperations = () => {
       
       <PageBreadcrumb 
         items={[
-          { label: "Products", path: "/products/field-operations" },
+          { label: "Products & Solutions", path: "/products" },
           { label: "Field Operations" }
         ]}
       />

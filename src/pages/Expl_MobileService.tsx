@@ -14,7 +14,7 @@ const ExploreServices = () => {
       
       <PageBreadcrumb 
         items={[
-          { label: "What We Do", path: "/about" },
+          { label: "Services", path: "/mobile-first-digital" },
           { label: "Mobile-First Digital", path: "/mobile-first-digital" },
           { label: "Digital Services" }
         ]}
