@@ -1,7 +1,7 @@
 
 import React from "react";
 import { useNavigate } from "react-router-dom";
-import { Home } from "lucide-react";
+import { Home, ChevronRight } from "lucide-react";
 import {
   Breadcrumb,
   BreadcrumbItem,
@@ -34,7 +34,9 @@ const PageBreadcrumb = ({ items }: PageBreadcrumbProps) => {
           
           {items.map((item, index) => (
             <React.Fragment key={index}>
-              <BreadcrumbSeparator />
+              <BreadcrumbSeparator>
+                <ChevronRight className="h-4 w-4" />
+              </BreadcrumbSeparator>
               <BreadcrumbItem>
                 {item.path ? (
                   <BreadcrumbLink onClick={() => navigate(item.path)}>

@@ -6,6 +6,7 @@ import { ArrowRight, Smartphone, LineChart, Users, Zap,
          Library, Phone, Wifi, FileText, BarChart3, 
          Leaf, Building2, Shield, Tractor } from "lucide-react";
 import { useNavigate } from "react-router-dom";
+import PageBreadcrumb from "@/components/PageBreadcrumb";
 
 const FieldOperations = () => {
   const navigate = useNavigate();
@@ -157,6 +158,13 @@ const FieldOperations = () => {
   return (
     <div className="min-h-screen bg-white">
       <Navigation />
+      
+      <PageBreadcrumb 
+        items={[
+          { label: "Products", path: "/about" },
+          { label: "Field Operations" }
+        ]}
+      />
       
       <HeroCarousel 
         images={carouselImages}
