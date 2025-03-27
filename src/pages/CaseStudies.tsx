@@ -2,8 +2,12 @@
 import Navigation from "@/components/Navigation";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
+import { useState } from "react";
+import { Card, CardContent } from "@/components/ui/card";
 
 const CaseStudies = () => {
+  const [imageErrors, setImageErrors] = useState<{[key: number]: boolean}>({});
+  
   const caseStudies = [
     {
       title: "Dairy Farm Optimization",
@@ -43,6 +47,10 @@ const CaseStudies = () => {
     }
   ];
 
+  const handleImageError = (index: number) => {
+    setImageErrors(prev => ({...prev, [index]: true}));
+  };
+
   return (
     <div className="min-h-screen bg-white">
       <Navigation />
@@ -58,20 +66,23 @@ const CaseStudies = () => {
           
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {caseStudies.map((study, index) => (
-              <div key={index} className="bg-white rounded-lg shadow-lg overflow-hidden">
-                <div className="h-60 relative overflow-hidden">
-                  <img 
-                    src={study.imageUrl} 
-                    alt={study.title}
-                    className="absolute inset-0 w-full h-full object-cover transition-transform hover:scale-105 duration-300"
-                    onError={(e) => {
-                      const target = e.target as HTMLImageElement;
-                      target.onerror = null;
-                      target.src = "https://via.placeholder.com/400x300?text=Image+Not+Found";
-                    }}
-                  />
+              <Card key={index} className="overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
+                <div className="aspect-w-16 aspect-h-9 w-full h-64 bg-gray-100">
+                  {!imageErrors[index] ? (
+                    <img 
+                      src={study.imageUrl} 
+                      alt={study.title}
+                      className="w-full h-full object-cover transition-transform hover:scale-105 duration-300"
+                      onError={() => handleImageError(index)}
+                      loading="lazy"
+                    />
+                  ) : (
+                    <div className="w-full h-full flex items-center justify-center bg-gray-200">
+                      <p className="text-gray-500 text-sm font-medium">Image not available</p>
+                    </div>
+                  )}
                 </div>
-                <div className="p-6">
+                <CardContent className="p-6">
                   <h3 className="text-2xl font-bold mb-4 text-[#673AB7] font-baloo">
                     {study.title}
                   </h3>
@@ -91,8 +102,8 @@ const CaseStudies = () => {
                   <Button className="w-full bg-[#673AB7] text-white hover:bg-[#5E35B1]">
                     Read Case Study <ArrowRight className="ml-2 h-4 w-4" />
                   </Button>
-                </div>
-              </div>
+                </CardContent>
+              </Card>
             ))}
           </div>
         </div>
