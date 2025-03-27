@@ -1,147 +1,185 @@
 
-import React from "react";
 import Navigation from "@/components/Navigation";
-import PageBreadcrumb from "@/components/PageBreadcrumb";
+import { Target, Rocket, Brain, BarChart, Users, Sparkles, Truck, Network } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useNavigate } from "react-router-dom";
 
 const AboutKrushal = () => {
   const navigate = useNavigate();
-
+  
   return (
     <div className="min-h-screen bg-white">
       <Navigation />
       
-      <PageBreadcrumb 
-        items={[
-          { label: "About", path: "/about" },
-          { label: "About Krushal" }
-        ]}
-      />
-      
       {/* Hero Section */}
-      <section className="relative">
-        <div className="absolute inset-0">
-          <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/50 to-transparent z-10" />
-          <img 
-            src="https://images.unsplash.com/photo-1519389950473-47a04ca0ecc7"
-            alt="About Krushal"
-            className="w-full h-[400px] object-cover"
-          />
-        </div>
-        <div className="container mx-auto px-4 py-24 relative z-20">
-          <div className="max-w-3xl mx-auto text-center">
-            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-              About Krushal.AI
+      <section className="relative min-h-[90vh] flex items-center justify-center py-20 mt-16">
+        <div 
+          className="absolute inset-0 z-0"
+          style={{
+            backgroundImage: `linear-gradient(rgba(103, 58, 183, 0.9), rgba(139, 92, 246, 0.9)), url('https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7')`,
+            backgroundSize: 'cover',
+            backgroundPosition: 'center',
+            backgroundRepeat: 'no-repeat',
+          }}
+        />
+        <div className="container px-4 mx-auto relative z-10">
+          <div className="max-w-4xl mx-auto text-center">
+            <h1 className="text-4xl md:text-5xl font-bold text-white mb-6 font-baloo">
+              Intelligent Technology for End-to-End & First Mile Impact
             </h1>
-            <p className="text-xl text-white/90 mb-8">
-              Learn about our mission, vision, and the values that drive us
+            <p className="text-xl text-white/90 leading-relaxed mb-8">
+              Empowering industries with intelligent solutions that drive transformation 
+              from the first mile to the end user, creating unprecedented efficiency and sustainable growth.
             </p>
-          </div>
-        </div>
-      </section>
-
-      {/* Mission & Vision Section */}
-      <section className="py-16 bg-white">
-        <div className="container mx-auto px-4">
-          <div className="grid md:grid-cols-2 gap-8">
-            <div>
-              <h2 className="text-3xl font-bold text-[#673AB7] mb-4">Our Mission</h2>
-              <p className="text-gray-700 text-lg">
-                To empower rural communities and transform industries through innovative AI-driven solutions.
-              </p>
-            </div>
-            <div>
-              <h2 className="text-3xl font-bold text-[#673AB7] mb-4">Our Vision</h2>
-              <p className="text-gray-700 text-lg">
-                To be the leading provider of AI solutions for rural development, creating sustainable impact and improving lives.
+            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-8 border border-white/20">
+              <p className="text-white/90">
+                Revolutionizing operations through AI-driven solutions, mobile-first applications, 
+                and comprehensive cloud services.
               </p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Values Section */}
-      <section className="py-16 bg-[#F6F6F7]">
-        <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold text-center text-[#673AB7] mb-12">Our Core Values</h2>
-          <div className="grid md:grid-cols-3 gap-8">
-            {/* Value Card 1 */}
-            <div className="bg-white p-8 rounded-lg shadow-lg hover:shadow-xl transition-all">
-              <h3 className="text-xl font-semibold text-[#673AB7] mb-2">Innovation</h3>
-              <p className="text-gray-600">We embrace creativity and continuously seek new ways to solve complex challenges.</p>
-            </div>
-            {/* Value Card 2 */}
-            <div className="bg-white p-8 rounded-lg shadow-lg hover:shadow-xl transition-all">
-              <h3 className="text-xl font-semibold text-[#673AB7] mb-2">Impact</h3>
-              <p className="text-gray-600">We are committed to making a positive and lasting difference in the communities we serve.</p>
-            </div>
-            {/* Value Card 3 */}
-            <div className="bg-white p-8 rounded-lg shadow-lg hover:shadow-xl transition-all">
-              <h3 className="text-xl font-semibold text-[#673AB7] mb-2">Integrity</h3>
-              <p className="text-gray-600">We operate with the highest ethical standards, ensuring transparency and trust in all our interactions.</p>
+      {/* Vision & Mission Section */}
+      <section className="py-20">
+        <div className="container px-4 mx-auto">
+          <div className="max-w-4xl mx-auto">
+            <div className="grid md:grid-cols-2 gap-12">
+              {/* Vision */}
+              <div className="bg-white p-8 rounded-xl shadow-sm border hover:border-[#673AB7] transition-colors">
+                <div className="flex items-center gap-3 mb-6">
+                  <Target className="w-8 h-8 text-[#673AB7]" />
+                  <h2 className="text-2xl font-bold text-[#673AB7] font-baloo">Our Vision</h2>
+                </div>
+                <p className="text-gray-600 leading-relaxed">
+                  To empower industries with intelligent technology across the entire value chain, 
+                  revolutionizing the 'First Mile' through AI, mobile-first solutions, and cloud innovation 
+                  for transformative improvements in efficiency and sustainable growth.
+                </p>
+              </div>
+
+              {/* Mission */}
+              <div className="bg-white p-8 rounded-xl shadow-sm border hover:border-[#673AB7] transition-colors">
+                <div className="flex items-center gap-3 mb-6">
+                  <Rocket className="w-8 h-8 text-[#673AB7]" />
+                  <h2 className="text-2xl font-bold text-[#673AB7] font-baloo">Our Mission</h2>
+                </div>
+                <p className="text-gray-600 leading-relaxed">
+                  To deliver impactful intelligent technology solutions that enable end-to-end transformation, 
+                  with specialized expertise in First Mile Modernization, leveraging AI Agents, Mobile-First Applications, 
+                  and comprehensive Cloud & DevOps services.
+                </p>
+              </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Team Section */}
-      <section className="py-16 bg-white">
-        <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold text-center text-[#673AB7] mb-12">Meet Our Team</h2>
-          <p className="text-gray-700 text-lg text-center mb-8">
-            We are a team of passionate individuals dedicated to driving innovation and creating meaningful impact.
-          </p>
-          <div className="grid md:grid-cols-3 gap-8">
-            {/* Team Member Card 1 */}
-            <div className="text-center">
-              <img 
-                src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde"
-                alt="Team Member"
-                className="w-32 h-32 rounded-full mx-auto mb-4"
-              />
-              <h3 className="text-xl font-semibold text-[#673AB7] mb-2">John Doe</h3>
-              <p className="text-gray-600">CEO</p>
-            </div>
-            {/* Team Member Card 2 */}
-            <div className="text-center">
-              <img 
-                src="https://images.unsplash.com/photo-1580489944761-15a19d654956"
-                alt="Team Member"
-                className="w-32 h-32 rounded-full mx-auto mb-4"
-              />
-              <h3 className="text-xl font-semibold text-[#673AB7] mb-2">Jane Smith</h3>
-              <p className="text-gray-600">CTO</p>
-            </div>
-            {/* Team Member Card 3 */}
-            <div className="text-center">
-              <img 
-                src="https://images.unsplash.com/photo-1494790108377-be9c29b2933e"
-                alt="Team Member"
-                className="w-32 h-32 rounded-full mx-auto mb-4"
-              />
-              <h3 className="text-xl font-semibold text-[#673AB7] mb-2">Emily White</h3>
-              <p className="text-gray-600">COO</p>
+      {/* Core Solutions Section */}
+      <section className="py-20 bg-[#F8F7FF]">
+        <div className="container px-4 mx-auto">
+          <div className="max-w-4xl mx-auto">
+            <h2 className="text-3xl font-bold text-center mb-12 text-[#673AB7] font-baloo">
+              Solutions We Deliver
+            </h2>
+            <div className="grid md:grid-cols-2 gap-8">
+              {[
+                {
+                  icon: <Truck className="w-10 h-10 text-[#673AB7]" />,
+                  title: "First Mile Solutions",
+                  description: "Specialized solutions for transforming foundational operations, procurement, and field services in rural and underserved markets."
+                },
+                {
+                  icon: <Brain className="w-10 h-10 text-[#673AB7]" />,
+                  title: "AI & Intelligent Automation",
+                  description: "AI Agents driving efficiency and proactive problem-solving, with specialized focus on First Mile operations."
+                },
+                {
+                  icon: <Network className="w-10 h-10 text-[#673AB7]" />,
+                  title: "End-to-End Transformation",
+                  description: "Comprehensive solutions spanning the entire value chain, from first mile operations to end-user experiences."
+                },
+                {
+                  icon: <Sparkles className="w-10 h-10 text-[#673AB7]" />,
+                  title: "Mobile-First Applications",
+                  description: "User-friendly solutions empowering field teams and enhancing operational efficiency in First Mile operations."
+                }
+              ].map((solution, index) => (
+                <div key={index} className="bg-white p-6 rounded-lg shadow-sm border hover:border-[#673AB7] transition-colors">
+                  <div className="mb-4">{solution.icon}</div>
+                  <h3 className="text-xl font-semibold mb-3 text-[#673AB7] font-baloo">{solution.title}</h3>
+                  <p className="text-gray-600">{solution.description}</p>
+                </div>
+              ))}
             </div>
           </div>
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="py-16 bg-gradient-to-br from-[#673AB7] to-[#9b87f5] text-white">
-        <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl font-bold mb-6">
-            Ready to Learn More?
-          </h2>
-          <p className="text-xl mb-8 max-w-2xl mx-auto">
-            Contact us to discover how Krushal.AI can transform your business and empower your community.
-          </p>
-          <Button 
-            onClick={() => navigate("/contact")}
-            className="bg-white text-[#673AB7] hover:bg-gray-100 px-8 py-6 text-lg"
-          >
-            Contact Us Today
-          </Button>
+      {/* Impact Section */}
+      <section className="py-20">
+        <div className="container px-4 mx-auto">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-3xl font-bold mb-12 text-[#673AB7] font-baloo">Our Impact</h2>
+            <div className="bg-white p-8 rounded-xl shadow-sm border">
+              <div className="grid md:grid-cols-2 gap-8">
+                {/* Impact categories */}
+                <div className="text-left">
+                  <h3 className="text-xl font-semibold mb-4 text-[#673AB7] font-baloo">First Mile Excellence</h3>
+                  <ul className="space-y-3 text-gray-600">
+                    <li>• 60%+ early mastitis detection in dairy</li>
+                    <li>• Farm-level antibiotic signalling</li>
+                    <li>• Rs. 0.36/liter cost reduction</li>
+                  </ul>
+                </div>
+                <div className="text-left">
+                  <h3 className="text-xl font-semibold mb-4 text-[#673AB7]">AI & Automation Impact</h3>
+                  <ul className="space-y-3 text-gray-600">
+                    <li>• 40% reduction in processing time</li>
+                    <li>• 85% automation in routine tasks</li>
+                    <li>• 50% decrease in error rates</li>
+                  </ul>
+                </div>
+                <div className="text-left">
+                  <h3 className="text-xl font-semibold mb-4 text-[#673AB7]">Mobile Solutions</h3>
+                  <ul className="space-y-3 text-gray-600">
+                    <li>• 75% field operation efficiency gain</li>
+                    <li>• 90% user adoption rate</li>
+                    <li>• 65% faster data collection</li>
+                  </ul>
+                </div>
+                <div className="text-left">
+                  <h3 className="text-xl font-semibold mb-4 text-[#673AB7]">Cloud Transformation</h3>
+                  <ul className="space-y-3 text-gray-600">
+                    <li>• 99.9% system availability</li>
+                    <li>• 45% infrastructure cost reduction</li>
+                    <li>• 70% faster deployment cycles</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Call to Action */}
+      <section className="py-20 bg-gradient-to-r from-[#673AB7] to-[#8B5CF6] text-white">
+        <div className="container px-4 mx-auto text-center">
+          <div className="max-w-3xl mx-auto">
+            <h2 className="text-3xl font-bold mb-6 font-baloo">
+              Shape the Future with Us
+            </h2>
+            <p className="text-xl text-white/90 mb-8">
+              Join us in building intelligent solutions that transform industries from the First Mile forward.
+            </p>
+            <Button 
+              className="bg-white text-[#673AB7] hover:bg-gray-100 text-lg px-8 py-6 rounded-full"
+              onClick={() => navigate("/careers")}
+            >
+              Explore Careers
+            </Button>
+          </div>
         </div>
       </section>
     </div>

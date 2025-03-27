@@ -3,7 +3,6 @@ import Navigation from "@/components/Navigation";
 import { Brain, ChartLine, Target, Users } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useNavigate } from "react-router-dom";
-import PageBreadcrumb from "@/components/PageBreadcrumb";
 
 const ExploreAIServices = () => {
   const navigate = useNavigate();
@@ -46,14 +45,6 @@ const ExploreAIServices = () => {
   return (
     <div className="min-h-screen bg-white">
       <Navigation />
-      
-      <PageBreadcrumb 
-        items={[
-          { label: "Services", path: "/" },
-          { label: "AI-Powered Insights", path: "/ai-insights" },
-          { label: "Explore AI Services" }
-        ]}
-      />
       
       {/* Hero Section with Background Image */}
       <section className="relative pt-20">

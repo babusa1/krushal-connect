@@ -3,7 +3,6 @@ import Navigation from "@/components/Navigation";
 import { Globe, Smartphone, Mic, Server, Database } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useNavigate } from "react-router-dom";
-import PageBreadcrumb from "@/components/PageBreadcrumb";
 
 const ExploreServices = () => {
   const navigate = useNavigate();
@@ -11,14 +10,6 @@ const ExploreServices = () => {
   return (
     <div className="min-h-screen bg-white">
       <Navigation />
-      
-      <PageBreadcrumb 
-        items={[
-          { label: "Services", path: "/mobile-first-digital" },
-          { label: "Mobile-First Digital", path: "/mobile-first-digital" },
-          { label: "Digital Services" }
-        ]}
-      />
       
       {/* Hero Section with Background Image */}
       <section className="relative pt-20">

@@ -1,87 +1,189 @@
-import React from "react";
+
+import { Button } from "@/components/ui/button";
 import Navigation from "@/components/Navigation";
-import PageBreadcrumb from "@/components/PageBreadcrumb";
+import HeroCarousel from "@/components/hero/HeroCarousel";
+import { ArrowRight, Brain, Code, Bug, LineChart, 
+         Shield, Database, Rocket, TrendingUp } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 
 const AISoftware = () => {
+  const navigate = useNavigate();
+
+  const carouselImages = [
+    {
+      url: "https://images.unsplash.com/photo-1607799279861-4dd421887fb3",
+      title: "AI-Powered Development: 10x Productivity",
+      tagline: "Transform Your SDLC, Cut Costs, and Deliver Superior Software"
+    },
+    {
+      url: "https://images.unsplash.com/photo-1555949963-ff9fe0c870eb",
+      title: "Revolutionizing Software Development",
+      tagline: "Built for Today's Development Challenges"
+    }
+  ];
+
+  const challenges = [
+    "Delayed releases and missed deadlines",
+    "Costly rework due to defects and miscommunication",
+    "Compromised quality and increased risk of critical bugs",
+    "Difficulty in maintaining and scaling complex codebases"
+  ];
+
+  const features = [
+    {
+      icon: <Brain className="w-12 h-12 text-[#8B5CF6]" />,
+      title: "AI-Driven SDLC",
+      description: "Intelligently automates and manages the entire software development lifecycle",
+      impact: "40% reduction in time to market"
+    },
+    {
+      icon: <Bug className="w-12 h-12 text-[#8B5CF6]" />,
+      title: "AI-Driven Test Management",
+      description: "Generates smart test cases and automates test execution",
+      impact: "80% reduction in testing effort"
+    },
+    {
+      icon: <Code className="w-12 h-12 text-[#8B5CF6]" />,
+      title: "Code Analyzer & Enhancer",
+      description: "Automatically identifies and resolves code defects",
+      impact: "Significant reduction in technical debt"
+    },
+    {
+      icon: <Database className="w-12 h-12 text-[#8B5CF6]" />,
+      title: "Functional Spec Generator",
+      description: "Automatically generates comprehensive functional specifications",
+      impact: "Reduced rework and faster project kickoff"
+    }
+  ];
+
+  const impacts = [
+    {
+      icon: <Rocket className="w-12 h-12 text-white" />,
+      title: "Unleash Productivity",
+      description: "Automate repetitive tasks and accelerate development cycles"
+    },
+    {
+      icon: <Shield className="w-12 h-12 text-white" />,
+      title: "Elevate Quality",
+      description: "Detect defects early and enforce coding standards"
+    },
+    {
+      icon: <Bug className="w-12 h-12 text-white" />,
+      title: "Streamline Testing",
+      description: "Automate test case generation and execution"
+    },
+    {
+      icon: <TrendingUp className="w-12 h-12 text-white" />,
+      title: "Fortify Regression",
+      description: "Automatically identify and prevent regressions"
+    }
+  ];
+
+  const whyKrushal = [
+    {
+      title: "AI-First Approach",
+      description: "Leverage the latest advancements in artificial intelligence and machine learning"
+    },
+    {
+      title: "Seamless Integration",
+      description: "Integrates with your existing development tools and workflows"
+    },
+    {
+      title: "Scalable and Secure",
+      description: "Built on a cloud-native architecture for demanding development needs"
+    },
+    {
+      title: "Expert Support",
+      description: "Dedicated team of experienced software development and AI experts"
+    }
+  ];
+
   return (
     <div className="min-h-screen bg-white">
       <Navigation />
       
-      <PageBreadcrumb 
-        items={[
-          { label: "Products & Solutions", path: "/products" },
-          { label: "AI Software" }
-        ]}
+      <HeroCarousel 
+        images={carouselImages}
+        buttonConfig={{
+          text: "Schedule a Demo",
+          onClick: () => navigate("/contact")
+        }}
       />
-      
-      {/* Hero Section */}
-      <section className="relative">
-        <div className="absolute inset-0">
-          <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/50 to-transparent z-10" />
-          <img 
-            src="https://images.unsplash.com/photo-1518770660439-4636190af475"
-            alt="AI Software"
-            className="w-full h-[400px] object-cover"
-          />
-        </div>
-        <div className="container mx-auto px-4 py-24 relative z-20">
-          <div className="max-w-3xl mx-auto text-center">
-            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-              AI Development Tools Suite
-            </h1>
-            <p className="text-xl text-white/90 mb-8">
-              Intelligent testing, code analysis, and AI-driven SDLC automation tools
-            </p>
+
+      {/* The Challenge Section */}
+      <section className="py-16 bg-[#F6F6F7]">
+        <div className="container mx-auto px-4">
+          <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
+            The Challenge
+          </h2>
+          <p className="text-lg text-gray-600 text-center mb-8 max-w-3xl mx-auto">
+            Traditional software development struggles with increasing complexity, tight deadlines, 
+            and the constant pressure to deliver high-quality software. Manual processes, fragmented 
+            tools, and limited insights result in:
+          </p>
+          <div className="grid md:grid-cols-2 gap-6 max-w-3xl mx-auto">
+            {challenges.map((challenge, index) => (
+              <div key={index} className="flex items-center gap-4 bg-white p-6 rounded-lg shadow-md">
+                <div className="w-2 h-2 bg-[#8B5CF6] rounded-full"></div>
+                <p className="text-gray-700">{challenge}</p>
+              </div>
+            ))}
           </div>
         </div>
       </section>
 
-      {/* Features Section */}
+      {/* Key Features Section */}
       <section className="py-16 bg-white">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
-            Key Features
+            Key Features & Benefits
           </h2>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {/* Feature 1 */}
-            <div className="bg-gray-100 p-6 rounded-lg shadow-md">
-              <h3 className="text-xl font-semibold mb-4">Intelligent Testing</h3>
-              <p className="text-gray-700">Automated testing with AI-driven insights to identify and fix bugs faster.</p>
-            </div>
-
-            {/* Feature 2 */}
-            <div className="bg-gray-100 p-6 rounded-lg shadow-md">
-              <h3 className="text-xl font-semibold mb-4">Code Analysis</h3>
-              <p className="text-gray-700">Advanced code analysis tools to improve code quality and maintainability.</p>
-            </div>
-
-            {/* Feature 3 */}
-            <div className="bg-gray-100 p-6 rounded-lg shadow-md">
-              <h3 className="text-xl font-semibold mb-4">SDLC Automation</h3>
-              <p className="text-gray-700">Automate your software development lifecycle with AI-powered tools.</p>
-            </div>
+          <div className="grid md:grid-cols-2 gap-8">
+            {features.map((feature, index) => (
+              <div key={index} className="bg-[#F8F7FF] p-8 rounded-lg shadow-lg hover:shadow-xl transition-all">
+                <div className="mb-4">{feature.icon}</div>
+                <h3 className="text-xl font-semibold mb-2">{feature.title}</h3>
+                <p className="text-gray-600 mb-4">{feature.description}</p>
+                <div className="bg-[#8B5CF6] text-white px-4 py-2 rounded-full inline-block">
+                  Impact: {feature.impact}
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       </section>
 
-      {/* Benefits Section */}
-      <section className="py-16 bg-gray-50">
+      {/* Impact Section */}
+      <section className="py-16 bg-gradient-to-br from-[#9b87f5] to-[#8B5CF6] text-white">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
-            Benefits
+            Impact on Quality & Productivity
           </h2>
-          <div className="grid md:grid-cols-2 gap-8">
-            {/* Benefit 1 */}
-            <div className="p-6 rounded-lg shadow-md">
-              <h3 className="text-xl font-semibold mb-4">Faster Development</h3>
-              <p className="text-gray-700">Accelerate your development process with AI-driven automation.</p>
-            </div>
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {impacts.map((impact, index) => (
+              <div key={index} className="text-center bg-white/10 backdrop-blur-lg p-8 rounded-lg">
+                <div className="mb-4 flex justify-center">{impact.icon}</div>
+                <h3 className="text-xl font-semibold mb-2">{impact.title}</h3>
+                <p className="text-gray-100">{impact.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
 
-            {/* Benefit 2 */}
-            <div className="p-6 rounded-lg shadow-md">
-              <h3 className="text-xl font-semibold mb-4">Improved Code Quality</h3>
-              <p className="text-gray-700">Enhance code quality with intelligent analysis and testing tools.</p>
-            </div>
+      {/* Why Krushal Section */}
+      <section className="py-16 bg-[#F6F6F7]">
+        <div className="container mx-auto px-4">
+          <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
+            Why Krushal?
+          </h2>
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {whyKrushal.map((item, index) => (
+              <div key={index} className="bg-white p-8 rounded-lg shadow-lg hover:shadow-xl transition-all">
+                <h3 className="text-xl font-semibold mb-4 text-[#8B5CF6]">{item.title}</h3>
+                <p className="text-gray-600">{item.description}</p>
+              </div>
+            ))}
           </div>
         </div>
       </section>
@@ -90,17 +192,17 @@ const AISoftware = () => {
       <section className="py-16 bg-gradient-to-br from-[#9b87f5] to-[#8B5CF6] text-white">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-6">
-            Ready to Revolutionize Your Development Process?
+            Ready to Revolutionize Your Software Development?
           </h2>
           <p className="text-xl mb-8 max-w-2xl mx-auto">
-            Contact us to learn more about how our AI Development Tools Suite can transform your software development lifecycle.
+            Achieve 10x productivity gains and deliver unbreakable software quality with Krushal's AI-powered platform.
           </p>
-          <button 
-            onClick={() => window.location.href = '/contact'}
-            className="bg-white text-[#8B5CF6] hover:bg-gray-100 px-8 py-6 text-lg rounded-full"
+          <Button 
+            onClick={() => navigate("/contact")}
+            className="bg-white text-[#8B5CF6] hover:bg-gray-100 px-8 py-6 text-lg"
           >
-            Contact Us Today
-          </button>
+            Schedule a Demo Today <ArrowRight className="ml-2" />
+          </Button>
         </div>
       </section>
     </div>

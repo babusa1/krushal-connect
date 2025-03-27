@@ -1,185 +1,258 @@
 
-import React from "react";
-import Navigation from "@/components/Navigation";
-import PageBreadcrumb from "@/components/PageBreadcrumb";
 import { Button } from "@/components/ui/button";
+import Navigation from "@/components/Navigation";
+import { ArrowRight, Leaf, LineChart, Sprout, CloudRain, 
+         Smartphone, Brain, DollarSign, FileCheck } from "lucide-react";
 import { useNavigate } from "react-router-dom";
-import { 
-  Leaf, 
-  Droplet, 
-  BarChart2, 
-  Truck, 
-  CheckCircle2, 
-  ArrowRight,
-  CloudRain,
-  LineChart,
-  Smartphone
-} from "lucide-react";
+import HeroCarousel from "@/components/hero/HeroCarousel";
 
 const Agritech = () => {
   const navigate = useNavigate();
+
+  const carouselImages = [
+    {
+      url: "https://images.unsplash.com/photo-1625246333195-78d9c38ad449",
+      title: "Reimagining AgriBusiness",
+      tagline: "Data-Driven, Sustainable, and Profitable Solutions"
+    },
+    {
+      url: "https://images.unsplash.com/photo-1592982537447-6f2a365a8ef3",
+      title: "Transforming Agriculture",
+      tagline: "One Field at a Time"
+    },
+    {
+      url: "https://images.unsplash.com/photo-1499529112087-3cb3b73cec95",
+      title: "Empowering Farmers",
+      tagline: "Through Innovative Solutions"
+    }
+  ];
+
+  const challenges = [
+    {
+      icon: <Sprout className="w-12 h-12 text-[#22C55E]" />,
+      title: "Low Farm Productivity",
+      description: "Many farmers lack access to the knowledge, technology, and resources they need to maximize yields."
+    },
+    {
+      icon: <Leaf className="w-12 h-12 text-[#22C55E]" />,
+      title: "Inefficient Input Use",
+      description: "Farmers often over- or under-apply fertilizers and pesticides, leading to environmental damage."
+    },
+    {
+      icon: <DollarSign className="w-12 h-12 text-[#22C55E]" />,
+      title: "Limited Market Access",
+      description: "Farmers struggle to connect with buyers and secure fair prices for their crops."
+    },
+    {
+      icon: <CloudRain className="w-12 h-12 text-[#22C55E]" />,
+      title: "Climate Change Impacts",
+      description: "Extreme weather events and changing patterns threaten crop yields and farmer livelihoods."
+    }
+  ];
+
+  const offerings = [
+    {
+      icon: <FileCheck className="w-12 h-12 text-[#22C55E]" />,
+      title: "Farm Extension Operations",
+      description: "Expert guidance and support",
+      points: [
+        "On-site consultations",
+        "Access to expert advice",
+        "Customized recommendations",
+        "Sustainable farming practices"
+      ]
+    },
+    {
+      icon: <Leaf className="w-12 h-12 text-[#22C55E]" />,
+      title: "Farm Input Adoption",
+      description: "Optimize resource utilization",
+      points: [
+        "Precision agriculture",
+        "Quality input access",
+        "Application training",
+        "Pest management strategies"
+      ]
+    },
+    {
+      icon: <DollarSign className="w-12 h-12 text-[#22C55E]" />,
+      title: "Procurement Operations",
+      description: "Direct market access",
+      points: [
+        "Fair price securing",
+        "Post-harvest management",
+        "Market expansion",
+        "Streamlined payments"
+      ]
+    },
+    {
+      icon: <LineChart className="w-12 h-12 text-[#22C55E]" />,
+      title: "Crop Data Analytics",
+      description: "Real-time insights platform",
+      points: [
+        "Data-driven decisions",
+        "Yield optimization",
+        "Early problem detection",
+        "Profitability tracking"
+      ]
+    }
+  ];
+
+  const advantages = [
+    {
+      icon: <Brain className="w-12 h-12 text-white" />,
+      title: "AI-Powered Insights",
+      description: "Leveraging advanced analytics for better decisions"
+    },
+    {
+      icon: <Smartphone className="w-12 h-12 text-white" />,
+      title: "Mobile-First Platform",
+      description: "Easy-to-use tools for farmers and staff"
+    },
+    {
+      icon: <Leaf className="w-12 h-12 text-white" />,
+      title: "Sustainable Solutions",
+      description: "Environmentally conscious farming practices"
+    },
+    {
+      icon: <LineChart className="w-12 h-12 text-white" />,
+      title: "Scalable & Affordable",
+      description: "Solutions for farmers of all sizes"
+    }
+  ];
+
+  const impacts = [
+    {
+      stat: "↑40%",
+      title: "Crop Yields",
+      description: "Increased productivity through optimization"
+    },
+    {
+      stat: "↓30%",
+      title: "Input Costs",
+      description: "Reduced expenses through precision farming"
+    },
+    {
+      stat: "2x",
+      title: "Market Access",
+      description: "Expanded market opportunities"
+    },
+    {
+      stat: "↑50%",
+      title: "Farmer Income",
+      description: "Improved profitability and sustainability"
+    }
+  ];
 
   return (
     <div className="min-h-screen bg-white">
       <Navigation />
       
-      <PageBreadcrumb 
-        items={[
-          { label: "Industries", path: "/" },
-          { label: "Agritech" }
-        ]}
+      <HeroCarousel 
+        images={carouselImages}
+        buttonConfig={{
+          text: "Transform Your Agribusiness",
+          onClick: () => navigate("/contact")
+        }}
       />
-      
-      <div className="container mx-auto px-4 pt-20">
-        <h1 className="text-4xl md:text-5xl font-bold text-center text-[#673AB7] mb-12 font-baloo">
-          Agritech Solutions
-        </h1>
-        <p className="text-lg text-gray-700 text-center max-w-4xl mx-auto mb-20">
-          Transforming agriculture with data-driven farming solutions that enhance productivity, sustainability, and profitability.
-        </p>
-      </div>
 
-      {/* Hero Section with Image */}
-      <section className="mb-20">
+      {/* Challenges Section */}
+      <section className="py-16 bg-[#F6F6F7]">
         <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div>
-              <h2 className="text-3xl font-bold text-[#673AB7] mb-6">
-                Empowering Farmers with Modern Technology
-              </h2>
-              <p className="text-gray-700 mb-6">
-                Our agritech solutions combine IoT, AI, and mobile technology to provide farmers with actionable insights and tools that optimize crop yields, reduce waste, and increase profitability.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4">
-                <Button 
-                  onClick={() => navigate("/contact")}
-                  className="bg-[#673AB7] hover:bg-[#5E35B1] text-white"
-                >
-                  Get Started
-                </Button>
-                <Button
-                  variant="outline"
-                  onClick={() => navigate("/case-studies")}
-                  className="border-[#673AB7] text-[#673AB7] hover:bg-[#EDE7F6]"
-                >
-                  View Case Studies
-                </Button>
-              </div>
-            </div>
-            <div className="rounded-lg overflow-hidden shadow-xl">
-              <img 
-                src="https://images.unsplash.com/photo-1472396961693-142e6e269027" 
-                alt="Smart farming technology" 
-                className="w-full h-auto object-cover"
-              />
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Solutions Section */}
-      <section className="py-16 bg-gray-50">
-        <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold text-center text-[#673AB7] mb-16">
-            Our Agritech Solutions
+          <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
+            The AgriBusiness Challenge
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            <div className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
-              <Leaf className="w-12 h-12 text-[#4CAF50] mb-6" />
-              <h3 className="text-xl font-semibold mb-4">Precision Farming</h3>
-              <p className="text-gray-600">
-                Data-driven insights for optimized crop management, soil analysis, and resource allocation.
-              </p>
-            </div>
-            <div className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
-              <Droplet className="w-12 h-12 text-[#2196F3] mb-6" />
-              <h3 className="text-xl font-semibold mb-4">Smart Irrigation</h3>
-              <p className="text-gray-600">
-                Automated water management systems that optimize usage based on real-time soil and weather conditions.
-              </p>
-            </div>
-            <div className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
-              <BarChart2 className="w-12 h-12 text-[#673AB7] mb-6" />
-              <h3 className="text-xl font-semibold mb-4">Pest Management</h3>
-              <p className="text-gray-600">
-                AI-powered monitoring and early detection systems to minimize crop damage and reduce pesticide use.
-              </p>
-            </div>
-            <div className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
-              <Truck className="w-12 h-12 text-[#FF5722] mb-6" />
-              <h3 className="text-xl font-semibold mb-4">Supply Chain</h3>
-              <p className="text-gray-600">
-                Blockchain-based tracking and logistics optimization for enhanced transparency and efficiency.
-              </p>
-            </div>
+          <div className="grid md:grid-cols-2 gap-8">
+            {challenges.map((challenge, index) => (
+              <div key={index} className="bg-white p-8 rounded-lg shadow-lg">
+                <div className="mb-4">{challenge.icon}</div>
+                <h3 className="text-xl font-semibold mb-4 text-[#22C55E]">
+                  {challenge.title}
+                </h3>
+                <p className="text-gray-600">{challenge.description}</p>
+              </div>
+            ))}
           </div>
         </div>
       </section>
 
-      {/* Features Section */}
-      <section className="py-16">
+      {/* Key Offerings Section */}
+      <section className="py-16 bg-white">
         <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-            <div>
-              <h2 className="text-3xl font-bold text-[#673AB7] mb-8">
-                Key Features & Benefits
-              </h2>
-              <ul className="space-y-4">
-                {[
-                  "IoT sensors for real-time environmental monitoring",
-                  "AI-powered crop disease detection and prevention",
-                  "Mobile-first apps designed for rural use with offline capabilities",
-                  "Predictive analytics for yield forecasting and planning",
-                  "Integration with weather data for smart decision-making",
-                  "Farmer community platforms for knowledge sharing"
-                ].map((feature, index) => (
-                  <li key={index} className="flex items-start">
-                    <CheckCircle2 className="w-5 h-5 text-[#4CAF50] mr-3 mt-1 flex-shrink-0" />
-                    <span className="text-gray-700">{feature}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
-            <div className="grid grid-cols-2 gap-6">
-              <div className="bg-[#F1F8E9] p-6 rounded-lg">
-                <CloudRain className="w-10 h-10 text-[#4CAF50] mb-4" />
-                <h3 className="font-semibold text-lg mb-2">Weather Integration</h3>
-                <p className="text-gray-700">Hyper-local weather forecasting for better planning</p>
+          <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
+            Key Offerings
+          </h2>
+          <div className="grid md:grid-cols-2 gap-8">
+            {offerings.map((offering, index) => (
+              <div key={index} className="bg-[#F0FDF4] p-8 rounded-lg shadow-lg">
+                <div className="mb-4">{offering.icon}</div>
+                <h3 className="text-xl font-semibold mb-2">{offering.title}</h3>
+                <p className="text-gray-600 mb-4">{offering.description}</p>
+                <ul className="space-y-2">
+                  {offering.points.map((point, idx) => (
+                    <li key={idx} className="flex items-center gap-2">
+                      <Leaf className="w-4 h-4 text-[#22C55E]" />
+                      <span className="text-gray-600">{point}</span>
+                    </li>
+                  ))}
+                </ul>
               </div>
-              <div className="bg-[#E8F5E9] p-6 rounded-lg">
-                <LineChart className="w-10 h-10 text-[#4CAF50] mb-4" />
-                <h3 className="font-semibold text-lg mb-2">Yield Analytics</h3>
-                <p className="text-gray-700">Data-driven insights for improved productivity</p>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Advantages Section */}
+      <section className="py-16 bg-gradient-to-br from-[#22C55E] to-[#16A34A] text-white">
+        <div className="container mx-auto px-4">
+          <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
+            The Krushal Advantage
+          </h2>
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {advantages.map((advantage, index) => (
+              <div key={index} className="text-center bg-white/10 backdrop-blur-lg p-8 rounded-lg">
+                <div className="mb-4 flex justify-center">{advantage.icon}</div>
+                <h3 className="text-xl font-semibold mb-2">{advantage.title}</h3>
+                <p className="text-gray-100">{advantage.description}</p>
               </div>
-              <div className="bg-[#E0F2F1] p-6 rounded-lg">
-                <Smartphone className="w-10 h-10 text-[#4CAF50] mb-4" />
-                <h3 className="font-semibold text-lg mb-2">Mobile Access</h3>
-                <p className="text-gray-700">Farm management from anywhere, anytime</p>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Impact Section */}
+      <section className="py-16 bg-[#F6F6F7]">
+        <div className="container mx-auto px-4">
+          <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
+            Our Impact
+          </h2>
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {impacts.map((impact, index) => (
+              <div key={index} className="text-center bg-white p-8 rounded-lg shadow-lg">
+                <div className="text-4xl font-bold text-[#22C55E] mb-2">
+                  {impact.stat}
+                </div>
+                <h3 className="text-xl font-semibold mb-2">{impact.title}</h3>
+                <p className="text-gray-600">{impact.description}</p>
               </div>
-              <div className="bg-[#F9FBE7] p-6 rounded-lg">
-                <BarChart2 className="w-10 h-10 text-[#4CAF50] mb-4" />
-                <h3 className="font-semibold text-lg mb-2">Resource Optimization</h3>
-                <p className="text-gray-700">Reduce waste and maximize efficiency</p>
-              </div>
-            </div>
+            ))}
           </div>
         </div>
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 bg-gradient-to-br from-[#4CAF50] to-[#8BC34A] text-white">
+      <section className="py-16 bg-gradient-to-br from-[#22C55E] to-[#16A34A] text-white">
         <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl font-bold mb-8">
-            Ready to Transform Your Agricultural Operations?
+          <h2 className="text-3xl md:text-4xl font-bold mb-6">
+            Ready to Transform Your AgriBusiness?
           </h2>
-          <p className="text-xl text-white/90 mb-12 max-w-2xl mx-auto">
-            Join thousands of farmers who are already benefiting from our innovative agritech solutions.
+          <p className="text-xl mb-8 max-w-2xl mx-auto">
+            Contact us today to learn how Krushal's AI-powered solutions can help you achieve your goals.
           </p>
           <Button 
             onClick={() => navigate("/contact")}
-            className="bg-white text-[#4CAF50] hover:bg-[#F1F8E9] px-8 py-6 text-lg font-medium flex items-center gap-2 mx-auto"
+            className="bg-white text-[#22C55E] hover:bg-gray-100 px-8 py-6 text-lg"
           >
-            Schedule a Demo <ArrowRight className="w-5 h-5" />
+            Get Started Today <ArrowRight className="ml-2" />
           </Button>
         </div>
       </section>

@@ -7,7 +7,6 @@ import TransformData from "@/components/ai-insights/TransformData";
 import KeyAreas from "@/components/ai-insights/KeyAreas";
 import SuccessStories from "@/components/ai-insights/SuccessStories";
 import CallToAction from "@/components/ai-insights/CallToAction";
-import PageBreadcrumb from "@/components/PageBreadcrumb";
 
 const AIPoweredInsights = () => {
   const navigate = useNavigate();
@@ -38,13 +37,6 @@ const AIPoweredInsights = () => {
   return (
     <div className="min-h-screen bg-white">
       <Navigation />
-      
-      <PageBreadcrumb 
-        items={[
-          { label: "Services", path: "/" },
-          { label: "AI-Powered Insights" }
-        ]}
-      />
       
       <HeroCarousel 
         images={carouselImages}
