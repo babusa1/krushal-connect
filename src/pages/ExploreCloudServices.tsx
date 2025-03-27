@@ -1,8 +1,9 @@
-
+import React from "react";
 import Navigation from "@/components/Navigation";
+import PageBreadcrumb from "@/components/PageBreadcrumb";
 import { Button } from "@/components/ui/button";
 import { useNavigate } from "react-router-dom";
-import { Cloud, Server, Database, Cog, Rocket, Infinity, Network, ChartBar } from "lucide-react";
+import { Cloud, Code, ShieldCheck, Database, Server } from "lucide-react";
 
 const ExploreCloudServices = () => {
   const navigate = useNavigate();
@@ -11,142 +12,92 @@ const ExploreCloudServices = () => {
     <div className="min-h-screen bg-white">
       <Navigation />
       
-      {/* Hero Section with Background Image */}
-      <section className="relative pt-20">
-        <div className="absolute inset-0">
-          <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/50 to-transparent z-10" />
-          <img 
-            src="https://images.unsplash.com/photo-1451187580459-43490279c0fa"
-            alt="Cloud Services"
-            className="w-full h-[500px] object-cover"
-          />
-        </div>
-        <div className="container mx-auto px-4 py-24 relative z-20">
-          <div className="max-w-3xl mx-auto text-center">
-            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 animate-fadeIn font-baloo">
-              Krushal: Cloud & DevOps Services
-            </h1>
-            <p className="text-xl md:text-2xl text-gray-200 max-w-2xl mx-auto mb-12 animate-fadeIn">
-              Transform your IT from a cost center to a competitive weapon. Krushal's Cloud & DevOps expertise delivers agility, scalability, and efficiency.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      {/* Cloud Solutions Section */}
-      <section className="py-16 bg-[#F1F0FB]">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-[#403E43] mb-4 font-baloo">
-              Unlock the Power of Cloud with Krushal
-            </h2>
-            <p className="text-xl text-[#8E9196]">Cloud Solutions: Optimize, Scale, Secure.</p>
-          </div>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {[
-              {
-                icon: <Cloud className="w-12 h-12 text-[#0EA5E9]" />,
-                title: "Strategic Cloud Consulting",
-                description: "Visionary strategy and expert cost optimization for cloud ROI."
-              },
-              {
-                icon: <Server className="w-12 h-12 text-[#0EA5E9]" />,
-                title: "Seamless Cloud Migration",
-                description: "Smooth, secure transitions with modern infrastructure deployment."
-              },
-              {
-                icon: <Database className="w-12 h-12 text-[#0EA5E9]" />,
-                title: "Intelligent Cloud Management",
-                description: "24/7 proactive management, robust security, and compliance."
-              },
-              {
-                icon: <Cog className="w-12 h-12 text-[#0EA5E9]" />,
-                title: "Cutting-Edge Cloud",
-                description: "Serverless, Containerization, and Orchestration for future-ready applications."
-              }
-            ].map((service, index) => (
-              <div 
-                key={index}
-                className="bg-white p-8 rounded-lg shadow-lg hover:shadow-xl transition-shadow"
-              >
-                <div className="flex flex-col items-center text-center">
-                  {service.icon}
-                  <h3 className="text-xl font-semibold mt-4 mb-2 text-[#403E43] font-baloo">
-                    {service.title}
-                  </h3>
-                  <p className="text-[#8E9196]">{service.description}</p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* DevOps Section */}
-      <section className="py-16 px-4 bg-white">
-        <div className="container mx-auto">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-[#403E43] mb-4 font-baloo">
-              DevOps: Fueling Agility and Speed
-            </h2>
-            <p className="text-xl text-[#8E9196]">DevOps Expertise: Agility, Speed, Reliability.</p>
-          </div>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {[
-              {
-                icon: <Rocket className="w-12 h-12 text-[#0EA5E9]" />,
-                title: "Strategic DevOps Transformation",
-                description: "Expert consulting, training, and tailored DevOps implementation."
-              },
-              {
-                icon: <Infinity className="w-12 h-12 text-[#0EA5E9]" />,
-                title: "Automated Infrastructure",
-                description: "Infrastructure-as-Code and Configuration Management for speed & consistency."
-              },
-              {
-                icon: <Network className="w-12 h-12 text-[#0EA5E9]" />,
-                title: "Rapid Software Delivery",
-                description: "CI/CD pipelines and Release Automation for faster, reliable releases."
-              },
-              {
-                icon: <ChartBar className="w-12 h-12 text-[#0EA5E9]" />,
-                title: "Intelligent DevOps Tooling",
-                description: "Integrated toolchains and proactive monitoring for peak performance."
-              }
-            ].map((service, index) => (
-              <div 
-                key={index}
-                className="bg-[#F1F0FB] p-8 rounded-lg shadow-lg hover:shadow-xl transition-shadow"
-              >
-                <div className="flex flex-col items-center text-center">
-                  {service.icon}
-                  <h3 className="text-xl font-semibold mt-4 mb-2 text-[#403E43]">
-                    {service.title}
-                  </h3>
-                  <p className="text-[#8E9196]">{service.description}</p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* CTA Section */}
-      <section className="py-16 bg-gradient-to-br from-[#0EA5E9] to-[#1EAEDB] text-white">
-        <div className="container mx-auto text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-6 font-baloo">
-            Ready to Accelerate Your Digital Transformation?
-          </h2>
-          <p className="text-xl mb-8 max-w-2xl mx-auto">
-            Contact Krushal today to explore tailored Cloud & DevOps solutions for your business growth.
+      <PageBreadcrumb 
+        items={[
+          { label: "What We Do", path: "/about" },
+          { label: "Cloud & DevOps", path: "/cloud-and-devops" },
+          { label: "Explore Cloud Services" }
+        ]}
+      />
+      
+      {/* Hero Section */}
+      <section className="relative py-24 bg-gray-100">
+        <div className="container mx-auto px-4 text-center">
+          <h1 className="text-4xl md:text-5xl font-bold text-gray-800 mb-6">
+            Explore Our Cloud and DevOps Services
+          </h1>
+          <p className="text-lg text-gray-600 mb-8">
+            Accelerate your digital transformation with our comprehensive cloud solutions.
           </p>
-          <Button 
-            onClick={() => navigate("/contact")}
-            className="bg-white text-[#0EA5E9] hover:bg-white/90 px-8 py-6 text-lg rounded-full"
-          >
-            Get Started Today
+          <Button onClick={() => navigate("/contact")} className="bg-[#673AB7] text-white hover:bg-[#512DA8] px-8 py-3 rounded-md">
+            Get Started
+          </Button>
+        </div>
+      </section>
+
+      {/* Services Overview */}
+      <section className="py-16">
+        <div className="container mx-auto px-4">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {/* Cloud Migration */}
+            <div className="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow duration-300">
+              <Cloud className="w-10 h-10 text-[#673AB7] mb-4" />
+              <h3 className="text-xl font-semibold text-gray-700 mb-2">Cloud Migration</h3>
+              <p className="text-gray-600">
+                Seamlessly migrate your applications and data to the cloud with minimal disruption.
+              </p>
+            </div>
+
+            {/* DevOps Automation */}
+            <div className="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow duration-300">
+              <Code className="w-10 h-10 text-[#673AB7] mb-4" />
+              <h3 className="text-xl font-semibold text-gray-700 mb-2">DevOps Automation</h3>
+              <p className="text-gray-600">
+                Automate your software delivery pipeline for faster releases and improved quality.
+              </p>
+            </div>
+
+            {/* Cloud Security */}
+            <div className="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow duration-300">
+              <ShieldCheck className="w-10 h-10 text-[#673AB7] mb-4" />
+              <h3 className="text-xl font-semibold text-gray-700 mb-2">Cloud Security</h3>
+              <p className="text-gray-600">
+                Protect your cloud environment with our robust security solutions and best practices.
+              </p>
+            </div>
+
+            {/* Data Management */}
+            <div className="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow duration-300">
+              <Database className="w-10 h-10 text-[#673AB7] mb-4" />
+              <h3 className="text-xl font-semibold text-gray-700 mb-2">Data Management</h3>
+              <p className="text-gray-600">
+                Efficiently manage and optimize your data in the cloud for better insights and performance.
+              </p>
+            </div>
+
+            {/* Serverless Architecture */}
+            <div className="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow duration-300">
+              <Server className="w-10 h-10 text-[#673AB7] mb-4" />
+              <h3 className="text-xl font-semibold text-gray-700 mb-2">Serverless Architecture</h3>
+              <p className="text-gray-600">
+                Build and deploy applications without managing servers, reducing costs and complexity.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Call to Action */}
+      <section className="py-20 bg-gradient-to-r from-[#673AB7] to-[#9b87f5] text-white">
+        <div className="container mx-auto px-4 text-center">
+          <h2 className="text-3xl md:text-4xl font-bold mb-6">
+            Ready to Transform Your Business with Cloud and DevOps?
+          </h2>
+          <p className="text-lg mb-8">
+            Contact us today to learn more about our services and how we can help you achieve your business goals.
+          </p>
+          <Button onClick={() => navigate("/contact")} className="bg-white text-[#673AB7] hover:bg-gray-100 px-8 py-3 rounded-md">
+            Contact Us
           </Button>
         </div>
       </section>

@@ -1,4 +1,3 @@
-
 import { Button } from "@/components/ui/button";
 import Navigation from "@/components/Navigation";
 import { ArrowRight } from "lucide-react";
@@ -8,6 +7,7 @@ import SolutionSection from "@/components/sections/SolutionSection";
 import IndustryUseCases from "@/components/sections/IndustryUseCases";
 import OutcomesSection from "@/components/sections/OutcomesSection";
 import { useNavigate } from "react-router-dom";
+import PageBreadcrumb from "@/components/PageBreadcrumb";
 
 const FirstMileSolutions = () => {
   const navigate = useNavigate();
@@ -41,6 +41,13 @@ const FirstMileSolutions = () => {
   return (
     <div className="min-h-screen bg-white overflow-x-hidden">
       <Navigation />
+      
+      <PageBreadcrumb 
+        items={[
+          { label: "First Mile Solutions" }
+        ]}
+      />
+      
       <HeroCarousel 
         images={images}
         buttonConfig={{
