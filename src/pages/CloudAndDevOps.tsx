@@ -1,3 +1,4 @@
+
 import React from "react";
 import Navigation from "@/components/Navigation";
 import PageBreadcrumb from "@/components/PageBreadcrumb";
@@ -14,7 +15,7 @@ const CloudAndDevOps = () => {
       
       <PageBreadcrumb 
         items={[
-          { label: "What We Do", path: "/about" },
+          { label: "Services", path: "/" },
           { label: "Cloud & DevOps" }
         ]}
       />

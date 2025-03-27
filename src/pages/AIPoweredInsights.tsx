@@ -41,7 +41,7 @@ const AIPoweredInsights = () => {
       
       <PageBreadcrumb 
         items={[
-          { label: "What We Do", path: "/about" },
+          { label: "Services", path: "/" },
           { label: "AI-Powered Insights" }
         ]}
       />

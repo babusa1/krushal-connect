@@ -1,3 +1,4 @@
+
 import React from "react";
 import Navigation from "@/components/Navigation";
 import { Button } from "@/components/ui/button";
@@ -48,7 +49,7 @@ const ExploreAIAgents = () => {
       
       <PageBreadcrumb 
         items={[
-          { label: "What We Do", path: "/about" },
+          { label: "Services", path: "/" },
           { label: "AI Agents", path: "/ai-agents" },
           { label: "Explore AI Agents" }
         ]}

@@ -36,7 +36,7 @@ const AIPoweredAgents = () => {
       
       <PageBreadcrumb 
         items={[
-          { label: "What We Do", path: "/about" },
+          { label: "Services", path: "/" },
           { label: "AI Agents" }
         ]}
       />
