@@ -1,6 +1,8 @@
+
 import Navigation from "@/components/Navigation";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
+import PageBreadcrumb from "@/components/PageBreadcrumb";
 
 const CaseStudies = () => {
   const caseStudies = [
@@ -45,6 +47,12 @@ const CaseStudies = () => {
   return (
     <div className="min-h-screen bg-white">
       <Navigation />
+      
+      <PageBreadcrumb 
+        items={[
+          { label: "Case Studies" }
+        ]}
+      />
       
       <section className="py-20 px-4">
         <div className="container mx-auto">

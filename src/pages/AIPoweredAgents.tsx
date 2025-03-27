@@ -7,6 +7,7 @@ import HeroCarousel from "@/components/hero/HeroCarousel";
 import ServicesSection from "@/components/ai-agents/ServicesSection";
 import ProcessSection from "@/components/ai-agents/ProcessSection";
 import IndustriesSection from "@/components/ai-agents/IndustriesSection";
+import PageBreadcrumb from "@/components/PageBreadcrumb";
 
 const AIPoweredAgents = () => {
   const navigate = useNavigate();
@@ -32,6 +33,13 @@ const AIPoweredAgents = () => {
   return (
     <div className="min-h-screen bg-white">
       <Navigation />
+      
+      <PageBreadcrumb 
+        items={[
+          { label: "What We Do", path: "/about" },
+          { label: "AI Agents" }
+        ]}
+      />
       
       <HeroCarousel 
         images={carouselImages}

@@ -5,6 +5,7 @@ import HeroCarousel from "@/components/hero/HeroCarousel";
 import { ArrowRight, Brain, Code, Bug, LineChart, 
          Shield, Database, Rocket, TrendingUp } from "lucide-react";
 import { useNavigate } from "react-router-dom";
+import PageBreadcrumb from "@/components/PageBreadcrumb";
 
 const AISoftware = () => {
   const navigate = useNavigate();
@@ -101,6 +102,13 @@ const AISoftware = () => {
   return (
     <div className="min-h-screen bg-white">
       <Navigation />
+      
+      <PageBreadcrumb 
+        items={[
+          { label: "Products", path: "/about" },
+          { label: "AI Software" }
+        ]}
+      />
       
       <HeroCarousel 
         images={carouselImages}

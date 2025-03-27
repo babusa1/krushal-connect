@@ -1,13 +1,20 @@
-
 import React from "react";
 import Navigation from "@/components/Navigation";
 import { Button } from "@/components/ui/button";
 import { BriefcaseIcon, Users, Mail } from "lucide-react";
+import PageBreadcrumb from "@/components/PageBreadcrumb";
 
 const Careers = () => {
   return (
     <div className="min-h-screen bg-white">
       <Navigation />
+      
+      <PageBreadcrumb 
+        items={[
+          { label: "About", path: "/about-krushal" },
+          { label: "Careers" }
+        ]}
+      />
       
       {/* Hero Section */}
       <section className="relative pt-20">

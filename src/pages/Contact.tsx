@@ -5,6 +5,7 @@ import { Textarea } from "@/components/ui/textarea";
 import Navigation from "@/components/Navigation";
 import { Mail, Phone, MapPin, MessageSquare } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
+import PageBreadcrumb from "@/components/PageBreadcrumb";
 
 const Contact = () => {
   const { toast } = useToast();
@@ -20,6 +21,12 @@ const Contact = () => {
   return (
     <div className="min-h-screen bg-white">
       <Navigation />
+      
+      <PageBreadcrumb 
+        items={[
+          { label: "Contact" }
+        ]}
+      />
       
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-[#673AB7] to-[#9b87f5] py-20 px-4">

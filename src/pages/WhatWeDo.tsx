@@ -1,4 +1,3 @@
-
 import React from "react";
 import Navigation from "@/components/Navigation";
 import { Button } from "@/components/ui/button";
@@ -7,14 +6,7 @@ import { Bot, Brain, Database, Cloud, Smartphone, Truck, Home } from "lucide-rea
 import MarketOpportunity from "@/components/sections/MarketOpportunity";
 import OutcomesSection from "@/components/sections/OutcomesSection";
 import SolutionSection from "@/components/sections/SolutionSection";
-import {
-  Breadcrumb,
-  BreadcrumbItem,
-  BreadcrumbLink,
-  BreadcrumbList,
-  BreadcrumbPage,
-  BreadcrumbSeparator,
-} from "@/components/ui/breadcrumb";
+import PageBreadcrumb from "@/components/PageBreadcrumb";
 
 const WhatWeDo = () => {
   const navigate = useNavigate();
@@ -56,23 +48,11 @@ const WhatWeDo = () => {
     <div className="min-h-screen bg-white">
       <Navigation />
       
-      {/* Breadcrumb Section */}
-      <div className="container mx-auto px-4 pt-20 pb-2">
-        <Breadcrumb>
-          <BreadcrumbList>
-            <BreadcrumbItem>
-              <BreadcrumbLink onClick={() => navigate('/')}>
-                <Home className="h-4 w-4 mr-1" />
-                Home
-              </BreadcrumbLink>
-            </BreadcrumbItem>
-            <BreadcrumbSeparator />
-            <BreadcrumbItem>
-              <BreadcrumbPage>What We Do</BreadcrumbPage>
-            </BreadcrumbItem>
-          </BreadcrumbList>
-        </Breadcrumb>
-      </div>
+      <PageBreadcrumb 
+        items={[
+          { label: "What We Do" }
+        ]}
+      />
       
       {/* Hero Section */}
       <section className="relative">

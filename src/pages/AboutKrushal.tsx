@@ -1,8 +1,8 @@
-
 import Navigation from "@/components/Navigation";
 import { Target, Rocket, Brain, BarChart, Users, Sparkles, Truck, Network } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useNavigate } from "react-router-dom";
+import PageBreadcrumb from "@/components/PageBreadcrumb";
 
 const AboutKrushal = () => {
   const navigate = useNavigate();
@@ -10,6 +10,12 @@ const AboutKrushal = () => {
   return (
     <div className="min-h-screen bg-white">
       <Navigation />
+      
+      <PageBreadcrumb 
+        items={[
+          { label: "About Krushal" }
+        ]}
+      />
       
       {/* Hero Section */}
       <section className="relative min-h-[90vh] flex items-center justify-center py-20 mt-16">

@@ -5,6 +5,7 @@ import { ArrowRight, ChartBar, CreditCard, LineChart, Users,
          BarChart2, Building, Network, DollarSign } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 import HeroCarousel from "@/components/hero/HeroCarousel";
+import PageBreadcrumb from "@/components/PageBreadcrumb";
 
 const Finance = () => {
   const navigate = useNavigate();
@@ -138,6 +139,13 @@ const Finance = () => {
   return (
     <div className="min-h-screen bg-white">
       <Navigation />
+      
+      <PageBreadcrumb 
+        items={[
+          { label: "Industries", path: "/about" },
+          { label: "Finance" }
+        ]}
+      />
       
       <HeroCarousel 
         images={carouselImages}

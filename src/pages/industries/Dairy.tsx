@@ -5,6 +5,7 @@ import { ArrowRight, Leaf, LineChart, Users, Tractor,
          BarChart2, Heart, Zap, ChartPie } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 import HeroCarousel from "@/components/hero/HeroCarousel";
+import PageBreadcrumb from "@/components/PageBreadcrumb";
 
 const Dairy = () => {
   const navigate = useNavigate();
@@ -138,6 +139,13 @@ const Dairy = () => {
   return (
     <div className="min-h-screen bg-white">
       <Navigation />
+      
+      <PageBreadcrumb 
+        items={[
+          { label: "Industries", path: "/about" },
+          { label: "Dairy" }
+        ]}
+      />
       
       <HeroCarousel 
         images={carouselImages}

@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import { useNavigate } from "react-router-dom";
 import { ArrowRight, Rocket, Percent, Scale, ShieldCheck, Gauge } from "lucide-react";
 import HeroCarousel from "@/components/hero/HeroCarousel";
+import PageBreadcrumb from "@/components/PageBreadcrumb";
 
 const CloudAndDevOps = () => {
   const navigate = useNavigate();
@@ -33,6 +34,13 @@ const CloudAndDevOps = () => {
   return (
     <div className="min-h-screen bg-white">
       <Navigation />
+      
+      <PageBreadcrumb 
+        items={[
+          { label: "What We Do", path: "/about" },
+          { label: "Cloud & DevOps" }
+        ]}
+      />
       
       <HeroCarousel 
         images={carouselImages}
