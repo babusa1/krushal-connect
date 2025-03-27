@@ -1,7 +1,10 @@
-import { Button } from "@/components/ui/button";
+
+import React from "react";
 import Navigation from "@/components/Navigation";
+import PageBreadcrumb from "@/components/PageBreadcrumb";
 import HeroCarousel from "@/components/hero/HeroCarousel";
 import { ArrowRight, Smartphone, Globe, Users, ShieldCheck, Code, Container, MessageSquare, Database } from "lucide-react";
+import { Button } from "@/components/ui/button";
 import { useNavigate } from "react-router-dom";
 
 const MobileFirstDigital = () => {
@@ -33,6 +36,13 @@ const MobileFirstDigital = () => {
   return (
     <div className="min-h-screen bg-white">
       <Navigation />
+      
+      <PageBreadcrumb 
+        items={[
+          { label: "Services", path: "/" },
+          { label: "Mobile-First Digital" }
+        ]}
+      />
       
       <HeroCarousel 
         images={carouselImages}
