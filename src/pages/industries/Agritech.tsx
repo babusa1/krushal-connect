@@ -1,3 +1,4 @@
+
 import React from "react";
 import Navigation from "@/components/Navigation";
 import PageBreadcrumb from "@/components/PageBreadcrumb";
@@ -27,7 +28,7 @@ import {
   PieChart,
   Pilcrow,
   Plus,
-  Projector2,
+  Projector, // Fixed: Changed from Projector2 to Projector
   Rocket,
   Scale,
   Settings,
