@@ -3,10 +3,18 @@ import React from "react";
 import Navigation from "@/components/Navigation";
 import { Button } from "@/components/ui/button";
 import { useNavigate } from "react-router-dom";
-import { Bot, Brain, Database, Cloud, Smartphone, Truck } from "lucide-react";
+import { Bot, Brain, Database, Cloud, Smartphone, Truck, Home } from "lucide-react";
 import MarketOpportunity from "@/components/sections/MarketOpportunity";
 import OutcomesSection from "@/components/sections/OutcomesSection";
 import SolutionSection from "@/components/sections/SolutionSection";
+import {
+  Breadcrumb,
+  BreadcrumbItem,
+  BreadcrumbLink,
+  BreadcrumbList,
+  BreadcrumbPage,
+  BreadcrumbSeparator,
+} from "@/components/ui/breadcrumb";
 
 const WhatWeDo = () => {
   const navigate = useNavigate();
@@ -48,8 +56,26 @@ const WhatWeDo = () => {
     <div className="min-h-screen bg-white">
       <Navigation />
       
+      {/* Breadcrumb Section */}
+      <div className="container mx-auto px-4 pt-20 pb-2">
+        <Breadcrumb>
+          <BreadcrumbList>
+            <BreadcrumbItem>
+              <BreadcrumbLink onClick={() => navigate('/')}>
+                <Home className="h-4 w-4 mr-1" />
+                Home
+              </BreadcrumbLink>
+            </BreadcrumbItem>
+            <BreadcrumbSeparator />
+            <BreadcrumbItem>
+              <BreadcrumbPage>What We Do</BreadcrumbPage>
+            </BreadcrumbItem>
+          </BreadcrumbList>
+        </Breadcrumb>
+      </div>
+      
       {/* Hero Section */}
-      <section className="relative pt-20">
+      <section className="relative">
         <div className="absolute inset-0">
           <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/50 to-transparent z-10" />
           <img 
