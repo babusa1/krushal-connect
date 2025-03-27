@@ -59,11 +59,16 @@ const CaseStudies = () => {
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {caseStudies.map((study, index) => (
               <div key={index} className="bg-white rounded-lg shadow-lg overflow-hidden">
-                <div className="h-48 overflow-hidden">
+                <div className="h-60 relative overflow-hidden">
                   <img 
                     src={study.imageUrl} 
                     alt={study.title}
-                    className="w-full h-full object-cover transition-transform hover:scale-105 duration-300"
+                    className="absolute inset-0 w-full h-full object-cover transition-transform hover:scale-105 duration-300"
+                    onError={(e) => {
+                      const target = e.target as HTMLImageElement;
+                      target.onerror = null;
+                      target.src = "https://via.placeholder.com/400x300?text=Image+Not+Found";
+                    }}
                   />
                 </div>
                 <div className="p-6">
