@@ -1,3 +1,4 @@
+
 import Navigation from "@/components/Navigation";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
@@ -7,37 +8,37 @@ const CaseStudies = () => {
     {
       title: "Dairy Farm Optimization",
       description: "Improved milk production and reduced costs through AI-driven insights.",
-      imageUrl: "https://images.unsplash.com/photo-1557330533-349a34620b6e",
+      imageUrl: "https://images.unsplash.com/photo-1557330533-349a34620b6e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80",
       tags: ["Dairy", "AI", "Optimization"]
     },
     {
       title: "Financial Inclusion in Rural Areas",
       description: "Increased access to financial services using mobile technology.",
-      imageUrl: "https://images.unsplash.com/photo-1501167722204-464ve9bc00cd",
+      imageUrl: "https://images.unsplash.com/photo-1501167786227-4cba60f6d8ae?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80",
       tags: ["Finance", "Mobile", "Inclusion"]
     },
     {
       title: "Sustainable Farming Practices",
       description: "Enhanced crop yields and reduced environmental impact with precision agriculture.",
-      imageUrl: "https://images.unsplash.com/photo-1470163013609-9f60c990ca57",
+      imageUrl: "https://images.unsplash.com/photo-1470163395405-d2b80e7140c1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80",
       tags: ["Agritech", "Sustainability", "Precision"]
     },
     {
       title: "Insurance for Farmers",
       description: "Providing insurance services to farmers in rural India",
-      imageUrl: "https://images.unsplash.com/photo-1661961112951-f2bfd1b964a7",
+      imageUrl: "https://images.unsplash.com/photo-1661961112134-fbce0fdf3d99?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80",
       tags: ["Insurance", "Farmers", "Risk Management"]
     },
     {
       title: "AI-Driven Healthcare",
       description: "Improving healthcare accessibility and outcomes in remote regions.",
-      imageUrl: "https://images.unsplash.com/photo-1532938314630-e9431e7605c3",
+      imageUrl: "https://images.unsplash.com/photo-1532938911079-1b06ac7ceec7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80",
       tags: ["Healthcare", "AI", "Accessibility"]
     },
     {
       title: "Empowering Women Entrepreneurs",
       description: "Supporting women-led businesses through technology and financial literacy.",
-      imageUrl: "https://images.unsplash.com/photo-1583525577515-c164390783aa",
+      imageUrl: "https://images.unsplash.com/photo-1583525952490-3195286782d1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80",
       tags: ["Entrepreneurship", "Women", "Technology"]
     }
   ];
@@ -58,11 +59,13 @@ const CaseStudies = () => {
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {caseStudies.map((study, index) => (
               <div key={index} className="bg-white rounded-lg shadow-lg overflow-hidden">
-                <img 
-                  src={study.imageUrl} 
-                  alt={study.title}
-                  className="w-full h-48 object-cover"
-                />
+                <div className="h-48 overflow-hidden">
+                  <img 
+                    src={study.imageUrl} 
+                    alt={study.title}
+                    className="w-full h-full object-cover transition-transform hover:scale-105 duration-300"
+                  />
+                </div>
                 <div className="p-6">
                   <h3 className="text-2xl font-bold mb-4 text-[#673AB7] font-baloo">
                     {study.title}
